@@ -34,9 +34,11 @@ nvim---
 
 
 
-Neovide 的话，我是用 `chocolatey` 包管理器来装的，提前装好 C/C++ 的一堆环境，再装 Rust 环境，最后用 `cargo` 编译得到 exe 文件，直接运行即可
+Neovide 的话，我一开始是用 `chocolatey` 包管理器来装环境的，后来感觉 Win 还是手动装才有内味儿
 
-`chocolatey` 记得在安装前改一下环境变量，在系统环境变量里加一个 `ChocolateyInstall`，变量值定义为 `chocolatey` ，表示 `chocolatey` 的安装路径
+提前装好 C/C++ 的一堆环境，再装 Rust 环境，最后用 `cargo` 编译得到 exe 文件，直接运行即可
+
+`chocolatey` 记得在安装前改一下环境变量，在系统环境变量里加一个 `ChocolateyInstall`，变量值定义为路径，表示 `chocolatey` 的安装路径
 
 
 
