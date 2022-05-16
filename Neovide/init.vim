@@ -1,39 +1,88 @@
-set encoding=utf-8
-set termencoding=utf-8
-set fileencoding=utf-8
-set fileencodings=ucs-bom,utf-8,chinese,cp936
-set clipboard=unnamedplus
-set scrolloff=8
-set sidescrolloff=8
-set number
-set relativenumber 
-set cursorline 
-set tabstop=2 
-set softtabstop=2 
-set shiftround 
-set ignorecase 
-set smartcase 
-set cmdheight=1 
-set autoread 
-set mouse=a
+" ukyang									-- Update Date: 2022年5月16日 15:57 周一
+" ========================================================================================================================
+" ================================================== BEGIN. ============================================================ 
+set nocompatible					" be improved, required
 
-inoremap jk <Esc>
-nnoremap <Space> :
-map <C-e> :NERDTreeToggle<CR>
-let mapleader=";"
-map <C-d> 10j
-map <C-u> 10k
-map sjj :sp<CR>
-map sll :vs<CR>
 
+" ==================== Plugin packages ====================
+" Begin Plug, Depends On https://github.com/junegunn/vim-plug
 call plug#begin('~/AppData/local/nvim/plugged')
-	Plug 'itchyny/lightline.vim'
-	Plug 'scrooloose/nerdtree'
-	Plug 'morhetz/gruvbox'
-	Plug 'mengelbrecht/lightline-bufferline'
-  Plug 'glepnir/zephyr-nvim'
-call plug#end()
 
+" ========== colorscheme here. ==========
+" Plug 'joshdick/onedark.vim'
+" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+" Plug 'EdenEast/nightfox.nvim'
+" Plug 'morhetz/gruvbox'
+" Plug 'sainnhe/gruvbox-material'
+  Plug 'glepnir/zephyr-nvim'
+" Plug 'ellisonleao/gruvbox.nvim'
+" Plug 'catppuccin/nvim'
+
+	Plug 'itchyny/lightline.vim'
+"	Plug 'scrooloose/nerdtree'
+	Plug 'mengelbrecht/lightline-bufferline'
+
+" lsp
+	Plug 'neovim/nvim-lspconfig'
+	Plug 'williamboman/nvim-lsp-installer'
+
+" nvim-tree
+  Plug 'kyazdani42/nvim-web-devicons'
+  Plug 'kyazdani42/nvim-tree.lua'
+
+" floaterm
+  Plug 'voldikss/vim-floaterm'
+
+" nvim-cmp
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
+	
+  Plug 'hrsh7th/cmp-vsnip'
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'rafamadriz/friendly-snippets'
+
+  Plug 'onsails/lspkind-nvim'
+
+
+" ========== appearence here. ==========
+" ========== useful tools here. ==========
+" ========== programming tools here. ==========
+
+call plug#end()
+" ==================== END Plugin packages ====================
+
+
+" ==================== Pre settings ===================
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+    if (has("nvim"))
+        "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+        let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    endif
+    "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+    "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+    " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+    if (has("termguicolors"))
+        set termguicolors
+    endif
+endif
+" =================== END Pre settings ===================
+
+
+" ==================== General  settings ===================
+" 为了避免出错，把通用配置项放在前面，一般来说不需要更改这个文件
+if filereadable($HOME . "/AppData/Local/nvim/general.vim")
+    source $HOME/AppData/Local/nvim/general.vim
+endif
+" ==================== END General settings ===================
+
+
+" ==================== Colorscheme settings ===================
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
@@ -56,26 +105,49 @@ let g:lightline#bufferline#number_map = {
 \ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
 set showtabline=2
 
-nmap <Leader>1 <Plug>lightline#bufferline#go(1)
-nmap <Leader>2 <Plug>lightline#bufferline#go(2)
-nmap <Leader>3 <Plug>lightline#bufferline#go(3)
-nmap <Leader>4 <Plug>lightline#bufferline#go(4)
-nmap <Leader>5 <Plug>lightline#bufferline#go(5)
-nmap <Leader>6 <Plug>lightline#bufferline#go(6)
-nmap <Leader>7 <Plug>lightline#bufferline#go(7)
-nmap <Leader>8 <Plug>lightline#bufferline#go(8)
-nmap <Leader>9 <Plug>lightline#bufferline#go(9)
-nmap <Leader>0 <Plug>lightline#bufferline#go(10)
-nmap <Leader>d1 <Plug>lightline#bufferline#delete(1)
-nmap <Leader>d2 <Plug>lightline#bufferline#delete(2)
-nmap <Leader>d3 <Plug>lightline#bufferline#delete(3)
-nmap <Leader>d4 <Plug>lightline#bufferline#delete(4)
-nmap <Leader>d5 <Plug>lightline#bufferline#delete(5)
-nmap <Leader>d6 <Plug>lightline#bufferline#delete(6)
-nmap <Leader>d7 <Plug>lightline#bufferline#delete(7)
-nmap <Leader>d8 <Plug>lightline#bufferline#delete(8)
-nmap <Leader>d9 <Plug>lightline#bufferline#delete(9)
-nmap <Leader>d0 <Plug>lightline#bufferline#delete(10)
-
+" For dark version
 set background=dark
+" For light version
+" set background=light
+
 colorscheme zephyr
+" ==================== END Colorscheme settings ===================
+
+
+" ==================== Plugin settings ===================
+" ==================== END Plugin settings ===================
+
+
+" ==================== Autocmd/Function settings ===================
+" ==================== END Autocmd/Function settings ===================
+
+
+" ==================== External Lua settings ===================
+" 可以理解为引入一个命名空间下的所有lua文件
+" lua require('ukyang')
+lua require('ukyang')
+" ==================== END External Lua settings ===================
+
+
+" ==================== External settings ===================
+"
+" ========== keymap settings here. ==========
+if filereadable($HOME . "/AppData/Local/nvim/keymaps.vim")
+    source $HOME/AppData/Local/nvim/keymaps.vim
+endif
+
+" ========== autoheader settings here. ==========
+" *.py & *.sh
+if filereadable($HOME . "/AppData/Local/nvim/shpy-autoheader.vim")
+    source $HOME/AppData/Local/nvim/shpy-autoheader.vim
+endif
+
+" ========== other custom external settings here. ==========
+if filereadable($HOME . "/AppData/Local/nvim/custom.vim")
+    source $HOME/AppData/Local/nvim/custom.vim
+endif
+" ==================== END External settings ===================
+
+
+" ================================================== THE END. ============================================================ 
+" ========================================================================================================================
