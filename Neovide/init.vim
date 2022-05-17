@@ -18,9 +18,10 @@ call plug#begin('~/.config/nvim/plugged')
 " Plug 'ellisonleao/gruvbox.nvim'
 " Plug 'catppuccin/nvim'
 
-	Plug 'itchyny/lightline.vim'
+"  Plug 'itchyny/lightline.vim'
 "	Plug 'scrooloose/nerdtree'
-	Plug 'mengelbrecht/lightline-bufferline'
+"  Plug 'mengelbrecht/lightline-bufferline'
+  Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
 " lsp
 	Plug 'neovim/nvim-lspconfig'
@@ -59,54 +60,51 @@ call plug#end()
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
 "(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
-if (empty($TMUX))
-    if (has("nvim"))
-        "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-        let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-    endif
-    "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
-    "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
-    " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
-    if (has("termguicolors"))
-        set termguicolors
-    endif
-endif
+"if (empty($TMUX))
+"   if (has("nvim"))
+"       "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+"       let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"   endif
+"   "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"   "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+"   " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+"   if (has("termguicolors"))
+"       set termguicolors
+"   endif
+"endif
 " =================== END Pre settings ===================
 
 
 " ==================== General  settings ===================
-" 为了避免出错，把通用配置项放在前面，一般来说不需要更改这个文件
-" If filereadable($HOME . "/AppData/Local/nvim/general.vim")
-"     source $HOME/AppData/Local/nvim/general.vim
-" endif
 " ==================== END General settings ===================
 
 
 " ==================== Colorscheme settings ===================
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'tabline': {
-      \   'left': [ ['buffers'] ],
-      \   'right': [ ['close'] ]
-      \ },
-      \ 'component_expand': {
-      \   'buffers': 'lightline#bufferline#buffers'
-      \ },
-      \ 'component_type': {
-      \   'buffers': 'tabsel'
-      \ }
-      \ }
-let g:lightline#bufferline#show_number = 2
-let g:lightline#bufferline#number_map = {
-\ 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴',
-\ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
+"let g:lightline = {
+"     \ 'colorscheme': 'wombat',
+"     \ 'active': {
+"     \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
+"     \ },
+"     \ 'tabline': {
+"     \   'left': [ ['buffers'] ],
+"     \   'right': [ ['close'] ]
+"     \ },
+"     \ 'component_expand': {
+"     \   'buffers': 'lightline#bufferline#buffers'
+"     \ },
+"     \ 'component_type': {
+"     \   'buffers': 'tabsel'
+"     \ }
+"     \ }
+"let g:lightline#bufferline#show_number = 2
+"let g:lightline#bufferline#number_map = {
+"\ 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴',
+"\ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
 set showtabline=2
 
 " For dark version
 set background=dark
+set termguicolors
 " For light version
 " set background=light
 colorscheme zephyr
@@ -122,20 +120,16 @@ colorscheme zephyr
 
 
 " ==================== External Lua settings ===================
-" 可以理解为引入一个命名空间下的所有lua文件
 lua require('basic')
 lua require('keybindings')
 lua require('plugin-config/nvim-tree')
+lua require('plugin-config/bufferline')
 " ==================== END External Lua settings ===================
 
 
 " ==================== External settings ===================
 "
 " ========== keymap settings here. ==========
-" if filereadable($HOME . "/AppData/Local/nvim/keymaps.vim")
-"     source $HOME/AppData/Local/nvim/keymaps.vim
-" endif
-
 " ========== autoheader settings here. ==========
 " *.py & *.sh
 " if filereadable($HOME . "/AppData/Local/nvim/shpy-autoheader.vim")
