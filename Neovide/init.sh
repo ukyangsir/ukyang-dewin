@@ -28,7 +28,7 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt upgrade
 
-sudo apt install -y curl git openssh-server net-tools neovim zsh zsh-autosuggestions
+sudo apt install -y curl git openssh-server net-tools neovim zsh
 
 mkdir ~/.config/nvim
 cp -r ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
