@@ -6,7 +6,7 @@ set nocompatible					" be improved, required
 
 " ==================== Plugin packages ====================
 " Begin Plug, Depends On https://github.com/junegunn/vim-plug
-call plug#begin('~/AppData/local/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " ========== colorscheme here. ==========
 " Plug 'joshdick/onedark.vim'
@@ -76,9 +76,9 @@ endif
 
 " ==================== General  settings ===================
 " 为了避免出错，把通用配置项放在前面，一般来说不需要更改这个文件
-if filereadable($HOME . "/AppData/Local/nvim/general.vim")
-    source $HOME/AppData/Local/nvim/general.vim
-endif
+" If filereadable($HOME . "/AppData/Local/nvim/general.vim")
+"     source $HOME/AppData/Local/nvim/general.vim
+" endif
 " ==================== END General settings ===================
 
 
@@ -125,27 +125,26 @@ colorscheme zephyr
 " ==================== External Lua settings ===================
 " 可以理解为引入一个命名空间下的所有lua文件
 " lua require('ukyang')
-lua require('ukyang')
 " ==================== END External Lua settings ===================
 
 
 " ==================== External settings ===================
 "
 " ========== keymap settings here. ==========
-if filereadable($HOME . "/AppData/Local/nvim/keymaps.vim")
-    source $HOME/AppData/Local/nvim/keymaps.vim
-endif
+" if filereadable($HOME . "/AppData/Local/nvim/keymaps.vim")
+"     source $HOME/AppData/Local/nvim/keymaps.vim
+" endif
 
 " ========== autoheader settings here. ==========
 " *.py & *.sh
-if filereadable($HOME . "/AppData/Local/nvim/shpy-autoheader.vim")
-    source $HOME/AppData/Local/nvim/shpy-autoheader.vim
-endif
+" if filereadable($HOME . "/AppData/Local/nvim/shpy-autoheader.vim")
+"     source $HOME/AppData/Local/nvim/shpy-autoheader.vim
+" endif
 
 " ========== other custom external settings here. ==========
-if filereadable($HOME . "/AppData/Local/nvim/custom.vim")
-    source $HOME/AppData/Local/nvim/custom.vim
-endif
+" if filereadable($HOME . "/AppData/Local/nvim/custom.vim")
+"     source $HOME/AppData/Local/nvim/custom.vim
+" endif
 " ==================== END External settings ===================
 
 
