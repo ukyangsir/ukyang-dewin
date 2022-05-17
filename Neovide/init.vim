@@ -7,7 +7,6 @@ set nocompatible					" be improved, required
 " ==================== Plugin packages ====================
 " Begin Plug, Depends On https://github.com/junegunn/vim-plug
 call plug#begin('~/.config/nvim/plugged')
-
 " ========== colorscheme here. ==========
 " Plug 'joshdick/onedark.vim'
 " Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
@@ -34,17 +33,17 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'voldikss/vim-floaterm'
 
 " nvim-cmp
-  Plug 'hrsh7th/nvim-cmp'
-  Plug 'hrsh7th/cmp-nvim-lsp'
-  Plug 'hrsh7th/cmp-buffer'
-  Plug 'hrsh7th/cmp-path'
-  Plug 'hrsh7th/cmp-cmdline'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/cmp-buffer'
+" Plug 'hrsh7th/cmp-path'
+" Plug 'hrsh7th/cmp-cmdline'
 	
-  Plug 'hrsh7th/cmp-vsnip'
-  Plug 'hrsh7th/vim-vsnip'
-  Plug 'rafamadriz/friendly-snippets'
+" Plug 'hrsh7th/cmp-vsnip'
+" Plug 'hrsh7th/vim-vsnip'
+" Plug 'rafamadriz/friendly-snippets'
 
-  Plug 'onsails/lspkind-nvim'
+" Plug 'onsails/lspkind-nvim'
 
 
 " ========== appearence here. ==========
