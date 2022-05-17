@@ -31,10 +31,7 @@ sudo apt upgrade
 sudo apt install -y curl git openssh-server net-tools 
 echo y|sudo apt install -y neovim
 
-ssh-keygen -t rsa -C "ukyang_ma@163.com"
-
-git clone https://github.com/rupa/z.git 
-git clone https://github.com/ukyangsir/ukyang-vimrelated-Windows.git 
+git clone git@github.com:rupa/z.git
 
 echo '. ~/z/z.sh' >> ~/.bashrc
 echo 'alias vim='nvim''>> ~/.bashrc
