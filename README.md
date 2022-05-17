@@ -29,6 +29,10 @@
 
 ## Neovide
 
+1. 运行 `init.sh` 脚本
+2. 通过 ssh，随便 clone 一个 github 仓库，把开始的指纹认定 yes 掉
+3. 最后 `:PlugInstall` 即可
+
 基于 Neovim 的 Neovide，我个人认为最舒服的 vim GUI，花里胡哨但又没那么花里胡哨
 
 我不是重度 vim 用户，用 Neovide 只是用来代替 Notepad，或者用来写写脚本，装几个逼，所以没多折腾，用的是最简单的配置

@@ -2,6 +2,7 @@
 " ========================================================================================================================
 " ================================================== BEGIN. ============================================================ 
 set nocompatible					" be improved, required
+set clipboard+=unnamedplus
 
 
 " ==================== Plugin packages ====================
@@ -108,7 +109,6 @@ set showtabline=2
 set background=dark
 " For light version
 " set background=light
-
 colorscheme zephyr
 " ==================== END Colorscheme settings ===================
 
@@ -123,7 +123,9 @@ colorscheme zephyr
 
 " ==================== External Lua settings ===================
 " 可以理解为引入一个命名空间下的所有lua文件
-" lua require('ukyang')
+lua require('basic')
+lua require('keybindings')
+lua require('plugin-config/nvim-tree')
 " ==================== END External Lua settings ===================
 
 
