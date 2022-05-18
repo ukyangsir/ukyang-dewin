@@ -3,6 +3,12 @@
 " ================================================== BEGIN. ============================================================ 
 set nocompatible					" be improved, required
 set clipboard+=unnamedplus
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+" Windows Need Modify Here
+cd ~
+" set guifont=FiraCode\ NF
+" cd F:\git_space
 
 
 " ==================== Plugin packages ====================

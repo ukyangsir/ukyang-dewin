@@ -29,9 +29,10 @@
 
 ## Neovide
 
-1. 运行 `init.sh` 脚本
-2. 通过 ssh，随便 clone 一个 github 仓库，把开始的指纹认定 yes 掉
-3. 最后 `:PlugInstall` 即可
+1. 创建 ssh 公私钥，放到 github 上
+2. clone 我的仓库
+3. 执行 init.sh 脚本（source 执行），有些地方需要手动 yes 和回车
+4. 执行 neovide.sh 脚本，有些地方需要手动 yes 和回车
 
 基于 Neovim 的 Neovide，我个人认为最舒服的 vim GUI，花里胡哨但又没那么花里胡哨
 
