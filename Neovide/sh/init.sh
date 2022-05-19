@@ -15,10 +15,10 @@ echo "  \ \  \\\  \ \  \\ \  \   \/  /  /   \ \  \ \  \ \  \\ \  \ \  \|\  \  "
 echo "   \ \_______\ \__\\ \__\__/  / /      \ \__\ \__\ \__\\ \__\ \_______\ "
 echo "    \|_______|\|__| \|__|\___/ /        \|__|\|__|\|__| \|__|\|_______| "
 echo "                        \|___|/                                         "
-                                   
+
 
 echo "*******************************BeginDate********************************"
-echo "Init Neovim"
+echo "Init ukyang's Ubuntu1804"
 echo "Mission1: Init Ubuntu1804"
 echo "Mission2: Install Neovim"
 echo "Mission3: Install z.sh"
@@ -38,6 +38,9 @@ echo "*****************************Install Neovim*****************************"
 sudo apt install -y neovim
 mkdir ~/.config/nvim
 cp -r ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
+echo 'alias vim='nvim''>> ~/.bashrc
+echo 'alias vi='nvim''>> ~/.bashrc
+echo 'alias v='nvim''>> ~/.bashrc
 echo "***************************End Install Neovim***************************"
 
 
@@ -45,8 +48,19 @@ echo "*****************************Install z.sh*******************************"
 git clone git@github.com:rupa/z.git ~/z
 
 echo '. ~/z/z.sh' >> ~/.bashrc
-echo 'alias vim='nvim''>> ~/.bashrc
-echo 'alias vi='nvim''>> ~/.bashrc
-echo 'alias v='nvim''>> ~/.bashrc
-source ~/.bashrc
 echo "***************************End Install z.sh*****************************"
+
+
+source ~/.bashrc
+
+
+echo "********************************EndDate*********************************"
+echo "End Init ukyang's Ubuntu1804"
+echo "Mission1 complete"
+echo "Mission2 complete"
+echo "Mission3 complete"
+#获取当前服务器时间，并格式化
+dqtime=$(date "+%Y-%m-%d %H:%M:%S")
+#输出当前服务器时间
+echo "BeginDate: ${dqtime}"
+echo "************************************************************************"
