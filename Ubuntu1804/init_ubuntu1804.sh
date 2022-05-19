@@ -20,8 +20,3 @@ echo "*******************End Change sources.list && Add ppa*******************"
 echo "**********************Install Something Necessary***********************"
 sudo apt install -y curl git openssh-server net-tools
 echo "********************End Install Something Necessary*********************"
-
-
-echo "***************************Generate SSH-key*****************************"
-ssh-keygen -t rsa -C 'ukyang_ma@163.com'
-echo "*************************End Generate SSH-key***************************"

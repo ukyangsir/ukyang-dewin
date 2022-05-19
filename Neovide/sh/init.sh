@@ -17,11 +17,12 @@ echo "    \|_______|\|__| \|__|\___/ /        \|__|\|__|\|__| \|__|\|_______| "
 echo "                        \|___|/                                         "
 
 
-echo "*******************************BeginDate********************************"
+echo "*********************************Begin**********************************"
 echo "Init ukyang's Ubuntu1804"
-echo "Mission1: Init Ubuntu1804"
-echo "Mission2: Install Neovim"
-echo "Mission3: Install z.sh"
+echo "Mission1: Change sources.list && Add ppa"
+echo "Mission2: Install Something Necessary"
+echo "Mission3: Install Neovim"
+echo "Mission4: Install z.sh"
 #获取当前服务器时间，并格式化
 dqtime=$(date "+%Y-%m-%d %H:%M:%S")
 #输出当前服务器时间
@@ -29,9 +30,19 @@ echo "BeginDate: ${dqtime}"
 echo "************************************************************************"
 
 
-echo "*****************************Init Ubuntu1804****************************"
-sh ../Ubuntu1804/init_ubuntu1804.sh
-echo "***************************End Init Ubuntu1804**************************"
+echo "*********************Change sources.list && Add ppa*********************"
+rm -rf /etc/apt/sources.list
+cp ~/ukyang-vimrelated-Windows/Neovide/sh/sources.list /etc/apt/
+
+sudo add-apt-repository ppa:neovim-ppa/unstable
+sudo apt update
+sudo apt upgrade
+echo "*******************End Change sources.list && Add ppa*******************"
+
+
+echo "**********************Install Something Necessary***********************"
+sudo apt install -y curl git openssh-server net-tools
+echo "********************End Install Something Necessary*********************"
 
 
 echo "*****************************Install Neovim*****************************"
@@ -54,11 +65,12 @@ echo "***************************End Install z.sh*****************************"
 source ~/.bashrc
 
 
-echo "********************************EndDate*********************************"
+echo "**********************************End***********************************"
 echo "End Init ukyang's Ubuntu1804"
 echo "Mission1 complete"
 echo "Mission2 complete"
 echo "Mission3 complete"
+echo "Mission4 complete"
 #获取当前服务器时间，并格式化
 dqtime=$(date "+%Y-%m-%d %H:%M:%S")
 #输出当前服务器时间
