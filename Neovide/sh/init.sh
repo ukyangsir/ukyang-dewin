@@ -7,67 +7,46 @@
 # Description:                                    *
 # Copyright 2022 by ukyang.All Rights Reserved    *
 #**************************************************
+echo " ___  ___  ___  __        ___    ___ ________  ________   ________      "
+echo "|\  \|\  \|\  \|\  \     |\  \  /  /|\   __  \|\   ___  \|\   ____\     "
+echo "\ \  \\\  \ \  \/  /|_   \ \  \/  / | \  \|\  \ \  \\ \  \ \  \___|     "
+echo " \ \  \\\  \ \   ___  \   \ \    / / \ \   __  \ \  \\ \  \ \  \  ___   "
+echo "  \ \  \\\  \ \  \\ \  \   \/  /  /   \ \  \ \  \ \  \\ \  \ \  \|\  \  "
+echo "   \ \_______\ \__\\ \__\__/  / /      \ \__\ \__\ \__\\ \__\ \_______\ "
+echo "    \|_______|\|__| \|__|\___/ /        \|__|\|__|\|__| \|__|\|_______| "
+echo "                        \|___|/                                         "
+                                   
 
-echo "============================================================"
-echo "==  ==    ==  ==  ==  ==  ==    ==     ==   ==  ========  =="
-echo "==  ==    ==  ===      =  =    =  =    ==== ==  ==        =="
-echo "==  ==    ==  ====      ==    ======   ==  ===  ========  =="
-echo "==  ========  ==  ==    ==   ===  ===  ==   ==  == == ==  =="
-echo "==  ========  ==  ==    ==  ====  ==== ==   ==  ===== ==  =="
-echo "============================================================"
-
-echo "begin>>>>>>>>>>>>>>>>>>>>"
+echo "*******************************BeginDate********************************"
+echo "Init Neovim"
+echo "Mission1: Init Ubuntu1804"
+echo "Mission2: Install Neovim"
+echo "Mission3: Install z.sh"
 #获取当前服务器时间，并格式化
 dqtime=$(date "+%Y-%m-%d %H:%M:%S")
-
 #输出当前服务器时间
-echo "datetime: ${dqtime}"
-echo "<<<<<<<<<<<<<<<<<<<<<<end"
+echo "BeginDate: ${dqtime}"
+echo "************************************************************************"
 
-rm -rf /etc/apt/sources.list
-cp ~/ukyang-vimrelated-Windows/Neovide/sh/sources.list /etc/apt/
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt update
-sudo apt upgrade
 
-# 最基本的软件集合
-sudo apt install -y curl git openssh-server net-tools neovim zsh
+echo "*****************************Init Ubuntu1804****************************"
+sh ../Ubuntu1804/init_ubuntu1804.sh
+echo "***************************End Init Ubuntu1804**************************"
 
-# Neovim 配置文件
+
+echo "*****************************Install Neovim*****************************"
+sudo apt install -y neovim
 mkdir ~/.config/nvim
 cp -r ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
+echo "***************************End Install Neovim***************************"
 
-# z 命令
+
+echo "*****************************Install z.sh*******************************"
 git clone git@github.com:rupa/z.git ~/z
-# ohmyzsh 终端主题
-git clone git@github.com:ohmyzsh/ohmyzsh.git ~/ohmyzsh 
-
-# 脚本安装 ohmyzsh 终端主题
-sh ~/ohmyzsh/tools/install.sh
-rm -rf ~/ohmyzsh
-rm -rf ~/.zshrc
-touch ~/.zshrc
-# 安装 ohmyzsh 插件 zsh-autosuggestions
-git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/plugins/zsh-autosuggestions 
 
 echo '. ~/z/z.sh' >> ~/.bashrc
 echo 'alias vim='nvim''>> ~/.bashrc
 echo 'alias vi='nvim''>> ~/.bashrc
 echo 'alias v='nvim''>> ~/.bashrc
-echo 'alias typora='/mnt/d/Typora/Typora/Typora.exe''>> ~/.bashrc
-
-echo 'export ZSH="$HOME/.oh-my-zsh"' >> ~/.zshrc
-echo 'ZSH_THEME="random"' >> ~/.zshrc
-echo 'plugins=(git zsh-autosuggestions)' >> ~/.zshrc
-echo 'source $ZSH/oh-my-zsh.sh' >> ~/.zshrc
-echo 'source ~/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh' >> ~/.zshrc
-echo '. ~/z/z.sh' >> ~/.zshrc
-echo 'alias vim='nvim''>> ~/.zshrc
-echo 'alias vi='nvim''>> ~/.zshrc
-echo 'alias v='nvim''>> ~/.zshrc
-echo 'alias typora='/mnt/d/Typora/Typora/Typora.exe''>> ~/.zshrc
-
 source ~/.bashrc
-source ~/.zshrc
-
-sudo chsh -s /bin/zsh
+echo "***************************End Install z.sh*****************************"

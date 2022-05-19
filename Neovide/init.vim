@@ -6,7 +6,7 @@ set clipboard+=unnamedplus
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " Windows Need Modify Here
-cd ~
+cd /mnt/f/git_space
 " set guifont=FiraCode\ NF
 " cd F:\git_space
 
