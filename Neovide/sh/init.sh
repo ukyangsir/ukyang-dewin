@@ -31,8 +31,8 @@ echo "************************************************************************"
 
 
 echo "*********************Change sources.list && Add ppa*********************"
-rm -rf /etc/apt/sources.list
-cp ~/ukyang-vimrelated-Windows/Neovide/sh/sources.list /etc/apt/
+sudo rm -rf /etc/apt/sources.list
+sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/sources.list /etc/apt/
 
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
