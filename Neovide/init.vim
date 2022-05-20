@@ -7,7 +7,7 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " Windows Need Modify Here
 cd /mnt/f/git_space
-" set guifont=FiraCode\ NF
+" set guifont=FiraCode\ NF:h12
 " cd F:\git_space
 
 
@@ -21,12 +21,15 @@ call plug#begin('~/.config/nvim/plugged')
 " Plug 'morhetz/gruvbox'
 " Plug 'sainnhe/gruvbox-material'
   Plug 'glepnir/zephyr-nvim'
+  Plug 'kyazdani42/nvim-web-devicons'
 " Plug 'ellisonleao/gruvbox.nvim'
 " Plug 'catppuccin/nvim'
 
 "  Plug 'itchyny/lightline.vim'
 "	Plug 'scrooloose/nerdtree'
 "  Plug 'mengelbrecht/lightline-bufferline'
+
+"  bufferline
   Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
 " lsp
@@ -34,11 +37,13 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'williamboman/nvim-lsp-installer'
 
 " nvim-tree
-  Plug 'kyazdani42/nvim-web-devicons'
   Plug 'kyazdani42/nvim-tree.lua'
 
 " floaterm
   Plug 'voldikss/vim-floaterm'
+
+" lualine
+  Plug 'nvim-lualine/lualine.nvim'
 
 " nvim-cmp
 " Plug 'hrsh7th/nvim-cmp'
@@ -86,26 +91,6 @@ call plug#end()
 
 
 " ==================== Colorscheme settings ===================
-"let g:lightline = {
-"     \ 'colorscheme': 'wombat',
-"     \ 'active': {
-"     \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'filename', 'modified' ] ]
-"     \ },
-"     \ 'tabline': {
-"     \   'left': [ ['buffers'] ],
-"     \   'right': [ ['close'] ]
-"     \ },
-"     \ 'component_expand': {
-"     \   'buffers': 'lightline#bufferline#buffers'
-"     \ },
-"     \ 'component_type': {
-"     \   'buffers': 'tabsel'
-"     \ }
-"     \ }
-"let g:lightline#bufferline#show_number = 2
-"let g:lightline#bufferline#number_map = {
-"\ 0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴',
-"\ 5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
 set showtabline=2
 
 " For dark version
@@ -130,6 +115,8 @@ lua require('basic')
 lua require('keybindings')
 lua require('plugin-config/nvim-tree')
 lua require('plugin-config/bufferline')
+lua require('plugin-config/lualine')
+lua require('lsp/lsp')
 " ==================== END External Lua settings ===================
 
 

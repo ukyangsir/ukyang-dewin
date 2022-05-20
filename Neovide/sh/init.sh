@@ -41,7 +41,8 @@ echo "*******************End Change sources.list && Add ppa*******************"
 
 
 echo "**********************Install Something Necessary***********************"
-sudo apt install -y curl git openssh-server net-tools
+# nodejs and npm need to install manually
+sudo apt install -y curl git openssh-server net-tools zip unzip
 echo "********************End Install Something Necessary*********************"
 
 
