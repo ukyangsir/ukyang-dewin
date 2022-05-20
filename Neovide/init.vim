@@ -1,9 +1,13 @@
-" ukyang									-- Update Date: 2022年5月16日 15:57 周一
-" ========================================================================================================================
-" ================================================== BEGIN. ============================================================ 
-set nocompatible					" be improved, required
+" Copyright (C)2022 By ukyang. All Rights Reserved.
+" Author: ukyang
+" E-mail: ukyang_ma@163.com
+" Date: 2022-05-20
+" Description:
+
+
 set clipboard+=unnamedplus
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
 
 " Windows Need Modify Here
 cd /mnt/f/git_space
@@ -46,17 +50,19 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'nvim-lualine/lualine.nvim'
 
 " nvim-cmp
-" Plug 'hrsh7th/nvim-cmp'
-" Plug 'hrsh7th/cmp-nvim-lsp'
-" Plug 'hrsh7th/cmp-buffer'
-" Plug 'hrsh7th/cmp-path'
-" Plug 'hrsh7th/cmp-cmdline'
-	
-" Plug 'hrsh7th/cmp-vsnip'
-" Plug 'hrsh7th/vim-vsnip'
-" Plug 'rafamadriz/friendly-snippets'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'hrsh7th/cmp-buffer'
+  Plug 'hrsh7th/cmp-path'
+  Plug 'hrsh7th/cmp-cmdline'
 
-" Plug 'onsails/lspkind-nvim'
+" Snippet engine: vsnip
+  Plug 'hrsh7th/cmp-vsnip'
+  Plug 'hrsh7th/vim-vsnip'
+  Plug 'rafamadriz/friendly-snippets'
+
+" lspkind
+  Plug 'onsails/lspkind-nvim'
 
 
 " ========== appearence here. ==========
@@ -86,10 +92,6 @@ call plug#end()
 " =================== END Pre settings ===================
 
 
-" ==================== General  settings ===================
-" ==================== END General settings ===================
-
-
 " ==================== Colorscheme settings ===================
 set showtabline=2
 
@@ -102,14 +104,6 @@ colorscheme zephyr
 " ==================== END Colorscheme settings ===================
 
 
-" ==================== Plugin settings ===================
-" ==================== END Plugin settings ===================
-
-
-" ==================== Autocmd/Function settings ===================
-" ==================== END Autocmd/Function settings ===================
-
-
 " ==================== External Lua settings ===================
 lua require('basic')
 lua require('keybindings')
@@ -117,22 +111,12 @@ lua require('plugin-config/nvim-tree')
 lua require('plugin-config/bufferline')
 lua require('plugin-config/lualine')
 lua require('lsp/lsp')
+lua require('lsp/nvim-cmp')
 " ==================== END External Lua settings ===================
 
 
 " ==================== External settings ===================
-"
-" ========== keymap settings here. ==========
-" ========== autoheader settings here. ==========
-" *.py & *.sh
-" if filereadable($HOME . "/AppData/Local/nvim/shpy-autoheader.vim")
-"     source $HOME/AppData/Local/nvim/shpy-autoheader.vim
-" endif
-
-" ========== other custom external settings here. ==========
-" if filereadable($HOME . "/AppData/Local/nvim/custom.vim")
-"     source $HOME/AppData/Local/nvim/custom.vim
-" endif
+source ~/.config/nvim/vim_raw/shpy-autoheader.vim
 " ==================== END External settings ===================
 
 

@@ -17,3 +17,4 @@ end
 lspconfig.sumneko_lua.setup { on_attach = on_attach }
 lspconfig.vimls.setup { on_attach = on_attach }
 lspconfig.bashls.setup { on_attach = on_attach }
+lspconfig.pylsp.setup { on_attach = on_attach }

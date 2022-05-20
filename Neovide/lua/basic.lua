@@ -1,3 +1,10 @@
+-- Copyright (C)2022 By ukyang. All Rights Reserved.
+-- Author: ukyang
+-- E-mail: ukyang_ma@163.com
+-- Date: 2022-05-20
+-- Description:
+
+
 -- uf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = 'utf-8'
