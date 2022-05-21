@@ -57,13 +57,17 @@ sudo apt install -y curl git openssh-server net-tools \
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
+cd ~/Neovim/plugged/Terslation/
+sudo make install
+cd ~
 echo "********************End Install Something Necessary*********************"
 
 
 echo "*****************************Install Neovim*****************************"
 sudo apt install -y neovim
 mkdir ~/.config/nvim
-cp -r ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
+sudo chmod -R 777 ~/.config/nvim
+sudo cp -r ~/ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
 echo 'alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
 echo 'alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
 echo 'alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc

@@ -22,7 +22,7 @@ cd ~/ukyang-vimrelated-Windows/Neovide
 
 " ==================== Plugin packages ====================
 " Begin Plug, Depends On https://github.com/junegunn/vim-plug
-call plug#begin('~/Neovim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 " colorscheme
 " Plug 'joshdick/onedark.vim'
 " Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
