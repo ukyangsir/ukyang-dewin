@@ -1,7 +1,7 @@
--- Copyright (C)2024 By ukyang. All Rights Reserved.
+-- Copyright (C)2022 By ukyang. All Rights Reserved.
 -- Author: ukyang
--- E-mail: ukyang_ma@165.com
--- Date: 2024-05-20
+-- E-mail: ukyang_ma@163.com
+-- Date: 2022-05-21
 -- Description:
 
 
@@ -28,7 +28,7 @@ local map = vim.api.nvim_set_keymap
 
 -- 无脑必配
 map("i", "jk", "<ESC>", opt)
-map("v", "jk", "<ESC>", opt)
+map("v", "ds", "<ESC>", opt)
 map("n", "<Space>", ":", opt)
 map("n", "<C-d>", "12jzz", opt)
 map("n", "<C-u>", "12kzz", opt)
@@ -52,7 +52,10 @@ map("n", "<C-a>", "ggVG", opt)
 map("n", "<Leader>q", ":q<CR>", opt)
 map("n", "<Leader>ww", ":w<CR>", opt)
 map("n", "<Leader>wq", ":wqa<CR>", opt)
-map("n", "zen", ":set nu! nu? relativenumber! relativenumber?<CR>", opt)
+-- map("n", "zen", ":set nu! nu? relativenumber! relativenumber? laststatus=0 showtabline=0<CR>", opt)
+-- map("n", "sen", ":set nu! nu? relativenumber! relativenumber? laststatus=2 showtabline=2<CR>", opt)
+map("n", "zen", ":set laststatus=0 showtabline=0<CR>", opt)
+map("n", "sen", ":set laststatus=2 showtabline=2<CR>", opt)
 
 -- alt + hjkl  窗口之间跳转
 map("n", "<A-h>", "<C-w>h", opt)
@@ -60,15 +63,16 @@ map("n", "<A-j>", "<C-w>j", opt)
 map("n", "<A-k>", "<C-w>k", opt)
 map("n", "<A-l>", "<C-w>l", opt)
 
--- Esc 回 Normal 模式
-map("t", "<Esc>", "<C-\\><C-n>", opt)
-
 -- nvimtree 快捷键
 map("n", "<A-1>", ":NvimTreeToggle<CR>", opt)
 map("n", "<A-r>", ":NvimTreeRefresh<CR>", opt)
+map("n", "<A-m>", ":NvimTreeFindFile<CR>", opt)
 
 -- floaterm 快捷键
-map("n", "<Leader>t", ":FloatermToggle<CR>", opt)
+map("n", "<F12>", ":FloatermToggle<CR>", opt)
+
+-- Esc 回 Normal 模式
+map("t", "<Esc>", "<C-\\><C-n>", opt)
 
 -- bufferline 快捷键
 map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
@@ -83,6 +87,8 @@ map("n", "<Leader>9", "<Cmd>BufferLineGoToBuffer 9<CR>", opt)
 map("n", "<Leader>0", "<Cmd>BufferLineGoToBuffer 0<CR>", opt)
 map("n", "gb", ":BufferLinePick<CR>", opt)
 map("n", "gc", ":BufferLinePickClose<CR>", opt)
+map("n", "<A-]>", ":BufferLineCycleNext<CR>", opt)
+map("n", "<A-[>", ":BufferLineCyclePrev<CR>", opt)
 
 -- 生成 title
 map("n", "ma", ":call SetTitle()<CR>", opt)
@@ -91,6 +97,11 @@ map('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
 map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opt)
 map('n', 'go', '<cmd>lua vim.diagnostic.open_float()<CR>', opt)
-map('n', '<C-l>', '<cmd>lua vim.lsp.buf.format{ async = true }<CR>', opt)
+map('n', '<C-L>', '<cmd>lua vim.lsp.buf.format{ async = true }<CR>', opt)
 -- map('n', '<S-F4>', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opt)
 map('n', '<F2>', '<cmd>lua vim.diagnostic.goto_next()<CR>', opt)
+
+-- terslation快捷键
+map('n', '<C-O>', ':TerslationToggle<CR>', opt)
+map('n', '<C-Y>', ':TerslationWordTrans<CR>', opt)
+map('v', '<C-X>', ':TerslationSelectTrans<CR>', opt)

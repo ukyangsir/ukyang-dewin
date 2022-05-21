@@ -1,10 +1,13 @@
 " Copyright (C)2022 By ukyang. All Rights Reserved.
 " Author: ukyang
 " E-mail: ukyang_ma@163.com
-" Date: 2022-05-20
+" Date: 2022-05-21
 " Description:
 
 
+set showtabline=2
+" set background=dark
+set termguicolors
 set clipboard+=unnamedplus
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
@@ -25,21 +28,26 @@ call plug#begin('~/.config/nvim/plugged')
 " Plug 'morhetz/gruvbox'
 " Plug 'sainnhe/gruvbox-material'
   Plug 'glepnir/zephyr-nvim'
-  Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 " Plug 'ellisonleao/gruvbox.nvim'
 " Plug 'catppuccin/nvim'
+" Plug 'rebelot/kanagawa.nvim'
+" Plug 'phanviet/vim-monokai-pro'
 
-"  Plug 'itchyny/lightline.vim'
-"	Plug 'scrooloose/nerdtree'
-"  Plug 'mengelbrecht/lightline-bufferline'
+  Plug 'kyazdani42/nvim-web-devicons'
 
 "  bufferline
   Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
 " lsp
-	Plug 'neovim/nvim-lspconfig'
-	Plug 'williamboman/nvim-lsp-installer'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'williamboman/nvim-lsp-installer'
 
+" lspkind
+  Plug 'onsails/lspkind-nvim'
+
+" lspsaga
+  Plug 'glepnir/lspsaga.nvim'
 " nvim-tree
   Plug 'kyazdani42/nvim-tree.lua'
 
@@ -47,7 +55,10 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'voldikss/vim-floaterm'
 
 " lualine
-  Plug 'nvim-lualine/lualine.nvim'
+" Plug 'nvim-lualine/lualine.nvim'
+
+" windline
+  Plug 'windwp/windline.nvim'
 
 " nvim-cmp
   Plug 'hrsh7th/nvim-cmp'
@@ -61,14 +72,9 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'hrsh7th/vim-vsnip'
   Plug 'rafamadriz/friendly-snippets'
 
-" lspkind
-  Plug 'onsails/lspkind-nvim'
-
-
-" ========== appearence here. ==========
-" ========== useful tools here. ==========
-" ========== programming tools here. ==========
-
+" translation
+  Plug 'ukyangsir/Terslation'
+  Plug 'SpringHan/Terslation.vim'
 call plug#end()
 " ==================== END Plugin packages ====================
 
@@ -93,14 +99,14 @@ call plug#end()
 
 
 " ==================== Colorscheme settings ===================
-set showtabline=2
-
-" For dark version
-set background=dark
-set termguicolors
-" For light version
-" set background=light
-colorscheme zephyr
+colorscheme zephyr 
+" transparency
+highlight Normal guibg=none ctermbg=none
+highlight LineNr guifg=DarkGray
+highlight CursorLineNr guifg=White ctermfg=white
+highlight CursorLine cterm=none ctermbg=none guibg=none
+" marks
+highlight SignColumn guibg=none ctermbg=none
 " ==================== END Colorscheme settings ===================
 
 
@@ -109,14 +115,18 @@ lua require('basic')
 lua require('keybindings')
 lua require('plugin-config/nvim-tree')
 lua require('plugin-config/bufferline')
-lua require('plugin-config/lualine')
+lua require('plugin-config/windline')
 lua require('lsp/lsp')
 lua require('lsp/nvim-cmp')
+lua require('lsp/lspsaga')
+" lua require('theme/kanagawa')
 " ==================== END External Lua settings ===================
 
 
 " ==================== External settings ===================
 source ~/.config/nvim/vim_raw/shpy-autoheader.vim
+source ~/.config/nvim/vim_raw/terslation.vim
+source ~/.config/nvim/vim_raw/floaterm.vim
 " ==================== END External settings ===================
 
 

@@ -53,6 +53,7 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
     width = 32,
     height = 30,
     side = "left",
+    auto_resize = true,
     preserve_window_proportions = false,
     number = false,
     relativenumber = false,
@@ -60,13 +61,13 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
     mappings = {
       custom_only = false,
       list = {
-        { key = {"<CR>", "l", "<2-LeftMouse>"}, cb = tree_cb("edit") },
+        { key = { "<CR>", "l", "<2-LeftMouse>" }, cb = tree_cb("edit") },
         { key = "v", cb = tree_cb("vsplit") },
         { key = "s", cb = tree_cb("split") },
         { key = "h", cb = tree_cb "close_node" },
         { key = "o", cb = tree_cb("system_open") },
       },
-  }
+    }
   },
   hijack_directories = {
     enable = true,
@@ -136,4 +137,3 @@ nvim_tree.setup { -- BEGIN_DEFAULT_OPTS
     },
   },
 } -- END_DEFAULT_OPTS
-

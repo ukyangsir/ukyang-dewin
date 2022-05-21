@@ -3,7 +3,7 @@ sudo apt install -y gnupg ca-certificates \
     gcc-multilib g++-multilib cmake libssl-dev pkg-config \
     libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
     libbz2-dev libsndio-dev freeglut3-dev libxmu-dev libxi-dev libfontconfig1-dev \
-    python3-dev python3-pip python3-setuptools
+    
 # Rust 环境
 curl --proto '=https' --tlsv1.2 -sSf "https://sh.rustup.rs" | sh
 

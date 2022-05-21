@@ -57,7 +57,7 @@ vim.o.mouse = "a"
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.swapfile = false
--- smaller updatetime 
+-- smaller updatetime
 -- vim.o.updatetime = 300
 -- 等待mappings
 -- vim.o.timeoutlen = 100
@@ -80,3 +80,7 @@ vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.pumheight = 10
 -- always show tabline
 vim.o.showtabline = 2
+-- 是否透明背景
+vim.g.background_transparency = true
+-- 目录后加上反斜杠 /
+vim.g.nvim_tree_add_trailing = 1

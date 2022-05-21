@@ -23,6 +23,7 @@ echo "Mission1: Change sources.list && Add ppa"
 echo "Mission2: Install Something Necessary"
 echo "Mission3: Install Neovim"
 echo "Mission4: Install z.sh"
+echo "Mission5: Install python-related"
 #获取当前服务器时间，并格式化
 dqtime=$(date "+%Y-%m-%d %H:%M:%S")
 #输出当前服务器时间
@@ -42,14 +43,17 @@ echo "*******************End Change sources.list && Add ppa*******************"
 
 echo "**********************Install Something Necessary***********************"
 # nodejs and npm need to install manually
-sudo apt install -y curl git openssh-server net-tools zip unzip
+sudo apt install -y curl git openssh-server net-tools \
+  zip unzip \
+  python3-dev python3-pip python3-setuptools python3-venv python-pip
 echo "********************End Install Something Necessary*********************"
 
 
 echo "*****************************Install Neovim*****************************"
 sudo apt install -y neovim
-mkdir ~/.config/nvim
+sudo mkdir ~/.config/nvim
 cp -r ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
+sudo mkdir ~/.config/nvim/plugged
 echo 'alias vim='nvim''>> ~/.bashrc
 echo 'alias vi='nvim''>> ~/.bashrc
 echo 'alias v='nvim''>> ~/.bashrc
@@ -63,6 +67,10 @@ echo '. ~/z/z.sh' >> ~/.bashrc
 echo "***************************End Install z.sh*****************************"
 
 
+echo "************************Install python-related**************************"
+pip install requests
+echo "**********************End Install python-related************************"
+
 source ~/.bashrc
 
 
@@ -72,6 +80,7 @@ echo "Mission1 complete"
 echo "Mission2 complete"
 echo "Mission3 complete"
 echo "Mission4 complete"
+echo "Mission5 complete"
 #获取当前服务器时间，并格式化
 dqtime=$(date "+%Y-%m-%d %H:%M:%S")
 #输出当前服务器时间
