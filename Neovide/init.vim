@@ -15,7 +15,7 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " Windows Need Modify Here
 " cd /mnt/f/git_space
-cd ~/.config/nvim
+cd ~/ukyang-vimrelated-Windows/Neovide/init.vim
 " set guifont=FiraCode\ NF:h12
 " cd F:\git_space
 
