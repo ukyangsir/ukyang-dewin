@@ -31,6 +31,7 @@ echo "************************************************************************"
 
 
 echo "*********************Change sources.list && Add ppa*********************"
+sudo chmod 777 -R ~/ukyang-vimrelated-Windows
 sudo rm -rf /etc/apt/sources.list
 sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/sources.list /etc/apt/
 
@@ -47,6 +48,9 @@ echo "**********************Install Something Necessary***********************"
 sudo apt install -y curl git openssh-server net-tools \
   zip unzip \
   python3-dev python3-pip python3-setuptools python3-venv python-pip
+
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
 echo "********************End Install Something Necessary*********************"
 
 
