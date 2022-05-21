@@ -58,9 +58,9 @@ echo "*****************************Install Neovim*****************************"
 sudo apt install -y neovim
 mkdir ~/.config/nvim
 cp -r ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
-echo 'alias vim='nvim -u ~/init.vim''>> ~/.bashrc
-echo 'alias vi='nvim -u ~/init.vim''>> ~/.bashrc
-echo 'alias v='nvim -u ~/init.vim''>> ~/.bashrc
+echo 'alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
+echo 'alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
+echo 'alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
 echo "***************************End Install Neovim***************************"
 
 
