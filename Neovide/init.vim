@@ -78,8 +78,13 @@ call plug#begin('~/Neovim/plugged')
   Plug 'SpringHan/Terslation.vim'
 
 " autosave
-" Plug 'Pocco81/AutoSave.nvim'
+  Plug 'Pocco81/AutoSave.nvim'
 
+" telescope
+  Plug 'nvim-telescope/telescope.nvim'  " 
+  Plug 'nvim-lua/plenary.nvim'  "lua 开发模块
+  Plug 'sharkdp/fd' "文件查找
+  Plug 'BurntSushi/ripgrep' "文字查找
 
 call plug#end()
 " ==================== END Plugin packages ====================
@@ -122,7 +127,8 @@ lua require('keybindings')
 lua require('plugin-config/nvim-tree')
 lua require('plugin-config/bufferline')
 lua require('plugin-config/windline')
-" lua require('plugin-config/autosave')
+lua require('plugin-config/autosave')
+lua require('plugin-config/telescope')
 lua require('lsp/lsp')
 lua require('lsp/nvim-cmp')
 lua require('lsp/lspsaga')

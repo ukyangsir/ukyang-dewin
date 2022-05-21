@@ -56,6 +56,7 @@ sudo apt install -y curl git openssh-server net-tools \
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
+
 echo "********************End Install Something Necessary*********************"
 
 
