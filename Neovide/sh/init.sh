@@ -1,12 +1,11 @@
 #!/bin/bash
-#
-#**************************************************
-# Author:         ukyang                          *
-# E-mail:         ukyang_ma@163.com               *
-# Date:           2022-05-16        
-# Description:                                    *
-# Copyright 2022 by ukyang.All Rights Reserved    *
-#**************************************************
+# Copyright (C)2022 By ukyang. All Rights Reserved.
+# Author: ukyang
+# E-mail: ukyang_ma@163.com
+# Date: 2022-05-21
+# Description:
+# 自定义 Ubuntu18.04 初始化脚本，source 运行脚本即可
+
 echo " ___  ___  ___  __        ___    ___ ________  ________   ________      "
 echo "|\  \|\  \|\  \|\  \     |\  \  /  /|\   __  \|\   ___  \|\   ____\     "
 echo "\ \  \\\  \ \  \/  /|_   \ \  \/  / | \  \|\  \ \  \\ \  \ \  \___|     "
