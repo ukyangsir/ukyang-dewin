@@ -18,7 +18,7 @@ echo "                        \|___|/                                         "
 
 echo "*********************************Begin**********************************"
 echo "Init ukyang's Ubuntu1804"
-echo "Mission1: Change sources.list && Add ppa && Add wsl.conf"
+echo "Mission1: Change sources.list && Add ppa && Add wsl.conf && Add lsp path && Add plugged path"
 echo "Mission2: Install Something Necessary"
 echo "Mission3: Install Neovim"
 echo "Mission4: Install z.sh"
@@ -40,6 +40,11 @@ sudo apt update
 sudo apt upgrade
 
 sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/wsl.conf /etc/
+sudo mkdir ~/.cache/nvim
+sudo touch ~/.cache/nvim/lsp-installer.log
+sudo mkdir -p Neovim/plugged
+sudo chmod 777 -R ~/.cache/nvim
+sudo chmod 777 -R ~/Neovim
 echo "*******************End Change sources.list && Add ppa*******************"
 
 
