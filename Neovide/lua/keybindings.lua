@@ -28,7 +28,7 @@ local map = vim.api.nvim_set_keymap
 
 -- 无脑必配
 map("i", "jk", "<ESC>", opt)
-map("v", "ds", "<ESC>", opt)
+map("v", "sd", "<ESC>", opt)
 map("n", "<Space>", ":", opt)
 map("n", "<C-d>", "12jzz", opt)
 map("n", "<C-u>", "12kzz", opt)
@@ -50,7 +50,7 @@ map("n", "k", "kzz", opt)
 map("n", "j", "jzz", opt)
 map("n", "<C-a>", "ggVG", opt)
 map("n", "<Leader>q", ":q<CR>", opt)
-map("n", "<Leader>ww", ":w<CR>", opt)
+map("n", "<Leader>ww", ":wa<CR>", opt)
 map("n", "<Leader>wq", ":wqa<CR>", opt)
 -- map("n", "zen", ":set nu! nu? relativenumber! relativenumber? laststatus=0 showtabline=0<CR>", opt)
 -- map("n", "sen", ":set nu! nu? relativenumber! relativenumber? laststatus=2 showtabline=2<CR>", opt)

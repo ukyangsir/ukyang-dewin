@@ -6,6 +6,7 @@
 
 
 set showtabline=2
+
 " set background=dark
 set termguicolors
 set clipboard+=unnamedplus
@@ -13,30 +14,32 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 
 " Windows Need Modify Here
-cd /mnt/f/git_space
+" cd /mnt/f/git_space
+cd ~/.config/nvim
 " set guifont=FiraCode\ NF:h12
 " cd F:\git_space
 
 
 " ==================== Plugin packages ====================
 " Begin Plug, Depends On https://github.com/junegunn/vim-plug
-call plug#begin('~/.config/nvim/plugged')
-" ========== colorscheme here. ==========
+call plug#begin('~/ukyang-vimrelated-Windows/Neovide/plugged')
+" colorscheme
 " Plug 'joshdick/onedark.vim'
 " Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 " Plug 'EdenEast/nightfox.nvim'
 " Plug 'morhetz/gruvbox'
 " Plug 'sainnhe/gruvbox-material'
-  Plug 'glepnir/zephyr-nvim'
 " Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 " Plug 'ellisonleao/gruvbox.nvim'
 " Plug 'catppuccin/nvim'
 " Plug 'rebelot/kanagawa.nvim'
 " Plug 'phanviet/vim-monokai-pro'
+  Plug 'glepnir/zephyr-nvim'
 
+" icons
   Plug 'kyazdani42/nvim-web-devicons'
 
-"  bufferline
+" bufferline
   Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
 " lsp
@@ -48,14 +51,12 @@ call plug#begin('~/.config/nvim/plugged')
 
 " lspsaga
   Plug 'glepnir/lspsaga.nvim'
+
 " nvim-tree
   Plug 'kyazdani42/nvim-tree.lua'
 
 " floaterm
   Plug 'voldikss/vim-floaterm'
-
-" lualine
-" Plug 'nvim-lualine/lualine.nvim'
 
 " windline
   Plug 'windwp/windline.nvim'
@@ -75,6 +76,11 @@ call plug#begin('~/.config/nvim/plugged')
 " translation
   Plug 'ukyangsir/Terslation'
   Plug 'SpringHan/Terslation.vim'
+
+" autosave
+" Plug 'Pocco81/AutoSave.nvim'
+
+
 call plug#end()
 " ==================== END Plugin packages ====================
 
@@ -116,19 +122,17 @@ lua require('keybindings')
 lua require('plugin-config/nvim-tree')
 lua require('plugin-config/bufferline')
 lua require('plugin-config/windline')
+" lua require('plugin-config/autosave')
 lua require('lsp/lsp')
 lua require('lsp/nvim-cmp')
 lua require('lsp/lspsaga')
-" lua require('theme/kanagawa')
 " ==================== END External Lua settings ===================
 
 
 " ==================== External settings ===================
-source ~/.config/nvim/vim_raw/shpy-autoheader.vim
-source ~/.config/nvim/vim_raw/terslation.vim
-source ~/.config/nvim/vim_raw/floaterm.vim
+source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/shpy-autoheader.vim
+source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/terslation.vim
+source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/floaterm.vim
 " ==================== END External settings ===================
-
-
 " ================================================== THE END. ============================================================ 
-" ========================================================================================================================
+" ======================================================================================================================== 
