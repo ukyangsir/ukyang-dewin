@@ -18,7 +18,7 @@ echo "                        \|___|/                                         "
 
 echo "*********************************Begin**********************************"
 echo "Init ukyang's Ubuntu1804"
-echo "Mission1: Change sources.list && Add ppa && Add wsl.conf && Add lsp path && Add plugged path"
+echo "Mission1: Change sources.list && Add ppa && Add wsl.conf && Add lsp path"
 echo "Mission2: Install Something Necessary"
 echo "Mission3: Install Neovim"
 echo "Mission4: Install z.sh"
@@ -42,9 +42,7 @@ sudo apt upgrade
 sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/wsl.conf /etc/
 sudo mkdir ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
-sudo mkdir -p Neovim/plugged
 sudo chmod 777 -R ~/.cache/nvim
-sudo chmod 777 -R ~/Neovim
 echo "*******************End Change sources.list && Add ppa*******************"
 
 
@@ -98,5 +96,5 @@ echo "Mission5 complete"
 #获取当前服务器时间，并格式化
 dqtime=$(date "+%Y-%m-%d %H:%M:%S")
 #输出当前服务器时间
-echo "BeginDate: ${dqtime}"
+echo "EndDate: ${dqtime}"
 echo "************************************************************************"
