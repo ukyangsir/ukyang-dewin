@@ -18,8 +18,6 @@ echo "    \|_______|\|__| \|__|\___/ /        \|__|\|__|\|__| \|__|\|_______| "
 echo "                        \|___|/                                         "
 
 cd ~/ukyang-vimrelated-Windows
-CURRENT_DIR=$(cd "$(dirname "$0")";pwd)
-echo "The current directory is：${CURRENT_DIR}"
 echo ""
 echo ""
 echo "*******************************本地库状态*******************************"
@@ -32,12 +30,14 @@ do
 	read -n 1 -p "是否继续提交? [Y/N] " input
 	case $input in
 		[yY][eE][sS]|[yY])
+      echo ""
       echo "********************************继续提交********************************"
 			createAt=$(date "+%Y-%m-%d %H:%M:%S")
 			# git pull GiteeTypora master
       echo "git add ......"
 			git add .
       read -p "输入 commit 信息： " message
+      echo ""
       echo "git commit -m '"${createAt}: ${message}"' ......"
 			git commit -m "'${createAt}: ${message}'"
       echo "git push ......"
