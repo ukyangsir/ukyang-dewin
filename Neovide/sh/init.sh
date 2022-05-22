@@ -31,7 +31,7 @@ echo "************************************************************************"
 
 
 echo "*********************Change sources.list && Add ppa*********************"
-sudo chmod 777 -R ~/ukyang-vimrelated-Windows
+echo "ukyang"|sudo -S chmod 777 -R ~/ukyang-vimrelated-Windows
 sudo rm -rf /etc/apt/sources.list
 sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/sources.list /etc/apt/
 

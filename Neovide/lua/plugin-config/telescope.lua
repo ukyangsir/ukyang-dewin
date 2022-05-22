@@ -1,3 +1,10 @@
+-- Copyright (C)2022 By ukyang. All Rights Reserved.
+-- Author: ukyang
+-- E-mail: ukyang_ma@163.com
+-- Date: 2022-05-22
+-- Description:
+
+
 require('telescope').setup {
   defaults = {
     -- Default configuration for telescope goes here:
@@ -15,14 +22,14 @@ require('telescope').setup {
       }
     }
   },
+  -- layout_strategy = 'vertical',
+  -- layout_config = { height = 0.5 },
   pickers = {
-    -- Default configuration for builtin pickers goes here:
-    -- picker_name = {
-    --   picker_config_key = value,
-    --   ...
-    -- }
-    -- Now the picker_config_key will be applied every time you call this
-    -- builtin picker
+    find_files = {
+      -- theme = "dropdown",
+      -- theme = "cursor",
+      -- theme = "ivy",
+    }
   },
   extensions = {
     -- Your extension configuration goes here:

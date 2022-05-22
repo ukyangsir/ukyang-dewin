@@ -12,9 +12,9 @@ sudo apt install -y zsh
 git clone git@github.com:ohmyzsh/ohmyzsh.git ~/ohmyzsh 
 # 脚本安装 ohmyzsh 终端主题
 sh ~/ohmyzsh/tools/install.sh
-rm -rf ~/ohmyzsh
-rm -rf ~/.zshrc
-cp ~/ukyang-vimrelated-Windows/Neovide/sh/.zshrc ~
+sudo rm -rf ~/ohmyzsh
+sudo rm -rf ~/.zshrc
+sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/.zshrc ~
 # 安装 ohmyzsh 插件 zsh-autosuggestions
 git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/plugins/zsh-autosuggestions 
 
