@@ -81,11 +81,16 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'Pocco81/AutoSave.nvim'
 
 " telescope
-  Plug 'nvim-telescope/telescope.nvim'  " 
+  Plug 'nvim-telescope/telescope.nvim'
   Plug 'nvim-lua/plenary.nvim'  "lua 开发模块
   Plug 'sharkdp/fd' "文件查找
   Plug 'BurntSushi/ripgrep' "文字查找
 
+" treesitter
+  Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
+  Plug 'p00f/nvim-ts-rainbow' " 彩虹括号
+" comment
+"  Plug ''
 call plug#end()
 " ==================== END Plugin packages ====================
 
@@ -129,6 +134,7 @@ lua require('plugin-config/bufferline')
 lua require('plugin-config/windline')
 lua require('plugin-config/autosave')
 lua require('plugin-config/telescope')
+lua require('plugin-config/nvim-treesitter')
 lua require('lsp/lsp')
 lua require('lsp/nvim-cmp')
 lua require('lsp/lspsaga')

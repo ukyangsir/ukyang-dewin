@@ -107,5 +107,5 @@ map('n', '<C-Y>', ':TerslationWordTrans<CR>', opt)
 map('v', '<C-X>', ':TerslationSelectTrans<CR>', opt)
 
 -- telescope 快捷键
-map('n', '<C-E>', ':Telescope find_files<CR>', opt)
-map('n', '<C-n>', ':Telescope oldfiles<CR>', opt)
+map('n', '<C-n>', ':Telescope find_files<CR>', opt)
+map('n', '<C-e>', ':Telescope oldfiles<CR>', opt)

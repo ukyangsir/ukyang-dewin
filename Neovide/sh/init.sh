@@ -49,8 +49,9 @@ echo "*******************End Change sources.list && Add ppa*******************"
 echo "**********************Install Something Necessary***********************"
 # nodejs and npm need to install manually
 sudo apt install -y curl git openssh-server net-tools \
-  zip unzip \
-  python3-dev python3-pip python3-setuptools python3-venv python-pip
+  tar zip unzip \
+  python3-dev python3-pip python3-setuptools python3-venv python-pip \
+  build-essential
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
