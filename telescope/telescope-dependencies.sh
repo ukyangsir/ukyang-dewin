@@ -4,7 +4,7 @@
 # E-mail: ukyang_ma@163.com
 # Date: 2022-05-22
 # Description:
-# telescope 插件 required 依赖安装脚本
+# NOTE: 必备脚本3：telescope 插件 required 依赖安装脚本，sh 运行即可
 
 
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb

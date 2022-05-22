@@ -63,13 +63,13 @@ vim.diagnostic.config(
 local function on_attach(client, bufnr)
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
   -- 跳转到定义（代替内置 LSP 的窗口，telescope 插件让跳转定义更方便）
-  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>Telescope lsp_definitions theme=dropdown<CR>', opts)
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gd', '<cmd>Telescope lsp_definitions<CR>', opts)
   -- 列出光标下所有引用（代替内置 LSP 的窗口，telescope 插件让查看引用更方便）
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>Telescope lsp_references theme=dropdown<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>Telescope lsp_references<CR>", opts)
   -- 工作区诊断（代替内置 LSP 的窗口，telescope 插件让工作区诊断更方便）
   vim.api.nvim_buf_set_keymap(bufnr, "n", "go", "<cmd>Telescope diagnostics<CR>", opts)
   -- 显示代码可用操作（代替内置 LSP 的窗口，telescope 插件让代码行为更方便）
-  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>Telescope lsp_code_actions theme=dropdown<CR>", opts)
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>Telescope lsp_code_actions<CR>", opts)
   -- 变量重命名（代替内置 LSP 的窗口，Lspsaga 让变量重命名更美观）
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>cn", "<cmd>Lspsaga rename<CR>", opts)
   -- 查看帮助信息（代替内置 LSP 的窗口，Lspsaga 让查看帮助信息更美观）

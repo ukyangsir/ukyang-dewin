@@ -109,3 +109,6 @@ map('v', '<C-X>', ':TerslationSelectTrans<CR>', opt)
 -- telescope 快捷键
 map('n', '<C-n>', ':Telescope find_files<CR>', opt)
 map('n', '<C-e>', ':Telescope oldfiles<CR>', opt)
+
+-- 查找 TODO 标签
+map("n", "to", "<cmd>TodoTelescope<CR>", opt)

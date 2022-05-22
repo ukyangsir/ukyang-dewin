@@ -1,12 +1,11 @@
 #!/bin/bash
-#
-#**************************************************
-# Author:         ukyang                          *
-# E-mail:         ukyang_ma@163.com               *
-# Date:           2022-05-16        
-# Description:                                    *
-# Copyright 2022 by ukyang.All Rights Reserved    *
-#**************************************************
+# Copyright (C)2022 By ukyang. All Rights Reserved.
+# Author: ukyang
+# E-mail: ukyang_ma@163.com
+# Date: 2022-05-22
+# Description:
+# NOTE: 必备脚本2：安装 zsh 与 ohmyzsh 的脚本，source 运行即可
+
 echo "************************Install zsh && ohmyzsh**************************"
 sudo apt install -y zsh
 git clone git@github.com:ohmyzsh/ohmyzsh.git ~/ohmyzsh 

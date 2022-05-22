@@ -4,7 +4,6 @@
 " Date: 2022-05-21
 " Description:
 
-
 set showtabline=2
 
 " set background=dark
@@ -74,6 +73,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'rafamadriz/friendly-snippets'
 
 " translation
+" NOTE: 必备脚本5：terslation 命令 terlat 安装脚本，到我的仓库目录下 sudo make install 即可
   Plug 'ukyangsir/Terslation'
   Plug 'SpringHan/Terslation.vim'
 
@@ -93,6 +93,9 @@ call plug#begin('~/.config/nvim/plugged')
 " comment
   Plug 'numToStr/Comment.nvim'
   Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+
+" todo-comments
+  Plug 'folke/todo-comments.nvim'
 call plug#end()
 " ==================== END Plugin packages ====================
 
@@ -138,6 +141,7 @@ lua require('plugin-config/windline')
 lua require('plugin-config/telescope')
 lua require('plugin-config/nvim-treesitter')
 lua require('plugin-config/comment')
+lua require('plugin-config/todo-comments')
 lua require('lsp/lsp')
 lua require('lsp/nvim-cmp')
 lua require('lsp/lspsaga')

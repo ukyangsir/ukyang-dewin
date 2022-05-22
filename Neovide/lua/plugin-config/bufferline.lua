@@ -8,7 +8,6 @@ require('bufferline').setup {
     right_mouse_command = "bdelete! %d", -- can be a string | function, see "Mouse actions"
     left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
     middle_mouse_command = nil, -- can be a string | function, see "Mouse actions"
-    -- NOTE: this plugin is designed with this icon in mind,
     -- and so changing this is NOT recommended, this is intended
     -- as an escape hatch for people who cannot bear it for whatever reason
     indicator_icon = '▎',
@@ -35,7 +34,6 @@ require('bufferline').setup {
     diagnostics_indicator = function(count, level, diagnostics_dict, context)
       return "(" .. count .. ")"
     end,
-    -- NOTE: this will be called a lot so don't do any heavy processing here
     custom_filter = function(buf_number, buf_numbers)
       -- filter out filetypes you don't want to see
       if vim.bo[buf_number].filetype ~= "<i-dont-want-to-see-this>" then

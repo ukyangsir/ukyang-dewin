@@ -1,3 +1,11 @@
+#!/bin/bash
+# Copyright (C)2022 By ukyang. All Rights Reserved.
+# Author: ukyang
+# E-mail: ukyang_ma@163.com
+# Date: 2022-05-22
+# Description:
+# FIX:暂不可用脚本1：Neovide 安装脚本，但目前 Ubuntu1804 编译后有 bug，无法运行
+
 # Neovide 所需软件和环境
 sudo apt install -y gnupg ca-certificates \
     gcc-multilib g++-multilib cmake libssl-dev pkg-config \
