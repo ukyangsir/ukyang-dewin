@@ -65,7 +65,7 @@ require('bufferline').setup {
     -- [focused and unfocused]. eg: { '|', '|' }
     separator_style = "thin",
     enforce_regular_tabs = false,
-    always_show_bufferline = true,
+    always_show_bufferline = false,
     sort_by = 'insert_after_current'
   }
 }

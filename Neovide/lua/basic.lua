@@ -79,7 +79,9 @@ vim.o.wildmenu = true
 vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.pumheight = 10
 -- always show tabline
-vim.o.showtabline = 2
+vim.o.showtabline = 0
+-- always show laststatus
+vim.o.laststatus = 0
 -- 是否透明背景
 vim.g.background_transparency = true
 -- 目录后加上反斜杠 /

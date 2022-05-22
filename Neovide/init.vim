@@ -4,7 +4,6 @@
 " Date: 2022-05-21
 " Description:
 
-set showtabline=2
 
 " set background=dark
 set termguicolors
@@ -39,7 +38,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'kyazdani42/nvim-web-devicons'
 
 " bufferline
-  Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
+" Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
 " windline
   Plug 'windwp/windline.nvim'
@@ -135,7 +134,7 @@ highlight SignColumn guibg=none ctermbg=none
 lua require('basic')
 lua require('keybindings')
 lua require('plugin-config/nvim-tree')
-lua require('plugin-config/bufferline')
+" lua require('plugin-config/bufferline')
 lua require('plugin-config/windline')
 " lua require('plugin-config/autosave')
 lua require('plugin-config/telescope')
