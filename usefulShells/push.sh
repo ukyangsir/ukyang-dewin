@@ -39,6 +39,7 @@ do
       read -p "输入 commit 信息： " message
       echo ""
       echo "git commit -m '"${createAt}: ${message}"' ......"
+      echo ""
 			git commit -m "'${createAt}: ${message}'"
       echo "git push ......"
       git push
