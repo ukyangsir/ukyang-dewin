@@ -3,7 +3,8 @@
 # E-mail: ukyang_ma@163.com
 # Date: 2022-05-22
 # Description:
-# 安装自定义 push 命令
+# push 命令
+# backup 命令
 
 install:
 	touch /usr/bin/push

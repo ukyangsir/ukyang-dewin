@@ -21,14 +21,14 @@ local colors = {
 
 local conditions = {
   buffer_not_empty = function()
-    return vim.fn.empty(vim.fn.expand('%:t')) ~= 1
+    return vim.empty(vim.expand('%:t')) ~= 1
   end,
   hide_in_width = function()
-    return vim.fn.winwidth(0) > 80
+    return vim.winwidth(0) > 80
   end,
   check_git_workspace = function()
-    local filepath = vim.fn.expand('%:p:h')
-    local gitdir = vim.fn.finddir('.git', filepath .. ';')
+    local filepath = vim.expand('%:p:h')
+    local gitdir = vim.finddir('.git', filepath .. ';')
     return gitdir and #gitdir > 0 and #gitdir < #filepath
   end,
 }
@@ -116,7 +116,7 @@ ins_left {
       ['!'] = colors.red,
       t = colors.red,
     }
-    return { fg = mode_color[vim.fn.mode()] }
+    return { fg = mode_color[vim.mode()] }
   end,
   padding = { right = 1 },
 }
@@ -160,14 +160,14 @@ ins_left {
   -- Lsp server name .
   function()
     local msg = 'No Active Lsp'
-    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-    local clients = vim.lsp.get_active_clients()
+    local buf_ft = vim.nvim_buf_get_option(0, 'filetype')
+    local clients = vim.get_active_clients()
     if next(clients) == nil then
       return msg
     end
     for _, client in ipairs(clients) do
       local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+      if filetypes and vim.index(filetypes, buf_ft) ~= -1 then
         return client.name
       end
     end

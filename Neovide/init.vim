@@ -42,6 +42,15 @@ call plug#begin('~/.config/nvim/plugged')
 " bufferline
   Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
+" windline
+  Plug 'windwp/windline.nvim'
+
+" nvim-tree
+  Plug 'kyazdani42/nvim-tree.lua'
+
+" floaterm
+  Plug 'voldikss/vim-floaterm'
+
 " lsp
   Plug 'neovim/nvim-lspconfig'
   Plug 'williamboman/nvim-lsp-installer'
@@ -51,15 +60,6 @@ call plug#begin('~/.config/nvim/plugged')
 
 " lspsaga
   Plug 'glepnir/lspsaga.nvim'
-
-" nvim-tree
-  Plug 'kyazdani42/nvim-tree.lua'
-
-" floaterm
-  Plug 'voldikss/vim-floaterm'
-
-" windline
-  Plug 'windwp/windline.nvim'
 
 " nvim-cmp
   Plug 'hrsh7th/nvim-cmp'
@@ -78,7 +78,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'SpringHan/Terslation.vim'
 
 " autosave
-  Plug 'Pocco81/AutoSave.nvim'
+" Plug 'Pocco81/AutoSave.nvim'
 
 " telescope
   Plug 'nvim-telescope/telescope.nvim'
@@ -89,8 +89,10 @@ call plug#begin('~/.config/nvim/plugged')
 " treesitter
   Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
   Plug 'p00f/nvim-ts-rainbow' " 彩虹括号
+
 " comment
-"  Plug ''
+  Plug 'numToStr/Comment.nvim'
+  Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 call plug#end()
 " ==================== END Plugin packages ====================
 
@@ -132,9 +134,10 @@ lua require('keybindings')
 lua require('plugin-config/nvim-tree')
 lua require('plugin-config/bufferline')
 lua require('plugin-config/windline')
-lua require('plugin-config/autosave')
+" lua require('plugin-config/autosave')
 lua require('plugin-config/telescope')
 lua require('plugin-config/nvim-treesitter')
+lua require('plugin-config/comment')
 lua require('lsp/lsp')
 lua require('lsp/nvim-cmp')
 lua require('lsp/lspsaga')
