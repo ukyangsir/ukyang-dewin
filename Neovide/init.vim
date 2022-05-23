@@ -32,69 +32,73 @@ call plug#begin('~/.config/nvim/plugged')
 " Plug 'catppuccin/nvim'
 " Plug 'rebelot/kanagawa.nvim'
 " Plug 'phanviet/vim-monokai-pro'
-  Plug 'glepnir/zephyr-nvim'
+Plug 'glepnir/zephyr-nvim'
 
 " icons
-  Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-web-devicons'
 
 " bufferline
 " Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
 " windline
-  Plug 'windwp/windline.nvim'
+Plug 'windwp/windline.nvim'
 
 " nvim-tree
-  Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-tree.lua'
 
 " floaterm
-  Plug 'voldikss/vim-floaterm'
+Plug 'voldikss/vim-floaterm'
 
 " lsp
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'williamboman/nvim-lsp-installer'
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
 
 " lspkind
-  Plug 'onsails/lspkind-nvim'
+Plug 'onsails/lspkind-nvim'
 
 " lspsaga
-  Plug 'tami5/lspsaga.nvim'
+Plug 'tami5/lspsaga.nvim'
 
 " nvim-cmp
-  Plug 'hrsh7th/nvim-cmp'
-  Plug 'hrsh7th/cmp-nvim-lsp'
-  Plug 'hrsh7th/cmp-buffer'
-  Plug 'hrsh7th/cmp-path'
-  Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
 
 " Snippet engine: vsnip
-  Plug 'hrsh7th/cmp-vsnip'
-  Plug 'hrsh7th/vim-vsnip'
-  Plug 'rafamadriz/friendly-snippets'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'rafamadriz/friendly-snippets'
 
 " translation
 " NOTE: 必备脚本5：terslation 命令 terlat 安装脚本，到我的仓库目录下 sudo make install 即可
-  Plug 'ukyangsir/Terslation'
-  Plug 'SpringHan/Terslation.vim'
+Plug 'ukyangsir/Terslation'
+Plug 'SpringHan/Terslation.vim'
 
 " autosave
 " Plug 'Pocco81/AutoSave.nvim'
 
 " telescope
-  Plug 'nvim-telescope/telescope.nvim'
-  Plug 'nvim-lua/plenary.nvim'  "lua 开发模块
-  Plug 'sharkdp/fd' "文件查找
-  Plug 'BurntSushi/ripgrep' "文字查找
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-lua/plenary.nvim'  "lua 开发模块
+Plug 'sharkdp/fd' "文件查找
+Plug 'BurntSushi/ripgrep' "文字查找
 
 " treesitter
-  Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
-  Plug 'p00f/nvim-ts-rainbow' " 彩虹括号
+Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
+Plug 'p00f/nvim-ts-rainbow' " 彩虹括号
 
 " comment
-  Plug 'numToStr/Comment.nvim'
-  Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+Plug 'numToStr/Comment.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 " todo-comments
-  Plug 'folke/todo-comments.nvim'
+Plug 'folke/todo-comments.nvim'
+
+" code format
+Plug 'sbdchd/neoformat'
+
 call plug#end()
 " ==================== END Plugin packages ====================
 
@@ -119,7 +123,7 @@ call plug#end()
 
 
 " ==================== Colorscheme settings ===================
-colorscheme zephyr 
+colorscheme zephyr
 " transparency
 highlight Normal guibg=none ctermbg=none
 " highlight LineNr guifg=DarkGray
@@ -142,5 +146,5 @@ source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/autoheader.vim
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/terslation.vim
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/floaterm.vim
 " ==================== END External settings ===================
-" ================================================== THE END. ============================================================ 
-" ======================================================================================================================== 
+" ================================================== THE END. ============================================================
+" ========================================================================================================================

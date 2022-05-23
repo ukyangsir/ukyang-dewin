@@ -4,7 +4,6 @@
 -- Date: 2022-05-21
 -- Description:
 
-
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -18,13 +17,12 @@ vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
 
 local opt = {
-  noremap = true,
-  silent = true,
+    noremap = true,
+    silent = true
 }
 
 -- 本地变量
 local map = vim.api.nvim_set_keymap
-
 
 -- 无脑必配
 map("i", "jk", "<ESC>", opt)
@@ -94,20 +92,24 @@ map("n", "ma", ":call SetTitle()<CR>", opt)
 
 -- map('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
 -- map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opt)
+map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
 -- map('n', 'go', '<cmd>lua vim.diagnostic.open_float()<CR>', opt)
-map('n', '<C-L>', '<cmd>lua vim.lsp.buf.format{ async = true }<CR>', opt)
+-- map('n', '<C-L>', '<cmd>lua vim.lsp.buf.format{ async = true }<CR>', opt)
 -- -- map('n', '<S-F4>', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opt)
-map('n', '<F2>', '<cmd>lua vim.diagnostic.goto_next()<CR>', opt)
+map("n", "<F2>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
 
 -- terslation快捷键
-map('n', '<C-O>', ':TerslationToggle<CR>', opt)
-map('n', '<C-Y>', ':TerslationWordTrans<CR>', opt)
-map('v', '<C-X>', ':TerslationSelectTrans<CR>', opt)
+map("n", "<C-O>", ":TerslationToggle<CR>", opt)
+map("n", "<C-Y>", ":TerslationWordTrans<CR>", opt)
+map("v", "<C-X>", ":TerslationSelectTrans<CR>", opt)
 
 -- telescope 快捷键
-map('n', '<C-n>', ':Telescope find_files<CR>', opt)
-map('n', '<C-e>', ':Telescope oldfiles<CR>', opt)
+map("n", "<C-n>", ":Telescope find_files<CR>", opt)
+map("n", "<C-e>", ":Telescope oldfiles<CR>", opt)
 
 -- 查找 TODO 标签
 map("n", "to", "<cmd>TodoTelescope<CR>", opt)
+
+-- neoformat 快捷键
+map("n", "<C-L>", "<cmd>Neoformat<CR>", opt)
+map("n", "<C-x>", ":Shfmt<CR>", opt)

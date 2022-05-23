@@ -4,27 +4,25 @@
 -- Date: 2022-05-20
 -- Description:
 
-
-
 -- require('plugin-config.autosave')
 -- require('plugin-config.bufferline')
-require('plugin_config.comment')
-require('plugin_config.nvim-tree')
-require('plugin_config.nvim-treesitter')
-require('plugin_config.telescope')
-require('plugin_config.todo-comments')
-require('plugin_config.windline')
+require("plugin_config.comment")
+require("plugin_config.nvim-tree")
+require("plugin_config.nvim-treesitter")
+require("plugin_config.telescope")
+require("plugin_config.todo-comments")
+require("plugin_config.windline")
+require("plugin_config.neoformat")
 
-require('lsp.lsp')
-require('lsp.lspsaga')
-require('lsp.nvim-cmp')
+require("lsp.lsp")
+require("lsp.lspsaga")
+require("lsp.nvim-cmp")
 
-require('keybindings')
-
+require("keybindings")
 
 -- uf8
 vim.g.encoding = "UTF-8"
-vim.o.fileencoding = 'utf-8'
+vim.o.fileencoding = "utf-8"
 -- jk移动时光标下上方保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
@@ -62,7 +60,7 @@ vim.bo.autoread = true
 -- vim.o.wrap = false
 -- vim.wo.wrap = false
 -- 行结尾可以跳到下一行
-vim.o.whichwrap = 'b,s,<,>,[,],h,l'
+vim.o.whichwrap = "b,s,<,>,[,],h,l"
 -- 允许隐藏被修改过的buffer
 vim.o.hidden = true
 -- 鼠标支持
@@ -86,11 +84,10 @@ vim.o.listchars = "space:·"
 -- 补全增强
 vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
-vim.o.shortmess = vim.o.shortmess .. 'c'
+vim.o.shortmess = vim.o.shortmess .. "c"
 vim.o.pumheight = 10
 -- 是否透明背景
 vim.g.background_transparency = true
-
 
 -- always show tabline
 vim.o.showtabline = 0
@@ -108,4 +105,3 @@ vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 目录后加上反斜杠 /
 vim.g.nvim_tree_add_trailing = 1
-

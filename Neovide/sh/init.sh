@@ -4,7 +4,7 @@
 # E-mail: ukyang_ma@163.com
 # Date: 2022-05-21
 # Description:
-# NOTE: 必备脚本1： Ubuntu18.04 初始化
+# NOTE: 必备脚本1： Ubuntu22.04 初始化
 
 
 echo -e "\033[33m ___  ___  ___  __        ___    ___ ________  ________   ________      \033[0m"
@@ -56,16 +56,12 @@ sudo apt install -y curl wget git openssh-server net-tools \
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
-
-cd ~/Neovim/plugged/Terslation/
-sudo make install
-cd ~
 echo "********************End Install Something Necessary*********************"
 
 
 echo "*****************************Install Neovim*****************************"
 sudo apt install -y neovim
-mkdir ~/.config/nvim
+sudo mkdir ~/.config/nvim
 sudo cp -r ~/ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
 sudo chmod -R 777 ~/.config/nvim
 echo 'alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
