@@ -72,34 +72,50 @@ do
         echo ""
         case $num in
            1)
+             read -p "input commit subject： " subject
+             echo ""
              echo -e "\e[36mgit commit -m '"add: ${subject} ${now}"' ......\e[0m"
              break
              ;;
            2)
+             read -p "input commit subject： " subject
+             echo ""
              echo -e "\e[36mgit commit -m '"update: ${subject} ${now}"' ......\e[0m"
              break
              ;;
            3)
+             read -p "input commit subject： " subject
+             echo ""
              echo -e "\e[36mgit commit -m '"fix: ${subject} ${now}"' ......\e[0m"
              break
              ;;
            4)
+             read -p "input commit subject： " subject
+             echo ""
              echo -e "\e[36mgit commit -m '"style: ${subject} ${now}"' ......\e[0m"
              break
              ;;
            5)
+             read -p "input commit subject： " subject
+             echo ""
              echo -e "\e[36mgit commit -m '"refactor: ${subject} ${now}"' ......\e[0m"
              break
              ;;
            6)
+             read -p "input commit subject： " subject
+             echo ""
              echo -e "\e[36mgit commit -m '"perf: ${subject} ${now}"' ......\e[0m"
              break
              ;;
            7)
+             read -p "input commit subject： " subject
+             echo ""
              echo -e "\e[36mgit commit -m '"docs: ${subject} ${now}"' ......\e[0m"
              break
              ;;
            8)
+             read -p "input commit subject： " subject
+             echo ""
              echo -e "\e[36mgit commit -m '"revert: ${subject} ${now}"' ......\e[0m"
              break
              ;;
