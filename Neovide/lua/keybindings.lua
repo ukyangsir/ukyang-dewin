@@ -52,10 +52,9 @@ map("n", "<C-a>", "ggVG", opt)
 map("n", "<Leader>q", ":q<CR>", opt)
 map("n", "<Leader>ww", ":wa<CR>", opt)
 map("n", "<Leader>wq", "ZZ", opt)
--- map("n", "zen", ":set nu! nu? relativenumber! relativenumber? laststatus=0 showtabline=0<CR>", opt)
--- map("n", "sen", ":set nu! nu? relativenumber! relativenumber? laststatus=2 showtabline=2<CR>", opt)
-map("n", "zen", ":set laststatus=0 showtabline=0<CR>", opt)
-map("n", "sen", ":set laststatus=2<CR>", opt)
+map("n", "shen", ":set nonumber norelativenumber laststatus=0<CR>", opt)
+map("n", "zen", ":set nu relativenumber laststatus=0<CR>", opt)
+map("n", "sen", ":set nu relativenumber laststatus=2<CR>", opt)
 
 -- alt + hjkl  窗口之间跳转
 map("n", "<A-h>", "<C-w>h", opt)

@@ -6,7 +6,7 @@
 
 
 " set background=dark
-set termguicolors
+" set termguicolors
 set clipboard+=unnamedplus
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
@@ -57,7 +57,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'onsails/lspkind-nvim'
 
 " lspsaga
-  Plug 'glepnir/lspsaga.nvim'
+  Plug 'tami5/lspsaga.nvim'
 
 " nvim-cmp
   Plug 'hrsh7th/nvim-cmp'
@@ -122,33 +122,23 @@ call plug#end()
 colorscheme zephyr 
 " transparency
 highlight Normal guibg=none ctermbg=none
-highlight LineNr guifg=DarkGray
+" highlight LineNr guifg=DarkGray
 highlight CursorLineNr guifg=White ctermfg=white
 highlight CursorLine cterm=none ctermbg=none guibg=none
 " marks
 highlight SignColumn guibg=none ctermbg=none
+" lspsaga
+" highlight link LspSagaFinderSelection guifg='#ff0000' guibg='#00ff00' gui='bold'
 " ==================== END Colorscheme settings ===================
 
 
 " ==================== External Lua settings ===================
 lua require('basic')
-lua require('keybindings')
-lua require('plugin-config/nvim-tree')
-" lua require('plugin-config/bufferline')
-lua require('plugin-config/windline')
-" lua require('plugin-config/autosave')
-lua require('plugin-config/telescope')
-lua require('plugin-config/nvim-treesitter')
-lua require('plugin-config/comment')
-lua require('plugin-config/todo-comments')
-lua require('lsp/lsp')
-lua require('lsp/nvim-cmp')
-lua require('lsp/lspsaga')
 " ==================== END External Lua settings ===================
 
 
 " ==================== External settings ===================
-source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/shpy-autoheader.vim
+source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/autoheader.vim
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/terslation.vim
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/floaterm.vim
 " ==================== END External settings ===================

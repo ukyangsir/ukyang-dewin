@@ -5,15 +5,29 @@
 -- Description:
 
 
+
+-- require('plugin-config.autosave')
+-- require('plugin-config.bufferline')
+require('plugin_config.comment')
+require('plugin_config.nvim-tree')
+require('plugin_config.nvim-treesitter')
+require('plugin_config.telescope')
+require('plugin_config.todo-comments')
+require('plugin_config.windline')
+
+require('lsp.lsp')
+require('lsp.lspsaga')
+require('lsp.nvim-cmp')
+
+require('keybindings')
+
+
 -- uf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = 'utf-8'
 -- jk移动时光标下上方保留8行
 vim.o.scrolloff = 8
 vim.o.sidescrolloff = 8
--- 使用相对行号
-vim.wo.number = true
-vim.wo.relativenumber = true
 -- 高亮所在行
 vim.wo.cursorline = true
 -- 缩2个空格等于一个Tab
@@ -45,8 +59,8 @@ vim.o.cmdheight = 1
 vim.o.autoread = true
 vim.bo.autoread = true
 -- 禁止折行
-vim.o.wrap = false
-vim.wo.wrap = false
+-- vim.o.wrap = false
+-- vim.wo.wrap = false
 -- 行结尾可以跳到下一行
 vim.o.whichwrap = 'b,s,<,>,[,],h,l'
 -- 允许隐藏被修改过的buffer
@@ -66,10 +80,6 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 -- 自动补全不自动选中
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
--- 样式
-vim.o.background = "dark"
-vim.o.termguicolors = true
-vim.opt.termguicolors = true
 -- 不可见字符的显示，这里只把空格显示为一个点
 vim.o.list = true
 vim.o.listchars = "space:·"
@@ -78,11 +88,24 @@ vim.o.wildmenu = true
 -- Dont' pass messages to |ins-completin menu|
 vim.o.shortmess = vim.o.shortmess .. 'c'
 vim.o.pumheight = 10
+-- 是否透明背景
+vim.g.background_transparency = true
+
+
 -- always show tabline
 vim.o.showtabline = 0
 -- always show laststatus
 vim.o.laststatus = 0
--- 是否透明背景
-vim.g.background_transparency = true
+-- auto wrap
+vim.o.wrap = true
+vim.wo.wrap = true
+-- 使用相对行号
+vim.wo.number = true
+vim.wo.relativenumber = true
+-- 样式
+vim.o.background = "dark"
+vim.o.termguicolors = true
+vim.opt.termguicolors = true
 -- 目录后加上反斜杠 /
 vim.g.nvim_tree_add_trailing = 1
+

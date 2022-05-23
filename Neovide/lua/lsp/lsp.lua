@@ -76,7 +76,38 @@ local function on_attach(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "gh", "<cmd>Lspsaga hover_doc<CR>", opts)
 end
 
-local servers = { 'bashls', 'cssls', 'html', 'jsonls', 'pyright', 'sumneko_lua', 'tsserver', 'vimls', 'volar', 'zk' }
+local servers = { 'bashls', 'cssls', 'html', 'jsonls', 'pyright', 'tsserver', 'vimls', 'volar', 'zk' }
+local runtime_path = vim.split(package.path, ";")
+table.insert(runtime_path, "lua/?.lua")
+table.insert(runtime_path, "lua/?/init.lua")
+require('lspconfig').sumneko_lua.setup {
+  on_attach = on_attach,
+  -- 比如这里修改成了中文提示信息，具体语言服务器是否支持中文提示还需要查看该语言服务器的配置项
+  cmd = { "lua-language-server", "--locale=zh-CN" },
+  filetypes = { "lua" },
+  log_level = 2,
+  -- 再比如我将该服务器的工作域范围改成了当前所在目录的工作区，避免了重复运行多个同样的语言服务器的问题
+  root_dir = function()
+    return vim.fn.getcwd()
+  end,
+  settings = {
+    Lua = {
+      runtime = {
+        version = "LuaJIT",
+        path = runtime_path
+      },
+      diagnostics = {
+        globals = { "vim" }
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file("", true)
+      },
+      telemetry = {
+        enable = false
+      }
+    }
+  }
+}
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,

@@ -49,7 +49,7 @@ echo "*******************End Change sources.list && Add ppa*******************"
 
 echo "**********************Install Something Necessary***********************"
 # nodejs and npm need to install manually
-sudo apt install -y curl git openssh-server net-tools \
+sudo apt install -y curl wget git openssh-server net-tools \
   tar zip unzip \
   python3-dev python3-pip python3-setuptools python3-venv python-pip \
   build-essential
@@ -66,8 +66,8 @@ echo "********************End Install Something Necessary*********************"
 echo "*****************************Install Neovim*****************************"
 sudo apt install -y neovim
 mkdir ~/.config/nvim
-sudo chmod -R 777 ~/.config/nvim
 sudo cp -r ~/ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
+sudo chmod -R 777 ~/.config/nvim
 echo 'alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
 echo 'alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
 echo 'alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
