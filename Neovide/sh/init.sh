@@ -4,7 +4,7 @@
 # E-mail: ukyang_ma@163.com
 # Date: 2022-05-21
 # Description:
-# NOTE: 必备脚本1：自定义 Ubuntu 18.04 初始化脚本，source 运行脚本即可
+# NOTE: 必备脚本1： Ubuntu18.04 初始化
 
 
 echo -e "\033[33m ___  ___  ___  __        ___    ___ ________  ________   ________      \033[0m"

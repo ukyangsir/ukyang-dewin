@@ -4,7 +4,7 @@
 # E-mail: ukyang_ma@163.com
 # Date: 2022-05-22
 # Description:
-# NOTE: 必备脚本2：安装 zsh 与 ohmyzsh 的脚本，source 运行即可
+# NOTE: 必备脚本2： zsh 与 ohmyzsh 的安装脚本
 
 echo "************************Install zsh && ohmyzsh**************************"
 echo "ukyang"|sudo -S apt install -y zsh
