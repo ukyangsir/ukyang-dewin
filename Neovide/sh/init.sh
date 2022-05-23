@@ -51,7 +51,7 @@ echo "**********************Install Something Necessary***********************"
 # nodejs and npm need to install manually
 sudo apt install -y curl wget git openssh-server net-tools \
   tar zip unzip \
-  python-pip python3-dev python3-pip python3-setuptools python3-venv \
+  python-pip python3-dev python3-setuptools python3-venv \
   build-essential
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -78,6 +78,7 @@ echo "***************************End Install z.sh*****************************"
 
 
 echo "************************Install python-related**************************"
+sudo apt install python3-pip 
 pip install requests
 echo "**********************End Install python-related************************"
 
