@@ -41,7 +41,7 @@ sudo apt update
 sudo apt upgrade
 
 sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/wsl.conf /etc/
-sudo mkdir ~/.cache/nvim
+sudo mkdir -p ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
 sudo chmod 777 -R ~/.cache/nvim
 echo "*******************End Change sources.list && Add ppa*******************"
@@ -51,7 +51,7 @@ echo "**********************Install Something Necessary***********************"
 # nodejs and npm need to install manually
 sudo apt install -y curl wget git openssh-server net-tools \
   tar zip unzip \
-  python3-dev python3-pip python3-setuptools python3-venv python-pip \
+  python-pip python3-dev python3-pip python3-setuptools python3-venv \
   build-essential
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
@@ -61,12 +61,12 @@ echo "********************End Install Something Necessary*********************"
 
 echo "*****************************Install Neovim*****************************"
 sudo apt install -y neovim
-sudo mkdir ~/.config/nvim
+sudo mkdir -p ~/.config/nvim
 sudo cp -r ~/ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
 sudo chmod -R 777 ~/.config/nvim
-echo 'alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
-echo 'alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
-echo 'alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim''>> ~/.bashrc
+echo "alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
+echo "alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
+echo "alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
 echo "***************************End Install Neovim***************************"
 
 
