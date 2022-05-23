@@ -52,7 +52,9 @@ echo "**********************Install Something Necessary***********************"
 sudo apt install -y curl wget git openssh-server net-tools \
   tar zip unzip \
   python-pip python3-dev python3-setuptools python3-venv \
-  build-essential
+  build-essential \
+  fd-find ripgrep \
+  python3-autopep8
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
@@ -78,7 +80,7 @@ echo "***************************End Install z.sh*****************************"
 
 
 echo "************************Install python-related**************************"
-sudo apt install python3-pip 
+sudo apt install -y python3-pip 
 pip install requests
 echo "**********************End Install python-related************************"
 

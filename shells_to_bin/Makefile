@@ -5,7 +5,7 @@
 # Description:
 # push 命令
 # backup 命令
-# NOTE: 必备脚本4： push 与 backup 安装脚本
+# NOTE: 必备脚本3： push 与 backup 安装脚本
 
 
 install:

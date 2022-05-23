@@ -72,7 +72,7 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'rafamadriz/friendly-snippets'
 
 " translation
-" NOTE: 必备脚本5：terslation 命令 terlat 安装脚本，到我的仓库目录下 sudo make install 即可
+" NOTE: 必备脚本4：terslation 命令 terlat 安装脚本，到我的仓库目录下 sudo make install 即可
 Plug 'ukyangsir/Terslation'
 Plug 'SpringHan/Terslation.vim'
 

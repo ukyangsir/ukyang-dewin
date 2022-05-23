@@ -4,7 +4,7 @@
 # E-mail: ukyang_ma@163.com
 # Date: 2022-05-22
 # Description:
-# NOTE: 必备脚本2： zsh/ohmyzsh 的安装脚本
+# NOTE: 必备脚本2： zsh/ohmyzsh 以及 代码格式化程序 的安装脚本
 
 echo "************************Install zsh && ohmyzsh**************************"
 echo "ukyang"|sudo -S apt install -y zsh
@@ -21,4 +21,7 @@ git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/plugins/
 
 source ~/.zshrc
 sudo chsh -s /bin/zsh
+
+# vue/lua
+sudo npm install -g prettier lua-fmt
 echo "**********************End Install zsh && ohmyzsh************************"
