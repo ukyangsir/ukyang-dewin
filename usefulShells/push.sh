@@ -135,7 +135,7 @@ do
              ;;
         esac
       done
-			git commit -m '${commitMessage}'
+			git commit -m "${commitMessage}"
       echo ""
       echo -e "\e[36mgit push ......\e[0m"
       git push
