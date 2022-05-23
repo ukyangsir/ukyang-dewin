@@ -16,6 +16,7 @@ echo -e "\033[33m   \ \_______\ \__\\ \__\__/  / /      \ \__\ \__\ \__\\ \__\ \
 echo -e "\033[33m    \|_______|\|__| \|__|\___/ /        \|__|\|__|\|__| \|__|\|_______| \033[0m"
 echo -e "\033[33m                        \|___|/                                         \033[0m"
 
+commitMessage=""
 argsError() {
   cat <<EOF
 Wrong use of the push shell!
@@ -75,48 +76,56 @@ do
              read -p "input commit subject： " subject
              echo ""
              echo -e "\e[36mgit commit -m '"add: ${subject} ${now}"' ......\e[0m"
+             commitMessage="add: ${subject} ${now}"
              break
              ;;
            2)
              read -p "input commit subject： " subject
              echo ""
              echo -e "\e[36mgit commit -m '"update: ${subject} ${now}"' ......\e[0m"
+             commitMessage="update: ${subject} ${now}"
              break
              ;;
            3)
              read -p "input commit subject： " subject
              echo ""
              echo -e "\e[36mgit commit -m '"fix: ${subject} ${now}"' ......\e[0m"
+             commitMessage="fix: ${subject} ${now}"
              break
              ;;
            4)
              read -p "input commit subject： " subject
              echo ""
              echo -e "\e[36mgit commit -m '"style: ${subject} ${now}"' ......\e[0m"
+             commitMessage="style: ${subject} ${now}"
              break
              ;;
            5)
              read -p "input commit subject： " subject
              echo ""
              echo -e "\e[36mgit commit -m '"refactor: ${subject} ${now}"' ......\e[0m"
+             commitMessage="refactor: ${subject} ${now}"
              break
              ;;
            6)
              read -p "input commit subject： " subject
              echo ""
              echo -e "\e[36mgit commit -m '"perf: ${subject} ${now}"' ......\e[0m"
+             commitMessage="perf: ${subject} ${now}"
              break
              ;;
            7)
              read -p "input commit subject： " subject
              echo ""
              echo -e "\e[36mgit commit -m '"docs: ${subject} ${now}"' ......\e[0m"
+             commitMessage="docs: ${subject} ${now}"
              break
              ;;
            8)
              read -p "input commit subject： " subject
              echo ""
              echo -e "\e[36mgit commit -m '"revert: ${subject} ${now}"' ......\e[0m"
+             commitMessage="revert: ${subject} ${now}"
              break
              ;;
            *)
@@ -126,7 +135,7 @@ do
              ;;
         esac
       done
-			git commit -m "'${createat}: ${message}'"
+			git commit -m "'${commitMessage}'"
       echo ""
       echo -e "\e[36mgit push ......\e[0m"
       git push
