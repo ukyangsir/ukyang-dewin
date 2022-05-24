@@ -56,8 +56,8 @@ sudo apt install -y curl wget git openssh-server net-tools \
   fd-find ripgrep \
   fontconfig daemonize \
 
-sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
-exec sudo nsenter -t $(pidof systemd) -m -p su - $LOGNAME
+# sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
+# exec sudo nsenter -t $(pidof systemd) -m -p su - $LOGNAME
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
