@@ -58,22 +58,33 @@ sudo touch ~/.cache/nvim/lsp-installer.log
 sudo chmod 777 -R ~/.cache
 echo -e "\e[36m==============================End Mission3==============================\e[0m"
 
-echo "**********************Install Something Necessary***********************"
-# enable systemctl
-sudo apt install -y curl wget git openssh-server net-tools \
-  tar zip unzip \
-  python-pip python3-dev python3-setuptools python3-venv \
-  build-essential \
-  fd-find ripgrep \
-  fontconfig daemonize \
 
+echo -e "\e[36m=================Mission4: Install something necessary==================\e[0m"
+sudo apt install -y curl wget git openssh-server net-tools \
+     tar zip unzip \
+     python-pip python3-dev python3-setuptools python3-venv \
+     build-essential \
+     fd-find ripgrep \
+     fontconfig daemonize \
 # sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
 # exec sudo nsenter -t $(pidof systemd) -m -p su - $LOGNAME
 # sudo systemctl restart snapd.service
-
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
-echo "********************End Install Something Necessary*********************"
+echo -e "\e[36m==============================End Mission4==============================\e[0m"
+
+echo -e "\e[36m=======================Mission5: Install Neovim=========================\e[0m"
+echo -e "\e[36m==============================End Mission5==============================\e[0m"
+
+echo -e "\e[36m========================Mission6: Install z.sh==========================\e[0m"
+echo -e "\e[36m==============================End Mission6==============================\e[0m"
+
+
+echo -e "\e[36m===================Mission7: Install python-related=====================\e[0m"
+echo -e "\e[36m==============================End Mission7==============================\e[0m"
+
+
+
 
 
 echo "*****************************Install Neovim*****************************"
