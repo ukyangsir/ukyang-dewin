@@ -2,7 +2,7 @@
 # Copyright (C)2022 By ukyang. All Rights Reserved.
 # Author: ukyang
 # E-mail: ukyang_ma@163.com
-# Date: 2022-05-21
+# Date: 2022-05-24
 # Description:
 # NOTE: 必备脚本1： Ubuntu22.04 初始化
 
@@ -17,18 +17,25 @@ echo -e "\033[33m    \|_______|\|__| \|__|\___/ /        \|__|\|__|\|__| \|__|\|
 echo -e "\033[33m                        \|___|/                                         \033[0m"
 
 
-echo "*********************************Begin**********************************"
-echo "Init ukyang's Ubuntu1804"
-echo "Mission1: Change sources.list && Add ppa && Add wsl.conf && Add lsp path"
-echo "Mission2: Install Something Necessary"
-echo "Mission3: Install Neovim"
-echo "Mission4: Install z.sh"
-echo "Mission5: Install python-related"
+echo -e "\e[36mWelcome to ukyang's Ubuntu-22.04!!!\e[0m"
+echo ""
+echo ""
+echo -e "\e[36m=============================Start To Init==============================\e[0m"
+echo "Init Ubuntu-22.04......"
+echo ""
+echo "Mission0: Add /etc/wsl.conf, Reboot, Add ssh-keys, Clone the repo to your home"
+echo "Mission1: Change sources.list(清华)"
+echo "Mission2: Add ppa(Neovim)"
+echo "Mission3: Add lsp path(for LSP)"
+echo "Mission4: Install something necessary"
+echo "Mission5: Install Neovim"
+echo "Mission6: Install z.sh"
+echo "Mission7: Install python-related"
 #获取当前服务器时间，并格式化
 dqtime=$(date "+%Y-%m-%d %H:%M:%S")
 #输出当前服务器时间
 echo "BeginDate: ${dqtime}"
-echo "************************************************************************"
+echo -e "\e[36m========================================================================\e[0m"
 
 
 echo "*********************Change sources.list && Add ppa*********************"
