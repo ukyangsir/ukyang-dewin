@@ -5,6 +5,7 @@
 # Date: 2022-05-22
 # Description:
 # NOTE: 必备脚本2： zsh/ohmyzsh 以及 代码格式化程序 的安装脚本
+# 记得测试 z 命令，npm -v 命令，以及 snap list 命令
 
 echo "************************Install zsh && ohmyzsh**************************"
 echo "ukyang"|sudo -S apt install -y zsh
