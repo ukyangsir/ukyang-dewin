@@ -26,33 +26,37 @@ echo ""
 echo "Mission0: Add /etc/wsl.conf, Reboot, Add ssh-keys, Clone the repo to your home"
 echo "Mission1: Change sources.list(清华)"
 echo "Mission2: Add ppa(Neovim)"
-echo "Mission3: Add lsp path(for LSP)"
+echo "Mission3: Add lsp log file(for LSP)"
 echo "Mission4: Install something necessary"
 echo "Mission5: Install Neovim"
 echo "Mission6: Install z.sh"
 echo "Mission7: Install python-related"
-#获取当前服务器时间，并格式化
-dqtime=$(date "+%Y-%m-%d %H:%M:%S")
+now=$(date "+%Y-%m-%d %H:%M:%S")
 #输出当前服务器时间
-echo "BeginDate: ${dqtime}"
+echo "BeginDate: ${now}"
 echo -e "\e[36m========================================================================\e[0m"
 
 
-echo "*********************Change sources.list && Add ppa*********************"
+echo -e "\e[36m===================Mission1: Change sources.list(清华)====================\e[0m"
 echo "ukyang"|sudo -S chmod 777 -R ~/ukyang-vimrelated-Windows
 sudo rm -rf /etc/apt/sources.list
-sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/sources.list /etc/apt/
+sudo cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/sources.list /etc/apt/
+sudo chmod 777 /etc/apt/sources.list 
+echo -e "\e[36m==============================End Mission1==============================\e[0m"
 
+
+echo -e "\e[36m=======================Mission2: Add ppa(Neovim)========================\e[0m"
 sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt upgrade
+echo -e "\e[36m==============================End Mission2==============================\e[0m"
 
-sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/wsl.conf /etc/
+
+echo -e "\e[36m==================Mission3: Add lsp log file(for LSP)===================\e[0m"
 sudo mkdir -p ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
 sudo chmod 777 -R ~/.cache
-echo "*******************End Change sources.list && Add ppa*******************"
-
+echo -e "\e[36m==============================End Mission3==============================\e[0m"
 
 echo "**********************Install Something Necessary***********************"
 # enable systemctl
@@ -106,7 +110,7 @@ echo "Mission3 complete"
 echo "Mission4 complete"
 echo "Mission5 complete"
 #获取当前服务器时间，并格式化
-dqtime=$(date "+%Y-%m-%d %H:%M:%S")
+now=$(date "+%Y-%m-%d %H:%M:%S")
 #输出当前服务器时间
-echo "EndDate: ${dqtime}"
+echo "EndDate: ${now}"
 echo "************************************************************************"
