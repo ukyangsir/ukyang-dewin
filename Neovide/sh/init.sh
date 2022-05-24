@@ -48,12 +48,16 @@ echo "*******************End Change sources.list && Add ppa*******************"
 
 
 echo "**********************Install Something Necessary***********************"
-# nodejs and npm need to install manually
+# enable systemctl
 sudo apt install -y curl wget git openssh-server net-tools \
   tar zip unzip \
   python-pip python3-dev python3-setuptools python3-venv \
   build-essential \
   fd-find ripgrep \
+  fontconfig daemonize \
+
+sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
+exec sudo nsenter -t $(pidof systemd) -m -p su - $LOGNAME
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
