@@ -24,4 +24,6 @@ sudo chsh -s /bin/zsh
 
 # vue/lua
 sudo npm install -g prettier lua-fmt
+# python
+sudo apt install -y python3-autopep8
 echo "**********************End Install zsh && ohmyzsh************************"

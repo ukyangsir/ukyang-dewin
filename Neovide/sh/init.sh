@@ -54,7 +54,6 @@ sudo apt install -y curl wget git openssh-server net-tools \
   python-pip python3-dev python3-setuptools python3-venv \
   build-essential \
   fd-find ripgrep \
-  python3-autopep8
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
