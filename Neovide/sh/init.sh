@@ -43,7 +43,7 @@ sudo apt upgrade
 sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/wsl.conf /etc/
 sudo mkdir -p ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
-sudo chmod 777 -R ~/.cache/nvim
+sudo chmod 777 -R ~/.cache
 echo "*******************End Change sources.list && Add ppa*******************"
 
 
@@ -58,6 +58,7 @@ sudo apt install -y curl wget git openssh-server net-tools \
 
 # sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
 # exec sudo nsenter -t $(pidof systemd) -m -p su - $LOGNAME
+# sudo systemctl restart snapd.service
 
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
