@@ -25,6 +25,8 @@ sudo apt install -y python3-pip
 echo -e "\e[36m=========================Intall python-related==========================\e[0m"
 pip3 install requests
 pip3.9 install requests
+cd ~/.config/nvim/plugged/Terslation
+sudo make install
 
 
 
