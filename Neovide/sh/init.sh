@@ -43,6 +43,7 @@ echo ""
 
 echo -e "\e[36m================Mission1: Change sources.list(tsinghua)=================\e[0m"
 echo "ukyang"|sudo -S chmod 777 -R ~/ukyang-vimrelated-Windows
+echo ""
 sudo rm -rf /etc/apt/sources.list
 sudo cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/sources.list /etc/apt/
 sudo chmod 777 /etc/apt/sources.list 
