@@ -151,7 +151,9 @@ do
 		  ;;
 		*)
       echo ""
-      echo -e "\e[36m======================Wrong input! 'yes' or 'no'========================\e[0m"
+      echo ""
+      echo ""
+      echo -e "\e[36m=======================Wrong input! 'Y' or 'N'==========================\e[0m"
       echo ""
 		  continue
 		  ;;
