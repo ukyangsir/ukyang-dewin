@@ -2,7 +2,7 @@
 # Copyright (C)2022 By ukyang. All Rights Reserved.
 # Author: ukyang
 # E-mail: ukyang_ma@163.com
-# Date: 2022-05-22
+# Date: 2022-05-28
 # Description:
 # git add . + git commit -m '' + git push
 
@@ -75,58 +75,146 @@ do
            1)
              read -p "input commit subject： " subject
              echo ""
-             echo -e "\e[36mgit commit -m '"add: ${subject}----${now}"' ......\e[0m"
-             commitMessage="add: ${subject}----${now}"
-             break
+             read -n 1 -p "The subject is '"${subject}"' , confirm it [Y/N] " confirmNum
+             echo ""
+             case $confirmNum in
+               [y/Y]|"")
+                    echo -e "\e[36mgit commit -m '"add: ${subject}----${now}"' ......\e[0m"
+                    commitMessage="add: ${subject}----${now}"
+                    break
+                    ;;
+               [n/N])
+                    echo -e "\e[36m==================Wrong commit subject! Input again!====================\e[0m"
+                    echo ""
+		                continue
+                    ;;
+             esac
              ;;
            2)
              read -p "input commit subject： " subject
              echo ""
-             echo -e "\e[36mgit commit -m '"update: ${subject}----${now}"' ......\e[0m"
-             commitMessage="update: ${subject}----${now}"
-             break
+             read -n 1 -p "The subject is '"${subject}"' , confirm it [Y/N] " confirmNum
+             echo ""
+             case $confirmNum in
+               [y/Y]|"")
+                    echo -e "\e[36mgit commit -m '"add: ${subject}----${now}"' ......\e[0m"
+                    commitMessage="update: ${subject}----${now}"
+                    break
+                    ;;
+               [n/N])
+                    echo -e "\e[36m==================Wrong commit subject! Input again!====================\e[0m"
+                    echo ""
+		                continue
+                    ;;
+             esac
              ;;
            3)
              read -p "input commit subject： " subject
              echo ""
-             echo -e "\e[36mgit commit -m '"fix: ${subject}----${now}"' ......\e[0m"
-             commitMessage="fix: ${subject}----${now}"
-             break
+             read -n 1 -p "The subject is '"${subject}"' , confirm it [Y/N] " confirmNum
+             echo ""
+             case $confirmNum in
+               [y/Y]|"")
+                    echo -e "\e[36mgit commit -m '"add: ${subject}----${now}"' ......\e[0m"
+                    commitMessage="fix: ${subject}----${now}"
+                    break
+                    ;;
+               [n/N])
+                    echo -e "\e[36m==================Wrong commit subject! Input again!====================\e[0m"
+                    echo ""
+		                continue
+                    ;;
+             esac
              ;;
            4)
              read -p "input commit subject： " subject
              echo ""
-             echo -e "\e[36mgit commit -m '"style: ${subject}----${now}"' ......\e[0m"
-             commitMessage="style: ${subject}----${now}"
-             break
+             read -n 1 -p "The subject is '"${subject}"' , confirm it [Y/N] " confirmNum
+             echo ""
+             case $confirmNum in
+               [y/Y]|"")
+                    echo -e "\e[36mgit commit -m '"add: ${subject}----${now}"' ......\e[0m"
+                    commitMessage="style: ${subject}----${now}"
+                    break
+                    ;;
+               [n/N])
+                    echo -e "\e[36m==================Wrong commit subject! Input again!====================\e[0m"
+                    echo ""
+		                continue
+                    ;;
+             esac
              ;;
            5)
              read -p "input commit subject： " subject
              echo ""
-             echo -e "\e[36mgit commit -m '"refactor: ${subject}----${now}"' ......\e[0m"
-             commitMessage="refactor: ${subject}----${now}"
-             break
+             read -n 1 -p "The subject is '"${subject}"' , confirm it [Y/N] " confirmNum
+             echo ""
+             case $confirmNum in
+               [y/Y]|"")
+                    echo -e "\e[36mgit commit -m '"add: ${subject}----${now}"' ......\e[0m"
+                    commitMessage="refactor: ${subject}----${now}"
+                    break
+                    ;;
+               [n/N])
+                    echo -e "\e[36m==================Wrong commit subject! Input again!====================\e[0m"
+                    echo ""
+		                continue
+                    ;;
+             esac
              ;;
            6)
              read -p "input commit subject： " subject
              echo ""
-             echo -e "\e[36mgit commit -m '"perf: ${subject}----${now}"' ......\e[0m"
-             commitMessage="perf: ${subject}----${now}"
-             break
+             read -n 1 -p "The subject is '"${subject}"' , confirm it [Y/N] " confirmNum
+             echo ""
+             case $confirmNum in
+               [y/Y]|"")
+                    echo -e "\e[36mgit commit -m '"add: ${subject}----${now}"' ......\e[0m"
+                    commitMessage="perf: ${subject}----${now}"
+                    break
+                    ;;
+               [n/N])
+                    echo -e "\e[36m==================Wrong commit subject! Input again!====================\e[0m"
+                    echo ""
+		                continue
+                    ;;
+             esac
              ;;
            7)
              read -p "input commit subject： " subject
              echo ""
-             echo -e "\e[36mgit commit -m '"docs: ${subject}----${now}"' ......\e[0m"
-             commitMessage="docs: ${subject}----${now}"
-             break
+             read -n 1 -p "The subject is '"${subject}"' , confirm it [Y/N] " confirmNum
+             echo ""
+             case $confirmNum in
+               [y/Y]|"")
+                    echo -e "\e[36mgit commit -m '"add: ${subject}----${now}"' ......\e[0m"
+                    commitMessage="docs: ${subject}----${now}"
+                    break
+                    ;;
+               [n/N])
+                    echo -e "\e[36m==================Wrong commit subject! Input again!====================\e[0m"
+                    echo ""
+		                continue
+                    ;;
+             esac
              ;;
            8)
              read -p "input commit subject： " subject
              echo ""
-             echo -e "\e[36mgit commit -m '"revert: ${subject}----${now}"' ......\e[0m"
-             commitMessage="revert: ${subject}----${now}"
-             break
+             read -n 1 -p "The subject is '"${subject}"' , confirm it [Y/N] " confirmNum
+             echo ""
+             case $confirmNum in
+               [y/Y]|"")
+                    echo -e "\e[36mgit commit -m '"add: ${subject}----${now}"' ......\e[0m"
+                    commitMessage="revert: ${subject}----${now}"
+                    break
+                    ;;
+               [n/N])
+                    echo -e "\e[36m==================Wrong commit subject! Input again!====================\e[0m"
+                    echo ""
+		                continue
+                    ;;
+             esac
              ;;
            *)
              echo -e "\e[36m=================Wrong input! Choose the right number!==================\e[0m"
