@@ -33,6 +33,7 @@ echo "Mission3: Add lsp log file(lsp,treesitter,cmp,format)"
 echo "Mission4: Install something necessary"
 echo "Mission5: Install Neovim"
 echo "Mission6: Install z.sh"
+echo "Mission7: Install shells_to_bin(push,backup)"
 begindate=$(date "+%Y-%m-%d %H:%M:%S")
 echo "BeginDate: ${begindate}"
 echo -e "\e[36m========================================================================\e[0m"
@@ -114,6 +115,14 @@ echo -e "\e[36m==============================End Mission6=======================
 echo ""
 echo ""
 
+echo -e "\e[36m===================Mission7: Install shells_to_bin======================\e[0m"
+cd ~/ukyang-vimrelated-Windows/shells_to_bin
+sudo make install
+echo -e "\e[36m==============================End Mission7==============================\e[0m"
+
+echo ""
+echo ""
+
 echo -e "\e[36m========================================================================\e[0m"
 source ~/.bashrc
 echo "Mission1 complete"
@@ -122,6 +131,7 @@ echo "Mission3 complete"
 echo "Mission4 complete"
 echo "Mission5 complete"
 echo "Mission6 complete"
+echo "Mission7 complete"
 enddate=$(date "+%Y-%m-%d %H:%M:%S")
 echo "EndDate: ${enddate}"
 echo -e "\e[36m===========================Init successfully============================\e[0m"
