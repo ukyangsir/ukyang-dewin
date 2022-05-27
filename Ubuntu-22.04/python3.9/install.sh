@@ -6,9 +6,6 @@
 # Description: 
 
 
-# python3.9 related(completing......)
-     # python-pip python3-dev python3-setuptools python3-venv \
-
 echo -e "\e[36m======================Intall python3.9 && pip3.9========================\e[0m"
 cd ~
 curl -LO https://www.python.org/ftp/python/3.9.12/Python-3.9.12.tar.xz
