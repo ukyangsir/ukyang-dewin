@@ -29,10 +29,10 @@ echo ""
 echo "Mission0: Add /etc/wsl.conf, Reboot, Add ssh-keys, Clone the repo to your home path"
 echo "Mission1: Change sources.list(tsinghua)"
 echo "Mission2: Add ppa(Neovim)"
-echo "Mission3: Add lsp log file(lsp,treesitter,cmp,format)"
-echo "Mission4: Install something necessary"
+echo "Mission3: Install something necessary"
+echo "Mission4: Install z.sh"
 echo "Mission5: Install Neovim"
-echo "Mission6: Install z.sh"
+echo "Mission6: Add lsp log file(lsp,treesitter,cmp,format)"
 echo "Mission7: Install shells_to_bin(push,backup)"
 begindate=$(date "+%Y-%m-%d %H:%M:%S")
 echo "BeginDate: ${begindate}"
@@ -59,15 +59,7 @@ echo "y" | sudo -S apt upgrade
 echo ""
 echo ""
 
-echo -e "\e[36m=========Mission3: Add lsp log file(lsp,treesitter,cmp,format)==========\e[0m"
-sudo mkdir -p ~/.cache/nvim
-sudo touch ~/.cache/nvim/lsp-installer.log
-sudo chmod 777 -R ~/.cache
-
-echo ""
-echo ""
-
-echo -e "\e[36m=================Mission4: Install something necessary==================\e[0m"
+echo -e "\e[36m=================Mission3: Install something necessary==================\e[0m"
 # net related(completed)
 # pack and unpack related(completed)
 # build related(completed)
@@ -89,6 +81,13 @@ sudo apt-get install -y nodejs
 echo ""
 echo ""
 
+echo -e "\e[36m========================Mission4: Install z.sh==========================\e[0m"
+git clone git@github.com:rupa/z.git ~/z
+echo '. ~/z/z.sh' >> ~/.bashrc
+
+echo ""
+echo ""
+
 echo -e "\e[36m=======================Mission5: Install Neovim=========================\e[0m"
 sudo apt install -y neovim
 sudo mkdir -p ~/.config/nvim
@@ -97,13 +96,22 @@ sudo chmod -R 777 ~/.config/nvim
 echo "alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
 echo "alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
 echo "alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
+source ~/.bashrc
 
 echo ""
 echo ""
 
-echo -e "\e[36m========================Mission6: Install z.sh==========================\e[0m"
-git clone git@github.com:rupa/z.git ~/z
-echo '. ~/z/z.sh' >> ~/.bashrc
+echo -e "\e[36m=========Mission6: Prepares(lsp,treesitter,cmp,format)==========\e[0m"
+# lsp log file
+sudo mkdir -p ~/.cache/nvim
+sudo touch ~/.cache/nvim/lsp-installer.log
+sudo chmod 777 -R ~/.cache
+
+# format
+# vue/lua
+sudo npm install -g prettier lua-fmt
+# python
+sudo apt install -y python3-autopep8
 
 echo ""
 echo ""
@@ -116,7 +124,6 @@ echo ""
 echo ""
 
 echo -e "\e[36m========================================================================\e[0m"
-source ~/.bashrc
 echo "Mission1 complete"
 echo "Mission2 complete"
 echo "Mission3 complete"

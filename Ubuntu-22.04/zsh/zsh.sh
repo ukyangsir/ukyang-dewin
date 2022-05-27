@@ -7,7 +7,7 @@
 # NOTE: 必备脚本2： zsh/ohmyzsh 以及 代码格式化程序 的安装脚本
 # 记得测试 z 命令，npm -v 命令，以及 snap list 命令
 
-echo "************************Install zsh && ohmyzsh**************************"
+echo -e "\e[36m========================Install zsh && ohmyzsh==========================\e[0m"
 echo "ukyang"|sudo -S apt install -y zsh
 echo ""
 git clone git@github.com:ohmyzsh/ohmyzsh.git ~/ohmyzsh 
@@ -15,7 +15,7 @@ git clone git@github.com:ohmyzsh/ohmyzsh.git ~/ohmyzsh
 sh ~/ohmyzsh/tools/install.sh
 sudo rm -rf ~/ohmyzsh
 sudo rm -rf ~/.zshrc
-sudo cp ~/ukyang-vimrelated-Windows/Neovide/sh/.zshrc ~
+sudo cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/zsh/.zshrc ~/
 sudo chmod 777 ~/.zshrc
 # 安装 ohmyzsh 插件 zsh-autosuggestions
 git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/plugins/zsh-autosuggestions 
@@ -23,8 +23,4 @@ git clone git@github.com:zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/plugins/
 source ~/.zshrc
 sudo chsh -s /bin/zsh
 
-# vue/lua
-sudo npm install -g prettier lua-fmt
-# python
-sudo apt install -y python3-autopep8
-echo "**********************End Install zsh && ohmyzsh************************"
+echo -e "\e[36m======================End Install zsh && ohmyzsh========================\e[0m"
