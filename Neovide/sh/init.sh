@@ -53,10 +53,10 @@ echo ""
 echo ""
 
 echo -e "\e[36m=======================Mission2: Add ppa(Neovim)========================\e[0m"
-sudo add-apt-repository ppa:neovim-ppa/unstable
-sudo apt update
+echo | sudo -S add-apt-repository ppa:neovim-ppa/unstable
+echo "y" | sudo -S apt update
 # sudo apt list --upgradable
-sudo apt upgrade
+echo "y" | sudo -S apt upgrade
 echo -e "\e[36m==============================End Mission2==============================\e[0m"
 
 echo ""
