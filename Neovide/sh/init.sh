@@ -36,7 +36,6 @@ echo "Mission6: Install z.sh"
 echo "Mission7: Install shells_to_bin(push,backup)"
 begindate=$(date "+%Y-%m-%d %H:%M:%S")
 echo "BeginDate: ${begindate}"
-echo -e "\e[36m========================================================================\e[0m"
 
 echo ""
 echo ""
@@ -47,7 +46,6 @@ echo ""
 sudo rm -rf /etc/apt/sources.list
 sudo cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/sources.list /etc/apt/
 sudo chmod 777 /etc/apt/sources.list 
-echo -e "\e[36m==============================End Mission1==============================\e[0m"
 
 echo ""
 echo ""
@@ -57,7 +55,6 @@ echo | sudo -S add-apt-repository ppa:neovim-ppa/unstable
 echo "y" | sudo -S apt update
 # sudo apt list --upgradable
 echo "y" | sudo -S apt upgrade
-echo -e "\e[36m==============================End Mission2==============================\e[0m"
 
 echo ""
 echo ""
@@ -66,7 +63,6 @@ echo -e "\e[36m=========Mission3: Add lsp log file(lsp,treesitter,cmp,format)===
 sudo mkdir -p ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
 sudo chmod 777 -R ~/.cache
-echo -e "\e[36m==============================End Mission3==============================\e[0m"
 
 echo ""
 echo ""
@@ -90,8 +86,6 @@ sudo apt install -y curl wget git openssh-server net-tools \
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
-echo -e "\e[36m==============================End Mission4==============================\e[0m"
-
 echo ""
 echo ""
 
@@ -103,7 +97,6 @@ sudo chmod -R 777 ~/.config/nvim
 echo "alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
 echo "alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
 echo "alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
-echo -e "\e[36m==============================End Mission5==============================\e[0m"
 
 echo ""
 echo ""
@@ -111,7 +104,6 @@ echo ""
 echo -e "\e[36m========================Mission6: Install z.sh==========================\e[0m"
 git clone git@github.com:rupa/z.git ~/z
 echo '. ~/z/z.sh' >> ~/.bashrc
-echo -e "\e[36m==============================End Mission6==============================\e[0m"
 
 echo ""
 echo ""
@@ -119,7 +111,6 @@ echo ""
 echo -e "\e[36m===================Mission7: Install shells_to_bin======================\e[0m"
 cd ~/ukyang-vimrelated-Windows/shells_to_bin
 sudo make install
-echo -e "\e[36m==============================End Mission7==============================\e[0m"
 
 echo ""
 echo ""
