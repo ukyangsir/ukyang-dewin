@@ -12,6 +12,8 @@ echo "ukyang"|sudo -S apt install -y zsh
 echo ""
 git clone git@github.com:ohmyzsh/ohmyzsh.git ~/ohmyzsh 
 # 脚本安装 ohmyzsh 终端主题
+sudo rm -rf ~/ohmyzsh/tools/install.sh
+sudo cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/zsh/install.sh ~/ohmyzsh/tools/
 sh ~/ohmyzsh/tools/install.sh
 sudo rm -rf ~/ohmyzsh
 sudo rm -rf ~/.zshrc
