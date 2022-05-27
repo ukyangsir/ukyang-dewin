@@ -86,8 +86,8 @@ Plug 'sharkdp/fd' "文件查找
 Plug 'BurntSushi/ripgrep' "文字查找
 
 " treesitter
-Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
-Plug 'p00f/nvim-ts-rainbow' " 彩虹括号
+" Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
+" Plug 'p00f/nvim-ts-rainbow' " 彩虹括号
 
 " comment
 Plug 'numToStr/Comment.nvim'

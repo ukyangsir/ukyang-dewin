@@ -8,7 +8,7 @@
 -- require('plugin-config.bufferline')
 require("plugin_config.comment")
 require("plugin_config.nvim-tree")
-require("plugin_config.nvim-treesitter")
+-- require("plugin_config.nvim-treesitter")
 require("plugin_config.telescope")
 require("plugin_config.todo-comments")
 require("plugin_config.windline")
