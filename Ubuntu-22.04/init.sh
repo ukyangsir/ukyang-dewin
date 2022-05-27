@@ -32,7 +32,7 @@ echo "Mission2: Add ppa(Neovim)"
 echo "Mission3: Install something necessary"
 echo "Mission4: Install z.sh"
 echo "Mission5: Install Neovim"
-echo "Mission6: Add lsp log file(lsp,treesitter,cmp,format)"
+echo "Mission6: Prepares(lsp,treesitter,cmp,format)"
 echo "Mission7: Install shells_to_bin(push,backup)"
 begindate=$(date "+%Y-%m-%d %H:%M:%S")
 echo "BeginDate: ${begindate}"
