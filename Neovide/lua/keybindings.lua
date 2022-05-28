@@ -1,7 +1,7 @@
 -- Copyright (C)2022 By ukyang. All Rights Reserved.
 -- Author: ukyang
 -- E-mail: ukyang_ma@163.com
--- Date: 2022-05-21
+-- Date: 2022-05-29
 -- Description:
 
 -- Modes
@@ -12,64 +12,100 @@
 --   term_mode = "t",
 --   command_mode = "c",
 
--- leader key 为空
+-- 设置 leader 键
 vim.g.mapleader = ";"
 vim.g.maplocalleader = ";"
 
-local opt = {
-    noremap = true,
-    silent = true
+-- 默认的键位设置函数太长了，所以这里将它们重新引用一下
+vim.keybinds = {
+    gmap = vim.api.nvim_set_keymap,
+    bmap = vim.api.nvim_buf_set_keymap,
+    dgmap = vim.api.nvim_del_keymap,
+    dbmap = vim.api.nvim_buf_del_keymap,
+    opts = {noremap = true, silent = true}
 }
 
--- 本地变量
-local map = vim.api.nvim_set_keymap
-
 -- 无脑必配
-map("i", "jk", "<ESC>", opt)
-map("v", "sd", "<ESC>", opt)
-map("n", "<Space>", ":", opt)
-map("n", "<C-d>", "10jzz", opt)
-map("n", "<C-u>", "10kzz", opt)
-map("n", "sp", ":sp<CR>", opt)
-map("n", "sv", ":vs<CR>", opt)
-map("n", "sc", "<C-w>c", opt)
-map("n", "so", "<C-w>o", opt) -- close others
-map("n", "U", "<C-r>", opt)
-map("n", "n", "nzz", opt)
-map("n", "N", "Nzz", opt)
-map("n", "*", "*zz", opt)
-map("n", "#", "#zz", opt)
-map("n", "<Leader>;", ":noh<CR>", opt)
-map("n", "H", "^", opt)
-map("v", "H", "^", opt)
-map("n", "L", "$", opt)
-map("v", "L", "$", opt)
--- map("n", "K", "kzz", opt)
--- map("n", "J", "jzz", opt)
-map("n", "<C-a>", "ggVG", opt)
-map("n", "<Leader>q", ":q<CR>", opt)
-map("n", "<Leader>ww", ":wa<CR>", opt)
-map("n", "<Leader>wq", "ZZ", opt)
-map("n", "shen", ":set nonumber norelativenumber laststatus=0<CR>", opt)
-map("n", "zen", ":set nu relativenumber laststatus=0<CR>", opt)
-map("n", "sen", ":set nu relativenumber laststatus=2<CR>", opt)
+vim.keybinds.gmap("i", "jk", "<ESC>", vim.keybinds.opts)
+vim.keybinds.gmap("v", "sd", "<ESC>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<Space>", ":", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-d>", "10jzz", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-u>", "10kzz", vim.keybinds.opts)
+vim.keybinds.gmap("n", "sp", ":sp<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "sv", ":vs<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "sc", "<C-w>c", vim.keybinds.opts)
+vim.keybinds.gmap("n", "so", "<C-w>o", vim.keybinds.opts)
+vim.keybinds.gmap("n", "U", "<C-r>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "n", "nzz", vim.keybinds.opts)
+vim.keybinds.gmap("n", "N", "Nzz", vim.keybinds.opts)
+vim.keybinds.gmap("n", "*", "*zz", vim.keybinds.opts)
+vim.keybinds.gmap("n", "#", "#zz", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<Leader>;", ":noh<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "H", "^", vim.keybinds.opts)
+vim.keybinds.gmap("v", "H", "^", vim.keybinds.opts)
+vim.keybinds.gmap("n", "L", "$", vim.keybinds.opts)
+vim.keybinds.gmap("v", "L", "$", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-a>", "ggVG", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<Leader>q", ":q<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "qu", ":qa!<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<Leader>wq", ":wqa<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<Leader>ww", ":wa<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-h>", "<left>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-j>", "<down>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-k>", "<up>", vim.keybinds.opts)
+vim.keybinds.gmap("i", "<A-l>", "<right>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "shen", ":set nonumber norelativenumber laststatus=0<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "zen", ":set nu relativenumber laststatus=0<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "sen", ":set nu relativenumber laststatus=2<CR>", vim.keybinds.opts)
 
 -- alt + hjkl  窗口之间跳转
-map("n", "<A-h>", "<C-w>h", opt)
-map("n", "<A-j>", "<C-w>j", opt)
-map("n", "<A-k>", "<C-w>k", opt)
-map("n", "<A-l>", "<C-w>l", opt)
+vim.keybinds.gmap("n", "<A-h>", "<C-w>h", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-j>", "<C-w>j", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-k>", "<C-w>k", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-l>", "<C-w>l", vim.keybinds.opts)
+-- 修改分屏大小
+vim.keybinds.gmap("n", "<A-i>", "<cmd>res +1<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-u>", "<cmd>res -1<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-y>", "<cmd>vertical resize-1<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-o>", "<cmd>vertical resize+1<CR>", vim.keybinds.opts)
 
 -- nvimtree 快捷键
-map("n", "<A-1>", ":NvimTreeToggle<CR>", opt)
-map("n", "<A-r>", ":NvimTreeRefresh<CR>", opt)
-map("n", "<A-m>", ":NvimTreeFindFile<CR>", opt)
+vim.keybinds.gmap("n", "<A-1>", ":NvimTreeToggle<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-r>", ":NvimTreeRefresh<CR>", vim.keybinds.opts)
 
 -- floaterm 快捷键
-map("n", "<F12>", ":FloatermToggle<CR>", opt)
-
+vim.keybinds.gmap("n", "J", ":FloatermToggle<CR>", vim.keybinds.opts)
 -- Esc 回 Normal 模式
-map("t", "<Esc>", "<C-\\><C-n>", opt)
+vim.keybinds.gmap("t", "jk", "<C-\\><C-n>", vim.keybinds.opts)
+
+-- 生成 title
+vim.keybinds.gmap("n", "ma", ":call SetTitle()<CR>", vim.keybinds.opts)
+
+-- map('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
+-- map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
+vim.keybinds.gmap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", vim.keybinds.opts)
+-- map('n', 'go', '<cmd>lua vim.diagnostic.open_float()<CR>', opt)
+-- map('n', '<C-L>', '<cmd>lua vim.lsp.buf.format{ async = true }<CR>', opt)
+-- -- map('n', '<S-F4>', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opt)
+vim.keybinds.gmap("n", "<F2>", "<cmd>lua vim.diagnostic.goto_next()<CR>", vim.keybinds.opts)
+
+-- terslation快捷键
+vim.keybinds.gmap("n", "<C-o>", ":TerslationToggle<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-y>", ":TerslationWordTrans<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("v", "<C-x>", ":TerslationSelectTrans<CR>", vim.keybinds.opts)
+
+-- telescope 快捷键
+vim.keybinds.gmap("n", "<C-n>", ":Telescope find_files<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-e>", ":Telescope oldfiles<CR>", vim.keybinds.opts)
+-- 查找 TODO 标签
+vim.keybinds.gmap("n", "to", "<cmd>TodoTelescope<CR>", vim.keybinds.opts)
+
+-- neoformat 快捷键
+vim.keybinds.gmap("n", "<C-l>", "<cmd>Neoformat<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<C-x>", ":Shfmt<CR>", vim.keybinds.opts)
+
+-- 切换拼写检查
+vim.keybinds.gmap("n", "<leader>cs", "<cmd>set spell!<CR>", vim.keybinds.opts)
 
 -- bufferline 快捷键
 -- map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
@@ -86,30 +122,3 @@ map("t", "<Esc>", "<C-\\><C-n>", opt)
 -- map("n", "gc", ":BufferLinePickClose<CR>", opt)
 -- map("n", "<A-]>", ":BufferLineCycleNext<CR>", opt)
 -- map("n", "<A-[>", ":BufferLineCyclePrev<CR>", opt)
-
--- 生成 title
-map("n", "ma", ":call SetTitle()<CR>", opt)
-
--- map('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
--- map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
-map("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opt)
--- map('n', 'go', '<cmd>lua vim.diagnostic.open_float()<CR>', opt)
--- map('n', '<C-L>', '<cmd>lua vim.lsp.buf.format{ async = true }<CR>', opt)
--- -- map('n', '<S-F4>', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opt)
-map("n", "<F2>", "<cmd>lua vim.diagnostic.goto_next()<CR>", opt)
-
--- terslation快捷键
-map("n", "<C-O>", ":TerslationToggle<CR>", opt)
-map("n", "<C-Y>", ":TerslationWordTrans<CR>", opt)
-map("v", "<C-X>", ":TerslationSelectTrans<CR>", opt)
-
--- telescope 快捷键
-map("n", "<C-n>", ":Telescope find_files<CR>", opt)
-map("n", "<C-e>", ":Telescope oldfiles<CR>", opt)
-
--- 查找 TODO 标签
-map("n", "to", "<cmd>TodoTelescope<CR>", opt)
-
--- neoformat 快捷键
-map("n", "<C-L>", "<cmd>Neoformat<CR>", opt)
-map("n", "<C-x>", ":Shfmt<CR>", opt)

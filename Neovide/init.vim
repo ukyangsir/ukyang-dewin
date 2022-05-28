@@ -1,14 +1,11 @@
 " Copyright (C)2022 By ukyang. All Rights Reserved.
 " Author: ukyang
 " E-mail: ukyang_ma@163.com
-" Date: 2022-05-28
+" Date: 2022-05-29
 " Description:
 
 
-" set background=dark
-" set termguicolors
-set clipboard+=unnamedplus
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+" autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 
 " Windows Need Modify Here
@@ -21,6 +18,9 @@ cd ~/ukyang-vimrelated-Windows
 " ==================== Plugin packages ====================
 " Begin Plug, Depends On https://github.com/junegunn/vim-plug
 call plug#begin('~/.config/nvim/plugged')
+" 中文文档
+Plug 'yianwillis/vimcdoc'
+
 " colorscheme
 " Plug 'joshdick/onedark.vim'
 " Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
