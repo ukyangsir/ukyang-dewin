@@ -4,7 +4,7 @@
 # E-mail: ukyang_ma@163.com
 # Date: 2022-05-24
 # Description:
-# NOTE: 必备脚本1： Ubuntu22.04 初始化
+# NOTE: 必备脚本1： Ubuntu22.04 初始化 + 代码格式化插件安装脚本
 
 
 echo -e "\033[33m ___  ___  ___  __        ___    ___ ________  ________   ________      \033[0m"
@@ -119,6 +119,7 @@ echo ""
 echo -e "\e[36m===================Mission7: Install shells_to_bin======================\e[0m"
 cd ~/ukyang-vimrelated-Windows/shells_to_bin
 sudo make install
+cd ~
 
 echo ""
 echo ""

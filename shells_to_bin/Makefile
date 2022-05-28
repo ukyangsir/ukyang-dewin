@@ -1,11 +1,10 @@
 # Copyright (C)2022 By ukyang. All Rights Reserved.
 # Author: ukyang
 # E-mail: ukyang_ma@163.com
-# Date: 2022-05-22
+# Date: 2022-05-28
 # Description:
 # push 命令
 # backup 命令
-# NOTE: 必备脚本3： push 与 backup 安装脚本
 
 
 install:

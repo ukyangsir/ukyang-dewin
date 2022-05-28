@@ -3,7 +3,7 @@
 # Author: ukyang
 # E-mail: ukyang_ma@163.com
 # Date: 2022-05-28
-# Description: 
+# Description:
 
 
 echo -e "\e[36m======================Intall python3.9 && pip3.9========================\e[0m"
@@ -27,6 +27,4 @@ pip3 install requests
 pip3.9 install requests
 cd ~/.config/nvim/plugged/Terslation
 sudo make install
-
-
-
+cd ~

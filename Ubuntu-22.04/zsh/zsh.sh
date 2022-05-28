@@ -4,7 +4,7 @@
 # E-mail: ukyang_ma@163.com
 # Date: 2022-05-22
 # Description:
-# NOTE: 必备脚本2： zsh/ohmyzsh 以及 代码格式化程序 的安装脚本
+# NOTE: 必备脚本2： zsh/ohmyzsh 安装脚本
 # 记得测试 z 命令，npm -v 命令，以及 snap list 命令
 
 echo -e "\e[36m========================Install zsh && ohmyzsh==========================\e[0m"
