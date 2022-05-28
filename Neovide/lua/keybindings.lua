@@ -72,6 +72,7 @@ vim.keybinds.gmap("n", "<A-o>", "<cmd>vertical resize+1<CR>", vim.keybinds.opts)
 -- nvimtree 快捷键
 vim.keybinds.gmap("n", "<A-1>", ":NvimTreeToggle<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<A-r>", ":NvimTreeRefresh<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<A-m>", ":NvimTreeFindFile<CR>", vim.keybinds.opts)
 
 -- floaterm 快捷键
 vim.keybinds.gmap("n", "J", ":FloatermToggle<CR>", vim.keybinds.opts)
