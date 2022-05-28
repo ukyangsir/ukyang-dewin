@@ -1,7 +1,7 @@
 -- Copyright (C)2022 By ukyang. All Rights Reserved.
 -- Author: ukyang
 -- E-mail: ukyang_ma@163.com
--- Date: 2022-05-20
+-- Date: 2022-05-28
 -- Description:
 
 -- require('plugin-config.autosave')
@@ -20,12 +20,12 @@ require("lsp.nvim-cmp")
 
 require("keybindings")
 
--- uf8
-vim.g.encoding = "UTF-8"
+-- utf8
+vim.g.encoding = "utf-8"
 vim.o.fileencoding = "utf-8"
 -- jk移动时光标下上方保留8行
-vim.o.scrolloff = 8
-vim.o.sidescrolloff = 8
+vim.o.scrolloff = 30
+vim.o.sidescrolloff = 30
 -- 高亮所在行
 vim.wo.cursorline = true
 -- 缩2个空格等于一个Tab
