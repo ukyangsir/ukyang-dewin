@@ -4,22 +4,6 @@
 -- Date: 2022-05-29
 -- Description:
 
--- require('plugin-config.autosave')
--- require('plugin-config.bufferline')
-require("plugin_config.comment")
-require("plugin_config.nvim-tree")
--- require("plugin_config.nvim-treesitter")
-require("plugin_config.telescope")
-require("plugin_config.todo-comments")
-require("plugin_config.windline")
-require("plugin_config.neoformat")
-
-require("lsp.lsp")
-require("lsp.lspsaga")
-require("lsp.nvim-cmp")
-
-require("keybindings")
-
 -- 使用增强状态栏后不再需要 vim 的模式提示
 vim.o.showmode = false
 -- 自动补全不自动选中
@@ -126,4 +110,23 @@ vim.o.splitright = true
 -- 边输入边搜索
 vim.o.incsearch = true
 -- 是否透明背景
--- vim.g.background_transparency = true
+vim.g.background_transparency = true
+
+-- require('plugin-config.autosave')
+-- require('plugin-config.bufferline')
+require("theme.catppuccin")
+
+require("plugin_config.comment")
+require("plugin_config.nvim-tree")
+-- require("plugin_config.nvim-treesitter")
+require("plugin_config.telescope")
+require("plugin_config.todo-comments")
+require("plugin_config.windline")
+require("plugin_config.neoformat")
+
+require("lsp.lsp")
+require("lsp.lspsaga")
+require("lsp.nvim-cmp")
+
+
+require("keybindings")

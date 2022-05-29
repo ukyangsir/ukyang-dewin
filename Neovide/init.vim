@@ -27,7 +27,7 @@ Plug 'yianwillis/vimcdoc'
 " Plug 'EdenEast/nightfox.nvim'
 " Plug 'morhetz/gruvbox'
 " Plug 'sainnhe/gruvbox-material'
-" Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 " Plug 'ellisonleao/gruvbox.nvim'
 " Plug 'catppuccin/nvim'
 " Plug 'rebelot/kanagawa.nvim'
@@ -121,29 +121,31 @@ call plug#end()
 " =================== END Pre settings ===================
 
 
-" ==================== Colorscheme settings ===================
-colorscheme zephyr
-" transparency
-highlight Normal guibg=none ctermbg=none
-" highlight LineNr guifg=DarkGray
-highlight CursorLineNr guifg=White ctermfg=white
-highlight CursorLine cterm=none ctermbg=none guibg=none
-" marks
-highlight SignColumn guibg=none ctermbg=none
-" lspsaga
-" highlight link LspSagaFinderSelection guifg='#ff0000' guibg='#00ff00' gui='bold'
-" ==================== END Colorscheme settings ===================
 
 
 " ==================== External Lua settings ===================
 lua require('basic')
 " ==================== END External Lua settings ===================
 
+" ==================== Colorscheme settings ===================
+" colorscheme zephyr
+let g:catppuccin_flavour = "mocha"
+colorscheme catppuccin
+" lspsaga
+" highlight link LspSagaFinderSelection guifg='#ff0000' guibg='#00ff00' gui='bold'
+" ==================== END Colorscheme settings ===================
+
+" transparency
+" highlight Normal guibg=none ctermbg=none
+" highlight NvimTreeNormal guibg=none ctermbg=none
+" highlight LineNr guifg=DarkGray
+highlight CursorLineNr guifg=White ctermfg=white
+highlight CursorLine cterm=none ctermbg=none guibg=none
+" marks
+highlight SignColumn guibg=none ctermbg=none
 
 " ==================== External settings ===================
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/autoheader.vim
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/terslation.vim
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/floaterm.vim
 " ==================== END External settings ===================
-" ================================================== THE END. ============================================================
-" ========================================================================================================================
