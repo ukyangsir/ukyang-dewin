@@ -139,7 +139,7 @@ colorscheme catppuccin
 " highlight Normal guibg=none ctermbg=none
 " highlight NvimTreeNormal guibg=none ctermbg=none
 " highlight LineNr guifg=DarkGray
-highlight CursorLineNr guifg=White ctermfg=white
+highlight CursorLineNr guifg=White ctermfg=White
 highlight CursorLine cterm=none ctermbg=none guibg=none
 " marks
 highlight SignColumn guibg=none ctermbg=none
