@@ -110,7 +110,8 @@ vim.keybinds.gmap("n", "<C-x>", ":Shfmt<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<leader>cs", "<cmd>set spell!<CR>", vim.keybinds.opts)
 
 -- gitsigns快捷键
-vim.keybinds.gmap("n", "git", "<cmd>Gitsigns toggle_current_line_blame<CR>", vim.keybinds.opts)
+-- vim.keybinds.gmap("n", "git", "<cmd>Gitsigns toggle_current_line_blame<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "git", "<cmd>Gitsigns preview_hunk<CR>", vim.keybinds.opts)
 
 -- bufferline 快捷键
 -- map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
