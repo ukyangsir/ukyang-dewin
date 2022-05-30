@@ -150,7 +150,14 @@ highlight CursorLineNr guifg=White ctermfg=White
 highlight CursorLine cterm=none ctermbg=none guibg=none
 
 " comment
-highlight comment guifg=#808080 ctermfg=#808080
+highlight comment guifg=#808080
+
+" nvim-tree
+highlight NvimTreeFolderIcon guifg=#84ffff
+highlight NvimTreeFolderName guifg=#808080
+highlight NvimTreeOpenedFolderName guifg=#40E0D0
+highlight NvimTreeRootFolder guifg=#40E0D0
+highlight NvimTreeWinSeparator guifg=Black
 
 " marks
 " highlight SignColumn guibg=none ctermbg=none
