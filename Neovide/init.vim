@@ -143,6 +143,8 @@ highlight CursorLineNr guifg=White ctermfg=White
 highlight CursorLine cterm=none ctermbg=none guibg=none
 " marks
 " highlight SignColumn guibg=none ctermbg=none
+let g:neovide_fullscreen=v:true
+let g:neovide_transparency=0.8
 
 " ==================== External settings ===================
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/autoheader.vim
