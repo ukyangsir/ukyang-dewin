@@ -168,4 +168,5 @@ require "nvim-tree".setup {
             profile = false
         }
     }
+    -- nvim_tree_add_trailing = false
 } -- END_DEFAULT_OPTS

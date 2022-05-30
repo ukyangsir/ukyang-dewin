@@ -162,6 +162,9 @@ highlight NvimTreeWinSeparator guifg=Black
 " marks
 " highlight SignColumn guibg=none ctermbg=none
 
+" cursor（fail）
+" highlight Cursor guifg=none guibg=#FF0CB
+
 " Neovide
 let g:neovide_fullscreen=v:true
 let g:neovide_transparency=0.8
