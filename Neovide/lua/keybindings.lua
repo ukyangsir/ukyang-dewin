@@ -76,6 +76,7 @@ vim.keybinds.gmap("n", "<A-m>", ":NvimTreeFindFile<CR>", vim.keybinds.opts)
 
 -- floaterm 快捷键
 vim.keybinds.gmap("n", "J", ":FloatermToggle<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "K", ":FloatermKill<CR>", vim.keybinds.opts)
 -- Esc 回 Normal 模式
 vim.keybinds.gmap("t", "jk", "<C-\\><C-n>", vim.keybinds.opts)
 
