@@ -123,6 +123,7 @@ require("plugin_config.telescope")
 require("plugin_config.todo-comments")
 require("plugin_config.windline")
 require("plugin_config.neoformat")
+require("plugin_config.gitsigns")
 
 require("lsp.lsp")
 require("lsp.lspsaga")

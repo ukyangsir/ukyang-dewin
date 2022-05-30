@@ -32,16 +32,22 @@ Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 " Plug 'catppuccin/nvim'
 " Plug 'rebelot/kanagawa.nvim'
 " Plug 'phanviet/vim-monokai-pro'
-Plug 'glepnir/zephyr-nvim'
+" Plug 'glepnir/zephyr-nvim'
 
 " icons
 Plug 'kyazdani42/nvim-web-devicons'
+
+" 一款lua开发使用的插件
+Plug 'nvim-lua/plenary.nvim'
 
 " bufferline
 " Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
 " windline
 Plug 'windwp/windline.nvim'
+
+" gitsigns
+Plug 'lewis6991/gitsigns.nvim'
 
 " nvim-tree
 Plug 'kyazdani42/nvim-tree.lua'
@@ -80,7 +86,6 @@ Plug 'SpringHan/Terslation.vim'
 
 " telescope
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-lua/plenary.nvim'  "lua 开发模块
 Plug 'sharkdp/fd' "文件查找
 Plug 'BurntSushi/ripgrep' "文字查找
 
@@ -138,9 +143,15 @@ colorscheme catppuccin
 " transparency
 " highlight Normal guibg=none ctermbg=none
 " highlight NvimTreeNormal guibg=none ctermbg=none
+
+" linenumber
 highlight LineNr guifg=#696969
 highlight CursorLineNr guifg=White ctermfg=White
 highlight CursorLine cterm=none ctermbg=none guibg=none
+
+" comment
+highlight comment guifg=#808080 ctermfg=#808080
+
 " marks
 " highlight SignColumn guibg=none ctermbg=none
 
