@@ -1,7 +1,7 @@
 " Copyright (C)2022 By ukyang. All Rights Reserved.
 " Author: ukyang
 " E-mail: ukyang_ma@163.com
-" Date: 2022-05-29
+" Date: 2022-05-30
 " Description:
 
 
@@ -138,11 +138,13 @@ colorscheme catppuccin
 " transparency
 " highlight Normal guibg=none ctermbg=none
 " highlight NvimTreeNormal guibg=none ctermbg=none
-" highlight LineNr guifg=DarkGray
+highlight LineNr guifg=#696969
 highlight CursorLineNr guifg=White ctermfg=White
 highlight CursorLine cterm=none ctermbg=none guibg=none
 " marks
 " highlight SignColumn guibg=none ctermbg=none
+
+" Neovide
 let g:neovide_fullscreen=v:true
 let g:neovide_transparency=0.8
 
