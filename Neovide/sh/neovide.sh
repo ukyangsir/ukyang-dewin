@@ -7,7 +7,7 @@
 # FIX: 暂不可用脚本1：Neovide 安装脚本，但目前 Ubuntu1804 编译后有 bug，无法运行
 
 # Neovide 所需软件和环境
-sudo apt install -y gnupg ca-certificates \
+echo | sudo -S apt install -y gnupg ca-certificates \
     gcc-multilib g++-multilib cmake libssl-dev pkg-config \
     libfreetype6-dev libasound2-dev libexpat1-dev libxcb-composite0-dev \
     libbz2-dev libsndio-dev freeglut3-dev libxmu-dev libxi-dev libfontconfig1-dev \
@@ -15,7 +15,7 @@ sudo apt install -y gnupg ca-certificates \
 # Rust 环境
 curl --proto '=https' --tlsv1.2 -sSf "https://sh.rustup.rs" | sh
 
-cp ~/ukyang-vimrelated-Windows/Neovide/sh/config ~/.cargo/
+cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/rust/rust_config ~/.cargo/config
 rm -rf ~/.cargo/registry/index
 # Neovide
 git clone git@github.com:neovide/neovide.git ~/neovide
