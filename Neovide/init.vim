@@ -55,6 +55,9 @@ Plug 'kyazdani42/nvim-tree.lua'
 " floaterm
 Plug 'voldikss/vim-floaterm'
 
+" hlslens
+Plug 'kevinhwang91/nvim-hlslens'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'

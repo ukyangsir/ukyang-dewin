@@ -115,6 +115,24 @@ vim.keybinds.gmap("n", "<leader>cs", "<cmd>set spell!<CR>", vim.keybinds.opts)
 -- vim.keybinds.gmap("n", "git", "<cmd>Gitsigns toggle_current_line_blame<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "git", "<cmd>Gitsigns preview_hunk<CR>", vim.keybinds.opts)
 
+-- hlslens快捷键
+vim.keybinds.gmap(
+    "n",
+    "n",
+    "<Cmd>execute('normal!'.v:count1.'n')<CR><Cmd>lua require('hlslens').start()<CR>",
+    vim.keybinds.opts
+)
+vim.keybinds.gmap(
+    "n",
+    "N",
+    "<Cmd>execute('normal!'.v:count1.'N')<CR><Cmd>lua require('hlslens').start()<CR>",
+    vim.keybinds.opts
+)
+vim.keybinds.gmap("n", "*", "*<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "#", "#<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "g*", "g*<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "g#", "g#<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
+
 -- bufferline 快捷键
 -- map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
 -- map("n", "<Leader>2", "<Cmd>BufferLineGoToBuffer 2<CR>", opt)
