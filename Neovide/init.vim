@@ -61,6 +61,15 @@ Plug 'kevinhwang91/nvim-hlslens'
 " indent-blankline
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+" autopairs
+Plug 'windwp/nvim-autopairs'
+
+" switch
+Plug 'AndrewRadev/switch.vim'
+
+" hop
+Plug 'phaazon/hop.nvim'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -140,7 +149,7 @@ lua require('basic')
 
 " ==================== Colorscheme settings ===================
 " colorscheme zephyr
-let g:catppuccin_flavour = "mocha"
+let g:catppuccin_flavour = "macchiato"
 colorscheme catppuccin
 " lspsaga
 " highlight link LspSagaFinderSelection guifg='#ff0000' guibg='#00ff00' gui='bold'
@@ -167,6 +176,10 @@ highlight NvimTreeFolderName guifg=#808080
 highlight NvimTreeOpenedFolderName guifg=#40E0D0
 highlight NvimTreeRootFolder guifg=#40E0D0
 highlight NvimTreeWinSeparator guifg=Black
+
+" hop
+highlight HopUnmatched guifg=none guibg=none
+
 
 " marks
 " highlight SignColumn guibg=none ctermbg=none

@@ -1,7 +1,7 @@
 -- Copyright (C)2022 By ukyang. All Rights Reserved.
 -- Author: ukyang
 -- E-mail: ukyang_ma@163.com
--- Date: 2022-05-29
+-- Date: 2022-05-31
 -- Description:
 
 -- Modes
@@ -46,10 +46,10 @@ vim.keybinds.gmap("v", "H", "^", vim.keybinds.opts)
 vim.keybinds.gmap("n", "L", "$", vim.keybinds.opts)
 vim.keybinds.gmap("v", "L", "$", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-a>", "ggVG", vim.keybinds.opts)
-vim.keybinds.gmap("n", "<Leader>q", ":q<CR>", vim.keybinds.opts)
-vim.keybinds.gmap("n", "qu", ":qa!<CR>", vim.keybinds.opts)
-vim.keybinds.gmap("n", "<Leader>wq", ":wqa<CR>", vim.keybinds.opts)
-vim.keybinds.gmap("n", "<Leader>ww", ":wa<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<Leader>c", ":wq<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<Leader>d", ":q!<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<Leader>q", ":wqa<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<Leader>w", ":wa<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("i", "<A-h>", "<left>", vim.keybinds.opts)
 vim.keybinds.gmap("i", "<A-j>", "<down>", vim.keybinds.opts)
 vim.keybinds.gmap("i", "<A-k>", "<up>", vim.keybinds.opts)
@@ -109,7 +109,7 @@ vim.keybinds.gmap("n", "<C-l>", "<cmd>Neoformat<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-x>", ":Shfmt<CR>", vim.keybinds.opts)
 
 -- 切换拼写检查
-vim.keybinds.gmap("n", "<leader>cs", "<cmd>set spell!<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>sp", "<cmd>set spell!<CR>", vim.keybinds.opts)
 
 -- gitsigns快捷键
 -- vim.keybinds.gmap("n", "git", "<cmd>Gitsigns toggle_current_line_blame<CR>", vim.keybinds.opts)
@@ -132,6 +132,17 @@ vim.keybinds.gmap("n", "*", "*<Cmd>lua require('hlslens').start()<CR>", vim.keyb
 vim.keybinds.gmap("n", "#", "#<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "g*", "g*<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "g#", "g#<Cmd>lua require('hlslens').start()<CR>", vim.keybinds.opts)
+
+-- switch快捷键
+vim.keybinds.gmap("n", "gs", ":Switch<CR>", vim.keybinds.opts)
+
+-- hop快捷键
+-- vim.keybinds.gmap("n", "<leader>hl", "<cmd>HopLine<CR>", vim.keybinds.opts)
+-- vim.keybinds.gmap("v", "<leader>hl", "<cmd>HopLine<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>hw", "<cmd>HopWord<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("v", "<leader>hw", "<cmd>HopWord<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>hc", "<cmd>HopChar1<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("v", "<leader>hc", "<cmd>HopChar1<CR>", vim.keybinds.opts)
 
 -- bufferline 快捷键
 -- map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)

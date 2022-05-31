@@ -65,7 +65,7 @@ require("catppuccin").setup(
             which_key = true,
             indent_blankline = {
                 enabled = true,
-                colored_indent_levels = false
+                colored_indent_levels = true
             },
             dashboard = true,
             neogit = false,
