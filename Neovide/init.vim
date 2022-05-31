@@ -70,6 +70,12 @@ Plug 'AndrewRadev/switch.vim'
 " hop
 Plug 'phaazon/hop.nvim'
 
+" surround
+Plug 'ur4ltz/surround.nvim'
+
+" illuminate
+Plug 'RRethy/vim-illuminate'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'

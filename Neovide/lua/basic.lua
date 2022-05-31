@@ -129,6 +129,8 @@ require("plugin_config.indent-blankline")
 require("plugin_config.nvim-autopairs")
 require("plugin_config.switch")
 require("plugin_config.hop")
+require("plugin_config.surround")
+require("plugin_config.vim-illuminate")
 
 require("lsp.lsp")
 require("lsp.lspsaga")
