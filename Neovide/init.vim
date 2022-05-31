@@ -76,6 +76,9 @@ Plug 'ur4ltz/surround.nvim'
 " illuminate
 Plug 'RRethy/vim-illuminate'
 
+" spellsitter
+Plug 'lewis6991/spellsitter.nvim'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'

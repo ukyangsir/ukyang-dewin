@@ -131,6 +131,7 @@ require("plugin_config.switch")
 require("plugin_config.hop")
 require("plugin_config.surround")
 require("plugin_config.vim-illuminate")
+require("plugin_config.spellsitter")
 
 require("lsp.lsp")
 require("lsp.lspsaga")
