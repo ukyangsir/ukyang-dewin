@@ -124,6 +124,7 @@ require("plugin_config.todo-comments")
 require("plugin_config.windline")
 require("plugin_config.neoformat")
 require("plugin_config.gitsigns")
+require("plugin_config.nvim-hlslens")
 
 require("lsp.lsp")
 require("lsp.lspsaga")
