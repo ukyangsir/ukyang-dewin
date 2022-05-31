@@ -125,6 +125,7 @@ require("plugin_config.windline")
 require("plugin_config.neoformat")
 require("plugin_config.gitsigns")
 require("plugin_config.nvim-hlslens")
+require("plugin_config.indent-blankline")
 
 require("lsp.lsp")
 require("lsp.lspsaga")

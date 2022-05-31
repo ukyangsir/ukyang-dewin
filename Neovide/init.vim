@@ -58,6 +58,9 @@ Plug 'voldikss/vim-floaterm'
 " hlslens
 Plug 'kevinhwang91/nvim-hlslens'
 
+" indent-blankline
+Plug 'lukas-reineke/indent-blankline.nvim'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -147,6 +150,9 @@ colorscheme catppuccin
 " highlight Normal guibg=none ctermbg=none
 " highlight NvimTreeNormal guibg=none ctermbg=none
 
+" cursor（fail）
+highlight Cursor guifg=#1f1f1f guibg=#98C379
+
 " linenumber
 highlight LineNr guifg=#696969
 highlight CursorLineNr guifg=White ctermfg=White
@@ -174,6 +180,3 @@ source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/autoheader.vim
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/terslation.vim
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/floaterm.vim
 " ==================== END External settings ===================
-
-" cursor（fail）
-highlight Cursor guifg=none guibg=Green
