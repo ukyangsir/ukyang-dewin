@@ -79,6 +79,12 @@ Plug 'RRethy/vim-illuminate'
 " spellsitter
 Plug 'lewis6991/spellsitter.nvim'
 
+" autosave
+Plug 'Pocco81/AutoSave.nvim'
+
+" lastplace
+Plug 'ethanholz/nvim-lastplace'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -104,9 +110,6 @@ Plug 'rafamadriz/friendly-snippets'
 " translation
 Plug 'ukyangsir/Terslation'
 Plug 'SpringHan/Terslation.vim'
-
-" autosave
-" Plug 'Pocco81/AutoSave.nvim'
 
 " telescope
 Plug 'nvim-telescope/telescope.nvim'
