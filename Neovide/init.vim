@@ -59,7 +59,7 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
 
 " floaterm
-Plug 'voldikss/vim-floaterm'
+" Plug 'voldikss/vim-floaterm'
 
 " hlslens
 Plug 'kevinhwang91/nvim-hlslens'
@@ -102,6 +102,9 @@ Plug 'terryma/vim-multiple-cursors'
 
 " scrollbar
 Plug 'petertriho/nvim-scrollbar'
+
+" colorizer
+Plug 'norcalli/nvim-colorizer.lua'
 
 " lsp
 Plug 'neovim/nvim-lspconfig'
@@ -218,5 +221,5 @@ let g:neovide_transparency=0.8
 " ==================== External settings ===================
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/autoheader.vim
 source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/terslation.vim
-source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/floaterm.vim
+" source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/floaterm.vim
 " ==================== END External settings ===================

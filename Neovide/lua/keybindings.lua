@@ -77,11 +77,11 @@ vim.keybinds.gmap("n", "<A-r>", ":NvimTreeRefresh<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<A-m>", ":NvimTreeFindFile<CR>", vim.keybinds.opts)
 
 -- floaterm 快捷键
-vim.keybinds.gmap("n", "J", ":FloatermToggle<CR>", vim.keybinds.opts)
-vim.keybinds.gmap("n", "K", ":FloatermKill<CR>", vim.keybinds.opts)
--- 各种退出
-vim.keybinds.gmap("t", "jk", "<C-\\><C-n> <C-w>j", vim.keybinds.opts)
-vim.keybinds.gmap("t", "sd", "<C-\\><C-n> :FloatermToggle<CR>", vim.keybinds.opts)
+-- vim.keybinds.gmap("n", "J", ":FloatermToggle<CR>", vim.keybinds.opts)
+-- vim.keybinds.gmap("n", "K", ":FloatermKill<CR>", vim.keybinds.opts)
+-- -- 各种退出
+-- vim.keybinds.gmap("t", "jk", "<C-\\><C-n> <C-w>j", vim.keybinds.opts)
+-- vim.keybinds.gmap("t", "sd", "<C-\\><C-n> :FloatermToggle<CR>", vim.keybinds.opts)
 
 -- 生成 title
 vim.keybinds.gmap("n", "ma", ":call SetTitle()<CR>", vim.keybinds.opts)

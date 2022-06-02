@@ -5,7 +5,7 @@
 -- Description:
 
 local colors = {
-    color = "#292E42",
+    color = "#696969",
     Search = "#FC867",
     Error = "#FD6883",
     Warn = "#FFD886",
