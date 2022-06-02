@@ -116,6 +116,7 @@ require("lsp.lsp")
 require("lsp.lspsaga")
 require("lsp.nvim-cmp")
 
+require("plugin_config.auto-session")
 require("plugin_config.autosave")
 -- require('plugin-config.bufferline')
 require("plugin_config.comment")

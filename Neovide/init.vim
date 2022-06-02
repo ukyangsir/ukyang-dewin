@@ -10,7 +10,7 @@
 
 " Windows Need Modify Here
 " cd /mnt/f/git_space
-cd ~/ukyang-vimrelated-Windows
+" cd ~/ukyang-vimrelated-Windows
 " set guifont=FiraCode\ NF:h12
 " cd F:\git_space
 
@@ -84,6 +84,9 @@ Plug 'Pocco81/AutoSave.nvim'
 
 " lastplace
 Plug 'ethanholz/nvim-lastplace'
+
+" auto-session
+Plug 'rmagatti/auto-session'
 
 " lsp
 Plug 'neovim/nvim-lspconfig'
@@ -160,7 +163,6 @@ lua require('basic')
 " ==================== END External Lua settings ===================
 
 " ==================== Colorscheme settings ===================
-" colorscheme zephyr
 let g:catppuccin_flavour = "macchiato"
 colorscheme catppuccin
 " lspsaga
