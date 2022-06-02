@@ -40,6 +40,12 @@ Plug 'kyazdani42/nvim-web-devicons'
 " 一款lua开发使用的插件
 Plug 'nvim-lua/plenary.nvim'
 
+" 文件查找
+Plug 'sharkdp/fd'
+
+" 文字查找
+Plug 'BurntSushi/ripgrep'
+
 " bufferline
 " Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
@@ -88,6 +94,9 @@ Plug 'ethanholz/nvim-lastplace'
 " auto-session
 Plug 'rmagatti/auto-session'
 
+" spectre
+Plug 'nvim-pack/nvim-spectre'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -116,8 +125,6 @@ Plug 'SpringHan/Terslation.vim'
 
 " telescope
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'sharkdp/fd' "文件查找
-Plug 'BurntSushi/ripgrep' "文字查找
 
 " treesitter
 " Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}

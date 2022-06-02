@@ -1,7 +1,7 @@
 -- Copyright (C)2022 By ukyang. All Rights Reserved.
 -- Author: ukyang
 -- E-mail: ukyang_ma@163.com
--- Date: 2022-05-31
+-- Date: 2022-06-02
 -- Description:
 
 -- Modes
@@ -143,6 +143,15 @@ vim.keybinds.gmap("n", "<leader>hw", "<cmd>HopWord<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("v", "<leader>hw", "<cmd>HopWord<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<leader>hc", "<cmd>HopChar1<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("v", "<leader>hc", "<cmd>HopChar1<CR>", vim.keybinds.opts)
+
+
+-- spectre快捷键
+-- 全项目替换
+vim.keybinds.gmap("n", "<leader>rp", "<cmd>lua require('spectre').open()<CR>", vim.keybinds.opts)
+-- 只替换当前文件
+vim.keybinds.gmap("n", "<leader>rf", "viw:lua require('spectre').open_file_search()<CR>", vim.keybinds.opts)
+-- 全项目中搜索当前单词
+vim.keybinds.gmap("n", "<leader>rw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", vim.keybinds.opts)
 
 -- bufferline 快捷键
 -- map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
