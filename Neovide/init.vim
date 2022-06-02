@@ -100,6 +100,9 @@ Plug 'nvim-pack/nvim-spectre'
 " vim-multiple-cursors
 Plug 'terryma/vim-multiple-cursors'
 
+" scrollbar
+Plug 'petertriho/nvim-scrollbar'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
