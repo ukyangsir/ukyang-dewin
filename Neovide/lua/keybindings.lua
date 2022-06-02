@@ -79,8 +79,9 @@ vim.keybinds.gmap("n", "<A-m>", ":NvimTreeFindFile<CR>", vim.keybinds.opts)
 -- floaterm 快捷键
 vim.keybinds.gmap("n", "J", ":FloatermToggle<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "K", ":FloatermKill<CR>", vim.keybinds.opts)
--- Esc 回 Normal 模式
-vim.keybinds.gmap("t", "jk", "<C-\\><C-n>", vim.keybinds.opts)
+-- 各种退出
+vim.keybinds.gmap("t", "jk", "<C-\\><C-n> <C-w>j", vim.keybinds.opts)
+vim.keybinds.gmap("t", "sd", "<C-\\><C-n> :FloatermToggle<CR>", vim.keybinds.opts)
 
 -- 生成 title
 vim.keybinds.gmap("n", "ma", ":call SetTitle()<CR>", vim.keybinds.opts)
@@ -144,14 +145,18 @@ vim.keybinds.gmap("v", "<leader>hw", "<cmd>HopWord<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<leader>hc", "<cmd>HopChar1<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("v", "<leader>hc", "<cmd>HopChar1<CR>", vim.keybinds.opts)
 
-
 -- spectre快捷键
 -- 全项目替换
 vim.keybinds.gmap("n", "<leader>rp", "<cmd>lua require('spectre').open()<CR>", vim.keybinds.opts)
 -- 只替换当前文件
 vim.keybinds.gmap("n", "<leader>rf", "viw:lua require('spectre').open_file_search()<CR>", vim.keybinds.opts)
 -- 全项目中搜索当前单词
-vim.keybinds.gmap("n", "<leader>rw", "<cmd>lua require('spectre').open_visual({select_word=true})<CR>", vim.keybinds.opts)
+vim.keybinds.gmap(
+    "n",
+    "<leader>rw",
+    "<cmd>lua require('spectre').open_visual({select_word=true})<CR>",
+    vim.keybinds.opts
+)
 
 -- bufferline 快捷键
 -- map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)

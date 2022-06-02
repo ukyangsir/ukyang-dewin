@@ -136,6 +136,7 @@ require("plugin_config.switch")
 require("plugin_config.telescope")
 require("plugin_config.todo-comments")
 require("plugin_config.vim-illuminate")
+require("plugin_config.vim-multiple-cursors")
 require("plugin_config.windline")
 
 require("theme.catppuccin")
