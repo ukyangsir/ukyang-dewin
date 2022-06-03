@@ -27,6 +27,7 @@ vim.keybinds = {
 
 -- 无脑必配
 vim.keybinds.gmap("i", "jk", "<ESC>", vim.keybinds.opts)
+vim.keybinds.gmap("c", "jk", "<C-u><ESC>", vim.keybinds.opts)
 vim.keybinds.gmap("v", "sd", "<ESC>", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<Space>", ":", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<C-d>", "10jzz", vim.keybinds.opts)

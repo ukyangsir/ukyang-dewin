@@ -27,7 +27,7 @@ echo -e "\e[36m=============================Start To Init=======================
 echo "Init Ubuntu-22.04......"
 echo ""
 echo "Mission0: Add /etc/wsl.conf, Reboot, Add ssh-keys, Clone the repo to your home path"
-echo "Mission1: Change sources.list(tsinghua)"
+echo "Mission1: Change sources.list(tsinghua) && Add google to resolv.config"
 echo "Mission2: Add ppa(Neovim)"
 echo "Mission3: Install something necessary"
 echo "Mission4: Install z.sh"
@@ -46,6 +46,9 @@ echo ""
 sudo rm -rf /etc/apt/sources.list
 sudo cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/sources.list /etc/apt/
 sudo chmod 777 /etc/apt/sources.list 
+sudo chmod 777 /etc/resolv.conf
+echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 
 echo ""
 echo ""

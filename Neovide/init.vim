@@ -106,6 +106,9 @@ Plug 'petertriho/nvim-scrollbar'
 " colorizer
 Plug 'norcalli/nvim-colorizer.lua'
 
+" toggleterm
+Plug 'akinsho/toggleterm.nvim'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
