@@ -224,6 +224,8 @@ alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
 alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
 alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
 
+alias lg='lazygit'
+
 # golang
 export GOPATH=~/go
 export GOROOT=/usr/local/go
@@ -236,5 +238,7 @@ export GOPRIVATE=git.mycompany.com,github.com/my/private
 # nodejs
 export NODEROOT=/usr/local/node
 export NODEBIN=$NODEROOT/bin/
+# lazygit
+export LAZYGIT=/usr/local
 # path
-export PATH=$GOBIN:$GOTOOLS:$NODEBIN:$PATH
+export PATH=$LAZYGIT:$GOBIN:$GOTOOLS:$NODEBIN:$PATH
