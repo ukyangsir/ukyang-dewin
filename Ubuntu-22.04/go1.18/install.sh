@@ -8,8 +8,8 @@
 cd /usr/local
 echo "ukyang"|sudo -S wget https://golang.google.cn/dl/go1.18.3.linux-amd64.tar.gz
 echo ""
-tar -xf go1.18.3.linux-amd64.tar.gz
-rm -rf go1.18.3.linux-amd64.tar.gz
+sudo tar -xf go1.18.3.linux-amd64.tar.gz
+sudo rm -rf go1.18.3.linux-amd64.tar.gz
 sudo chmod -R 777 go
 cd ~
 mkdir go
