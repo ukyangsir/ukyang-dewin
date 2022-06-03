@@ -99,6 +99,7 @@ sudo chmod -R 777 ~/.config/nvim
 echo "alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
 echo "alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
 echo "alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
+echo "export PATH=~/go/bin:$PATH">> ~/.bashrc
 source ~/.bashrc
 
 echo ""

@@ -223,3 +223,4 @@ source ~/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
 alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
 alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
+export PATH = ~/go/bin:$PATH
