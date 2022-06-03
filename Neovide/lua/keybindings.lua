@@ -159,6 +159,29 @@ vim.keybinds.gmap(
     vim.keybinds.opts
 )
 
+-- toggleterm快捷键
+-- 退出终端插入模式
+vim.keybinds.gmap("t", "<Esc>", "<C-\\><C-n>", vim.keybinds.opts)
+-- 打开普通终端
+vim.keybinds.gmap("n", "J", "<cmd>exe v:count.'ToggleTerm'<CR>", vim.keybinds.opts)
+-- 打开浮动终端
+vim.keybinds.gmap("n", "K", "<cmd>lua require('toggleterm').float_toggle()<CR>", vim.keybinds.opts)
+-- 打开lazy git 终端
+vim.keybinds.gmap("n", "gl", "<cmd>lua require('toggleterm').lazygit_toggle()<CR>", vim.keybinds.opts)
+-- 打开或关闭所有终端
+vim.keybinds.gmap("n", "<leader>ta", "<cmd>ToggleTermToggleAll<CR>", vim.keybinds.opts)
+-- 要需创建多个终端，可：
+-- 1 <键位> leader tt
+-- 2 <键位>
+-- ... <键位>
+-- 另外，上面我们新建了 2 个特殊终端，所以普通终端的顺序应该是从 3 开始
+vim.keybinds.gmap("t", "jk", "<C-\\><C-n>", vim.keybinds.opts)
+vim.keybinds.gmap("t", "<A-h>", "<C-\\><C-n><C-w>h", vim.keybinds.opts)
+vim.keybinds.gmap("t", "<A-j>", "<C-\\><C-n><C-w>j", vim.keybinds.opts)
+vim.keybinds.gmap("t", "<A-k>", "<C-\\><C-n><C-w>k", vim.keybinds.opts)
+vim.keybinds.gmap("t", "<A-l>", "<C-\\><C-n><C-w>l", vim.keybinds.opts)
+-- vim.keybinds.gmap("t", "sd", "<C-\\><C-n> :close<CR>", vim.keybinds.opts)
+
 -- bufferline 快捷键
 -- map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
 -- map("n", "<Leader>2", "<Cmd>BufferLineGoToBuffer 2<CR>", opt)
