@@ -70,7 +70,7 @@ echo -e "\e[36m=================Mission3: Install something necessary===========
 # enable systemctl related(completed)
 sudo apt install -y curl wget git openssh-server net-tools \
      tar zip unzip \
-     build-essential gcc zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev sqlite3 libsqlite3-dev tk-dev uuid-dev libgdbm-compat-dev \
+     build-essential gcc g++ zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev sqlite3 libsqlite3-dev tk-dev uuid-dev libgdbm-compat-dev \
      fd-find ripgrep sed xsel \
      fontconfig daemonize \
 # sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
