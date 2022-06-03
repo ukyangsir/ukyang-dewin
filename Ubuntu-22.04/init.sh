@@ -85,8 +85,8 @@ echo ""
 echo ""
 
 echo -e "\e[36m========================Mission4: Install z.sh==========================\e[0m"
-git clone git@github.com:rupa/z.git ~/z
-echo '. ~/z/z.sh' >> ~/.bashrc
+git clone git@github.com:rupa/z.git /usr/local/z
+echo '. /usr/local/z/z.sh' >> ~/.bashrc
 
 echo ""
 echo ""

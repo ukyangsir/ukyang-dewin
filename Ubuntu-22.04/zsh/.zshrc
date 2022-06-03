@@ -217,10 +217,21 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
+# source $ZSHoh-my-zsh.sh
 source ~/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-. ~/z/z.sh
+. /usr/local/z/z.sh
 alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
 alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
 alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
-export PATH = ~/go/bin:$PATH
+
+# golang
+export GOPATH=~/go
+export GOROOT=/usr/local/go
+export GOARCH=amd64
+export GOOS=linux
+export GOBIN=$GOROOT/bin/
+export GOTOOLS=$GOROOT/pkg/tool/
+export GOPROXY=https://proxy.golang.com.cn,direct
+export GOPRIVATE=git.mycompany.com,github.com/my/private
+# path
+export PATH = $PATH:$GOBIN:$GOTOOLS
