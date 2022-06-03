@@ -233,5 +233,8 @@ export GOBIN=$GOROOT/bin/
 export GOTOOLS=$GOROOT/pkg/tool/
 export GOPROXY=https://proxy.golang.com.cn,direct
 export GOPRIVATE=git.mycompany.com,github.com/my/private
+# nodejs
+export NODEROOT=/usr/local/node
+export NODEBIN=$NODEROOT/bin/
 # path
-export PATH = $PATH:$GOBIN:$GOTOOLS
+export PATH=$PATH:$GOBIN:$GOTOOLS:$NODEBIN
