@@ -1,9 +1,8 @@
 -- Copyright (C)2022 By ukyang. All Rights Reserved.
 -- Author: ukyang
 -- E-mail: ukyang_ma@163.com
--- Date: 2022-05-23
+-- Date: 2022-06-05
 -- Description:
-
 
 local runtime_path = vim.split(package.path, ";")
 table.insert(runtime_path, "lua/?.lua")
