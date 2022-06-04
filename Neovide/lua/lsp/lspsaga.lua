@@ -1,3 +1,9 @@
+-- Copyright (C)2022 By ukyang. All Rights Reserved.
+-- Author: ukyang
+-- E-mail: ukyang_ma@163.com
+-- Date: 2022-06-05
+-- Description:
+
 local lspsaga = require "lspsaga"
 lspsaga.setup {
     -- defaults ...
@@ -10,9 +16,9 @@ lspsaga.setup {
     infor_sign = "",
     diagnostic_header_icon = "   ",
     -- code action title icon
-    code_action_icon = " ",
+    code_action_icon = " ", -- 正在写入的行提示
     code_action_prompt = {
-        enable = true,
+        enable = true, -- 显示写入行提示，如果为 true，则写代码时会在左侧行号栏中显示你所定义的图标
         sign = true,
         sign_priority = 40,
         virtual_text = true
@@ -29,15 +35,16 @@ lspsaga.setup {
         scroll_up = "<C-b>"
     },
     code_action_keys = {
-        quit = "q",
+        -- 快捷键配置
+        quit = "<Esc>",
         exec = "<CR>"
     },
     rename_action_keys = {
-        quit = "<C-c>",
+        quit = "<Esc>",
         exec = "<CR>"
     },
     definition_preview_icon = "  ",
-    border_style = "single",
+    border_style = "round", -- 提示边框样式：round、single、double
     rename_prompt_prefix = "➤",
     rename_output_qflist = {
         enable = false,
