@@ -121,6 +121,9 @@ Plug 'nvim-telescope/telescope.nvim'
 " notify
 Plug 'rcarriga/nvim-notify'
 
+" todo-comments
+Plug 'folke/todo-comments.nvim'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -154,9 +157,6 @@ Plug 'SpringHan/Terslation.vim'
 " comment
 Plug 'numToStr/Comment.nvim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-
-" todo-comments
-Plug 'folke/todo-comments.nvim'
 
 " code format
 Plug 'sbdchd/neoformat'
