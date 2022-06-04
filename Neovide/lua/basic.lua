@@ -143,6 +143,7 @@ require("plugin_config.toggleterm")
 require("plugin_config.undotree")
 require("plugin_config.vim-illuminate")
 require("plugin_config.vim-multiple-cursors")
+require("plugin_config.which-key")
 require("plugin_config.windline")
 
 require("theme.catppuccin")

@@ -112,6 +112,9 @@ Plug 'akinsho/toggleterm.nvim'
 " undotree
 Plug 'mbbill/undotree'
 
+" which-key
+Plug 'folke/which-key.nvim'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
