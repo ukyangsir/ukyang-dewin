@@ -109,6 +109,9 @@ Plug 'norcalli/nvim-colorizer.lua'
 " toggleterm
 Plug 'akinsho/toggleterm.nvim'
 
+" undotree
+Plug 'mbbill/undotree'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'

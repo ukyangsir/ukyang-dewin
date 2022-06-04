@@ -169,7 +169,7 @@ vim.keybinds.gmap("n", "K", "<cmd>lua require('toggleterm').float_toggle()<CR>",
 -- 打开lazy git 终端
 vim.keybinds.gmap("n", "gl", "<cmd>lua require('toggleterm').lazygit_toggle()<CR>", vim.keybinds.opts)
 -- 打开或关闭所有终端
-vim.keybinds.gmap("n", "<leader>ta", "<cmd>ToggleTermToggleAll<CR>", vim.keybinds.opts)
+-- vim.keybinds.gmap("n", "<leader>ta", "<cmd>ToggleTermToggleAll<CR>", vim.keybinds.opts)
 -- 要需创建多个终端，可：
 -- 1 <键位> leader tt
 -- 2 <键位>
@@ -181,6 +181,10 @@ vim.keybinds.gmap("t", "<A-j>", "<C-\\><C-n><C-w>j", vim.keybinds.opts)
 vim.keybinds.gmap("t", "<A-k>", "<C-\\><C-n><C-w>k", vim.keybinds.opts)
 vim.keybinds.gmap("t", "<A-l>", "<C-\\><C-n><C-w>l", vim.keybinds.opts)
 -- vim.keybinds.gmap("t", "sd", "<C-\\><C-n> :close<CR>", vim.keybinds.opts)
+
+-- undotree快捷键
+-- 按键绑定，查看 undotree
+vim.keybinds.gmap("n", "<leader>t", ":UndotreeToggle<CR>", vim.keybinds.opts)
 
 -- bufferline 快捷键
 -- map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)

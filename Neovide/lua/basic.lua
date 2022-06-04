@@ -111,6 +111,8 @@ vim.o.splitright = true
 vim.o.incsearch = true
 -- 是否透明背景
 vim.g.background_transparency = true
+-- 指定undotree缓存存放路径
+vim.g.undotree_dir="~/.cache/nvim/undodir"
 
 require("lsp.lsp")
 require("lsp.lspsaga")
@@ -138,6 +140,7 @@ require("plugin_config.switch")
 require("plugin_config.telescope")
 require("plugin_config.todo-comments")
 require("plugin_config.toggleterm")
+require("plugin_config.undotree")
 require("plugin_config.vim-illuminate")
 require("plugin_config.vim-multiple-cursors")
 require("plugin_config.windline")
