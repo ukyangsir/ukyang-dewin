@@ -114,9 +114,10 @@ vim.g.background_transparency = true
 -- 指定undotree缓存存放路径
 vim.g.undotree_dir="~/.cache/nvim/undodir"
 
-require("lsp.lsp")
 require("lsp.lspsaga")
 require("lsp.nvim-cmp")
+require("lsp.nvim-lsp-installer")
+require("lsp.nvim-lspconfig")
 
 require("plugin_config.auto-session")
 require("plugin_config.autosave")
