@@ -184,7 +184,7 @@ vim.keybinds.gmap("t", "<A-l>", "<C-\\><C-n><C-w>l", vim.keybinds.opts)
 
 -- undotree快捷键
 -- 按键绑定，查看 undotree
-vim.keybinds.gmap("n", "<leader>t", ":UndotreeToggle<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>un", ":UndotreeToggle<CR>", vim.keybinds.opts)
 
 -- 显示历史弹窗记录
 -- WARN:这里notify弹窗显示历史记录有bug
