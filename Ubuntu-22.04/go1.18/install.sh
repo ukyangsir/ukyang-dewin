@@ -13,3 +13,4 @@ sudo rm -rf go1.18.3.linux-amd64.tar.gz
 sudo chmod -R 777 go
 cd ~
 mkdir go
+sudo chmod -R 777 go
