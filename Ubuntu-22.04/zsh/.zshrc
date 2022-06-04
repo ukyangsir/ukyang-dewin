@@ -220,9 +220,9 @@ source $ZSH/oh-my-zsh.sh
 # source $ZSHoh-my-zsh.sh
 source ~/.oh-my-zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 . /usr/local/z/z.sh
-alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
-alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
-alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'
+alias vim='nvim'
+alias vi='nvim'
+alias v='nvim'
 
 alias lg='lazygit'
 
