@@ -2,7 +2,7 @@
 # Copyright (C)2022 By ukyang. All Rights Reserved.
 # Author: ukyang
 # E-mail: ukyang_ma@163.com
-# Date: 2022-05-28
+# Date: 2022-06-04
 # Description:
 
 
@@ -17,6 +17,7 @@ sudo ./configure --enable-optimizations --with-lto --enable-shared
 sudo make -j8
 sudo make altinstall
 sudo ln -s /usr/local/lib/libpython3.9.so.1.0 /usr/lib/
+cd ~
 sudo rm -rf ~/Python-3.9.12
 
 echo -e "\e[36m==============================Intall pip3===============================\e[0m"
