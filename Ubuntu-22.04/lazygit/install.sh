@@ -2,7 +2,7 @@
 # Copyright (C)2022 By ukyang. All Rights Reserved.
 # Author: ukyang
 # E-mail: ukyang_ma@163.com
-# Date: 2022-06-03
+# Date: 2022-06-04
 # Description:
 
 cd /usr/local
@@ -12,5 +12,6 @@ sudo rm -rf lazygit_0.34_Linux_x86_64.tar.gz
 
 sudo mkdir ~/.config/lazygit
 sudo cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/lazygit/config.yml ~/.config/lazygit/
-
 sudo chmod -R 777 ~/.config
+
+cd ~
