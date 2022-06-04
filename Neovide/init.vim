@@ -18,121 +18,89 @@
 " ==================== Plugin packages ====================
 " Begin Plug, Depends On https://github.com/junegunn/vim-plug
 call plug#begin('~/.config/nvim/plugged')
+
 " 中文文档
 Plug 'yianwillis/vimcdoc'
 
+
 " colorscheme
-" Plug 'joshdick/onedark.vim'
-" Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-" Plug 'EdenEast/nightfox.nvim'
-" Plug 'morhetz/gruvbox'
-" Plug 'sainnhe/gruvbox-material'
 Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-" Plug 'ellisonleao/gruvbox.nvim'
-" Plug 'catppuccin/nvim'
-" Plug 'rebelot/kanagawa.nvim'
-" Plug 'phanviet/vim-monokai-pro'
-" Plug 'glepnir/zephyr-nvim'
+
 
 " icons
 Plug 'kyazdani42/nvim-web-devicons'
-
 " 一款lua开发使用的插件
 Plug 'nvim-lua/plenary.nvim'
-
 " 文件查找
 Plug 'sharkdp/fd'
-
 " 文字查找
 Plug 'BurntSushi/ripgrep'
 
-" bufferline
-" Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 
 " windline
 Plug 'windwp/windline.nvim'
-
 " gitsigns
 Plug 'lewis6991/gitsigns.nvim'
-
 " nvim-tree
 Plug 'kyazdani42/nvim-tree.lua'
-
-" floaterm
-" Plug 'voldikss/vim-floaterm'
-
 " hlslens
 Plug 'kevinhwang91/nvim-hlslens'
-
 " indent-blankline
 Plug 'lukas-reineke/indent-blankline.nvim'
-
 " autopairs
 Plug 'windwp/nvim-autopairs'
-
 " switch
 Plug 'AndrewRadev/switch.vim'
-
 " hop
 Plug 'phaazon/hop.nvim'
-
 " surround
 Plug 'ur4ltz/surround.nvim'
-
 " illuminate
 Plug 'RRethy/vim-illuminate'
-
 " spellsitter
 Plug 'lewis6991/spellsitter.nvim'
-
 " autosave
 Plug 'Pocco81/AutoSave.nvim'
-
 " lastplace
 Plug 'ethanholz/nvim-lastplace'
-
 " auto-session
 Plug 'rmagatti/auto-session'
-
 " spectre
 Plug 'nvim-pack/nvim-spectre'
-
 " vim-multiple-cursors
 Plug 'terryma/vim-multiple-cursors'
-
 " scrollbar
 Plug 'petertriho/nvim-scrollbar'
-
 " colorizer
 Plug 'norcalli/nvim-colorizer.lua'
-
 " toggleterm
 Plug 'akinsho/toggleterm.nvim'
-
 " undotree
 Plug 'mbbill/undotree'
-
 " which-key
 Plug 'folke/which-key.nvim'
-
 " telescope
 Plug 'nvim-telescope/telescope.nvim'
-
 " notify
 Plug 'rcarriga/nvim-notify'
-
 " todo-comments
 Plug 'folke/todo-comments.nvim'
+" translation
+Plug 'ukyangsir/Terslation'
+Plug 'SpringHan/Terslation.vim'
+" comment
+Plug 'numToStr/Comment.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+
 
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
-
 " lspkind
 Plug 'onsails/lspkind-nvim'
-
 " lspsaga
 Plug 'tami5/lspsaga.nvim'
+
 
 " nvim-cmp
 Plug 'hrsh7th/nvim-cmp'
@@ -141,25 +109,23 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 
+
 " Snippet engine: vsnip
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'rafamadriz/friendly-snippets'
 
-" translation
-Plug 'ukyangsir/Terslation'
-Plug 'SpringHan/Terslation.vim'
-
 " treesitter
 " Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
 " Plug 'p00f/nvim-ts-rainbow' " 彩虹括号
 
-" comment
-Plug 'numToStr/Comment.nvim'
-Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-
 " code format
 Plug 'sbdchd/neoformat'
+
+" bufferline
+" Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
+" floaterm
+" Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 " ==================== END Plugin packages ====================
