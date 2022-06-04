@@ -8,15 +8,6 @@ local wk = require("which-key")
 
 wk.register(
     {
-        ["g"] = {
-            s = {":Switch<CR>", "ukyang--switch"},
-            l = {"<cmd>lua require('toggleterm').lazygit_toggle()<CR>", "ukyang--lazygit"}
-        }
-    }
-)
-
-wk.register(
-    {
         ["s"] = {
             p = {":sp<CR>", "ukyang--down"},
             v = {":vs<CR>", "ukyang--right"},
