@@ -186,6 +186,14 @@ vim.keybinds.gmap("t", "<A-l>", "<C-\\><C-n><C-w>l", vim.keybinds.opts)
 -- 按键绑定，查看 undotree
 vim.keybinds.gmap("n", "<leader>t", ":UndotreeToggle<CR>", vim.keybinds.opts)
 
+-- 显示历史弹窗记录
+vim.keybinds.gmap(
+    "n",
+    "<leader>fn",
+    "<cmd>lua require('telescope').extensions.notify.notify()<CR>",
+    vim.keybinds.opts
+)
+
 -- which-key快捷键
 -- vim.keybinds.gmap("n", "<leader>", ":WhichKey <leader><CR>", vim.keybinds.opts)
 -- vim.keybinds.gmap("n", "m", ":WhichKey m<CR>", vim.keybinds.opts)

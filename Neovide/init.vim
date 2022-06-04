@@ -115,6 +115,12 @@ Plug 'mbbill/undotree'
 " which-key
 Plug 'folke/which-key.nvim'
 
+" telescope
+Plug 'nvim-telescope/telescope.nvim'
+
+" notify
+Plug 'rcarriga/nvim-notify'
+
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
@@ -140,9 +146,6 @@ Plug 'rafamadriz/friendly-snippets'
 " translation
 Plug 'ukyangsir/Terslation'
 Plug 'SpringHan/Terslation.vim'
-
-" telescope
-Plug 'nvim-telescope/telescope.nvim'
 
 " treesitter
 " Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
