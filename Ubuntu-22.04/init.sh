@@ -115,12 +115,6 @@ echo -e "\e[36m=========mission6: prepares(lsp,treesitter,cmp,format,undotree)==
 sudo mkdir -p ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
 
-# format
-# vue/lua
-sudo npm install -g prettier lua-fmt
-# python
-sudo apt install -y python3-autopep8
-
 # undotree
 sudo mkdir ~/.cache/nvim/undodir
 sudo chmod -R 777 ~/.cache
