@@ -106,7 +106,7 @@ vim.o.splitright = true
 -- 设定在无操作时，交换文件刷写到磁盘的等待毫秒数（默认为 4000）
 -- vim.o.updatetime = 300
 -- 设定等待按键时长的毫秒数，默认1000ms，可以设置更短
--- vim.o.timeoutlen = 100
+vim.o.timeoutlen = 500
 -- 边输入边搜索
 vim.o.incsearch = true
 -- 是否透明背景

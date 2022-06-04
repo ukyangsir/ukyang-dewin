@@ -219,6 +219,8 @@ highlight NvimTreeWinSeparator guifg=Black
 " hop
 highlight HopUnmatched guifg=none guibg=none
 
+" which-key
+highlight WhichKeyFloat guibg=none
 
 " marks
 " highlight SignColumn guibg=none ctermbg=none

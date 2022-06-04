@@ -1,7 +1,7 @@
 -- Copyright (C)2022 By ukyang. All Rights Reserved.
 -- Author: ukyang
 -- E-mail: ukyang_ma@163.com
--- Date: 2022-06-02
+-- Date: 2022-06-04
 -- Description:
 
 -- Modes
@@ -185,6 +185,12 @@ vim.keybinds.gmap("t", "<A-l>", "<C-\\><C-n><C-w>l", vim.keybinds.opts)
 -- undotree快捷键
 -- 按键绑定，查看 undotree
 vim.keybinds.gmap("n", "<leader>t", ":UndotreeToggle<CR>", vim.keybinds.opts)
+
+-- which-key快捷键
+-- vim.keybinds.gmap("n", "<leader>", ":WhichKey <leader><CR>", vim.keybinds.opts)
+-- vim.keybinds.gmap("n", "m", ":WhichKey m<CR>", vim.keybinds.opts)
+-- vim.keybinds.gmap("n", "g", ":WhichKey g<CR>", vim.keybinds.opts)
+-- vim.keybinds.gmap("n", "<leader>k", ":WhichKey <leader><CR>", vim.keybinds.opts)
 
 -- bufferline 快捷键
 -- map("n", "<Leader>1", "<Cmd>BufferLineGoToBuffer 1<CR>", opt)
