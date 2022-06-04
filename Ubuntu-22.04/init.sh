@@ -40,7 +40,7 @@ echo "BeginDate: ${begindate}"
 echo ""
 echo ""
 
-echo -e "\e[36m================Mission1: Change sources.list(tsinghua)=================\e[0m"
+echo -e "\e[36m=Mission1: Change sources.list(tsinghua) && Add google to resolv.config=\e[0m"
 echo "ukyang"|sudo -S chmod 777 -R ~/ukyang-vimrelated-Windows
 echo ""
 sudo rm -rf /etc/apt/sources.list
@@ -99,26 +99,31 @@ sudo apt install -y neovim
 sudo mkdir -p ~/.config/nvim
 sudo cp -r ~/ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
 sudo chmod -R 777 ~/.config/nvim
-echo "alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
-echo "alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
-echo "alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
-echo "export PATH=~/go/bin:$PATH">> ~/.bashrc
+# echo "alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
+# echo "alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
+# echo "alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
+echo "alias vim='nvim'">> ~/.bashrc
+echo "alias vi='nvim'">> ~/.bashrc
+echo "alias v='nvim'">> ~/.bashrc
 source ~/.bashrc
 
 echo ""
 echo ""
 
-echo -e "\e[36m=========Mission6: Prepares(lsp,treesitter,cmp,format)==========\e[0m"
+echo -e "\e[36m=========mission6: prepares(lsp,treesitter,cmp,format,undotree)==========\e[0m"
 # lsp log file
 sudo mkdir -p ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
-sudo chmod 777 -R ~/.cache
 
 # format
 # vue/lua
 sudo npm install -g prettier lua-fmt
 # python
 sudo apt install -y python3-autopep8
+
+# undotree
+sudo mkdir ~/.cache/nvim/undodir
+sudo chmod -R 777 ~/.cache
 
 echo ""
 echo ""
