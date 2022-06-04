@@ -31,7 +31,7 @@ require("bufferline").setup {
         tab_size = 18,
         diagnostics = "nvim_lsp", -- 使用 nvim 内置 lsp
         diagnostics_update_in_insert = false,
-        diagnostics_indicator = function(count, level, diagnostics_dict, context)
+        diagnostics_indicator = function(count)
             return "(" .. count .. ")"
         end,
         custom_filter = function(buf_number, buf_numbers)
