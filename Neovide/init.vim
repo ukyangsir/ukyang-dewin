@@ -191,6 +191,11 @@ highlight HopUnmatched guifg=none guibg=none
 " which-key
 highlight WhichKeyFloat guibg=none
 
+" lsp
+highlight DiagnosticInfo guibg=none
+highlight DiagnosticWarn guibg=none
+highlight DiagnosticError guibg=none
+
 " marks
 " highlight SignColumn guibg=none ctermbg=none
 
