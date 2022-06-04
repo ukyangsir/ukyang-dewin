@@ -123,6 +123,7 @@ require("plugin_config.auto-session")
 require("plugin_config.autosave")
 -- require('plugin-config.bufferline')
 require("plugin_config.comment") -- 代码格式化快捷键
+require("plugin_config.fidget")
 require("plugin_config.gitsigns")
 require("plugin_config.hop") -- leader 退出
 require("plugin_config.indent-blankline")

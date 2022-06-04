@@ -100,6 +100,8 @@ Plug 'williamboman/nvim-lsp-installer'
 Plug 'onsails/lspkind-nvim'
 " lspsaga
 Plug 'tami5/lspsaga.nvim'
+" fidget
+Plug 'j-hui/fidget.nvim'
 
 
 " nvim-cmp
