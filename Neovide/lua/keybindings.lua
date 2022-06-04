@@ -115,7 +115,7 @@ vim.keybinds.gmap("n", "<leader>sp", "<cmd>set spell!<CR>", vim.keybinds.opts)
 
 -- gitsigns快捷键
 -- vim.keybinds.gmap("n", "git", "<cmd>Gitsigns toggle_current_line_blame<CR>", vim.keybinds.opts)
-vim.keybinds.gmap("n", "git", "<cmd>Gitsigns preview_hunk<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>gi", "<cmd>Gitsigns preview_hunk<CR>", vim.keybinds.opts)
 
 -- hlslens快捷键
 vim.keybinds.gmap(
