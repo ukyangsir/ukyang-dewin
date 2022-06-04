@@ -28,32 +28,38 @@ echo "Init Ubuntu-22.04......"
 echo ""
 echo "Mission0: Add /etc/wsl.conf, Reboot, Add ssh-keys, Clone the repo to your home path"
 echo "Mission1: Change sources.list(tsinghua) && Add google to resolv.config"
-echo "Mission2: Add ppa(Neovim)"
-echo "Mission3: Install something necessary"
-echo "Mission4: Install z.sh"
-echo "Mission5: Install Neovim"
-echo "Mission6: Prepares(lsp,treesitter,cmp,format)"
-echo "Mission7: Install shells_to_bin(push,backup)"
+echo "Mission2: Add google nameserver to resolv.config"
+echo "Mission3: Add ppa(Neovim)"
+echo "Mission4: Install something necessary"
+echo "Mission5: Install z.sh"
+echo "Mission6: Install Neovim"
+echo "Mission7: Prepares(lsp,treesitter,cmp,format)"
+echo "Mission8: Install shells_to_bin(push,backup)"
 begindate=$(date "+%Y-%m-%d %H:%M:%S")
 echo "BeginDate: ${begindate}"
 
 echo ""
 echo ""
 
-echo -e "\e[36m=Mission1: Change sources.list(tsinghua) && Add google to resolv.config=\e[0m"
+echo -e "\e[36m================Mission1: Change sources.list(tsinghua)=================\e[0m"
 echo "ukyang"|sudo -S chmod 777 -R ~/ukyang-vimrelated-Windows
 echo ""
 sudo rm -rf /etc/apt/sources.list
 sudo cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/sources.list /etc/apt/
 sudo chmod 777 /etc/apt/sources.list 
+
+echo ""
+echo ""
+
+echo -e "\e[36m===========Mission2: Add google nameserver to resolv.config=============\e[0m"
 sudo chmod 777 /etc/resolv.conf
-echo "nameserver 8.8.8.8" >> /etc/resolv.conf
-echo "nameserver 8.8.4.4" >> /etc/resolv.conf
+sudo echo "nameserver 8.8.8.8" >> /etc/resolv.conf
+sudo echo "nameserver 8.8.4.4" >> /etc/resolv.conf
 
 echo ""
 echo ""
 
-echo -e "\e[36m=======================Mission2: Add ppa(Neovim)========================\e[0m"
+echo -e "\e[36m=======================Mission3: Add ppa(Neovim)========================\e[0m"
 echo | sudo -S add-apt-repository ppa:neovim-ppa/unstable
 echo "y" | sudo -S apt update
 # sudo apt list --upgradable
@@ -62,7 +68,7 @@ echo "y" | sudo -S apt upgrade
 echo ""
 echo ""
 
-echo -e "\e[36m=================Mission3: Install something necessary==================\e[0m"
+echo -e "\e[36m=================Mission4: Install something necessary==================\e[0m"
 # net related(completed)
 # pack and unpack related(completed)
 # build related(completed)
@@ -84,7 +90,7 @@ sudo apt install -y curl wget git openssh-server net-tools \
 echo ""
 echo ""
 
-echo -e "\e[36m========================Mission4: Install z.sh==========================\e[0m"
+echo -e "\e[36m========================Mission5: Install z.sh==========================\e[0m"
 sudo mkdir /usr/local/z
 sudo chmod -R 777 /usr/local/z
 git clone git@github.com:rupa/z.git /usr/local/z
@@ -94,7 +100,7 @@ echo '. /usr/local/z/z.sh' >> ~/.bashrc
 echo ""
 echo ""
 
-echo -e "\e[36m=======================Mission5: Install Neovim=========================\e[0m"
+echo -e "\e[36m=======================Mission6: Install Neovim=========================\e[0m"
 sudo apt install -y neovim
 sudo mkdir -p ~/.config/nvim
 sudo cp -r ~/ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
@@ -110,7 +116,7 @@ source ~/.bashrc
 echo ""
 echo ""
 
-echo -e "\e[36m=========mission6: prepares(lsp,treesitter,cmp,format,undotree)==========\e[0m"
+echo -e "\e[36m=========mission7: prepares(lsp,treesitter,cmp,format,undotree)==========\e[0m"
 # lsp log file
 sudo mkdir -p ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
@@ -122,7 +128,7 @@ sudo chmod -R 777 ~/.cache
 echo ""
 echo ""
 
-echo -e "\e[36m===================Mission7: Install shells_to_bin======================\e[0m"
+echo -e "\e[36m===================Mission8: Install shells_to_bin======================\e[0m"
 cd ~/ukyang-vimrelated-Windows/shells_to_bin
 sudo make install
 cd ~
@@ -138,6 +144,7 @@ echo "Mission4 complete"
 echo "Mission5 complete"
 echo "Mission6 complete"
 echo "Mission7 complete"
+echo "Mission8 complete"
 enddate=$(date "+%Y-%m-%d %H:%M:%S")
 echo "EndDate: ${enddate}"
 echo ""
