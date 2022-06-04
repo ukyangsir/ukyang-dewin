@@ -28,3 +28,4 @@ vim.notify.setup(notify_opts)
 -- 级别有：info、warn、error、debug、trace
 -- 示例：
 -- vim.notify("hello world", "info", {title = "info"})
+require("telescope").load_extension("notify")

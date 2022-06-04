@@ -187,12 +187,15 @@ vim.keybinds.gmap("t", "<A-l>", "<C-\\><C-n><C-w>l", vim.keybinds.opts)
 vim.keybinds.gmap("n", "<leader>t", ":UndotreeToggle<CR>", vim.keybinds.opts)
 
 -- 显示历史弹窗记录
+-- WARN:这里notify弹窗显示历史记录有bug
 vim.keybinds.gmap(
     "n",
-    "<leader>fn",
-    "<cmd>lua require('telescope').extensions.notify.notify()<CR>",
+    "<leader>lf",
+    -- "<cmd>lua require('telescope').extensions.notify.notify()<CR>",
+    ":Telescope notify<CR>",
     vim.keybinds.opts
 )
+vim.keybinds.gmap("n", "<leader>ll", ":Notifications<CR>", vim.keybinds.opts)
 
 -- which-key快捷键
 -- vim.keybinds.gmap("n", "<leader>", ":WhichKey <leader><CR>", vim.keybinds.opts)
