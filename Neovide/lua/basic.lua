@@ -116,7 +116,7 @@ vim.g.undotree_dir="~/.cache/nvim/undodir"
 
 require("lsp.lspsaga")
 require("lsp.nvim-cmp")
-require("lsp.nvim-lsp-installer")
+require("lsp.nvim-lsp-installer") -- g系列快捷键
 require("lsp.nvim-lspconfig")
 
 require("plugin_config.auto-session")
