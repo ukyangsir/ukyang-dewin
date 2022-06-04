@@ -121,9 +121,9 @@ require("lsp.nvim-cmp")
 require("plugin_config.auto-session")
 require("plugin_config.autosave")
 -- require('plugin-config.bufferline')
-require("plugin_config.comment")
+require("plugin_config.comment") -- 代码格式化快捷键
 require("plugin_config.gitsigns")
-require("plugin_config.hop")
+require("plugin_config.hop") -- leader 退出
 require("plugin_config.indent-blankline")
 require("plugin_config.neoformat")
 require("plugin_config.nvim-autopairs")
@@ -132,18 +132,18 @@ require("plugin_config.nvim-hlslens")
 require("plugin_config.nvim-lastplace")
 require("plugin_config.nvim-notify")
 require("plugin_config.nvim-scrollbar")
-require("plugin_config.nvim-spectre")
-require("plugin_config.nvim-tree")
+require("plugin_config.nvim-spectre") -- <leader>rf/p 后，内部<leader>相关快捷键
+require("plugin_config.nvim-tree") -- nvim-tree 有一些快捷键
 -- require("plugin_config.nvim-treesitter")
 require("plugin_config.spellsitter")
-require("plugin_config.surround")
+require("plugin_config.surround") -- ys/ds/cs
 require("plugin_config.switch")
-require("plugin_config.telescope")
-require("plugin_config.todo-comments")
+require("plugin_config.telescope") -- alt 系列快捷键
+require("plugin_config.todo-comments") -- 几个高亮标签
 require("plugin_config.toggleterm")
 require("plugin_config.undotree")
 require("plugin_config.vim-illuminate")
-require("plugin_config.vim-multiple-cursors")
+require("plugin_config.vim-multiple-cursors") -- gm，alt 系列（alt + b 取消），sd
 require("plugin_config.which-key")
 require("plugin_config.windline")
 
