@@ -8,12 +8,12 @@
 
 
 echo -e "\e[36m正在同步......\e[0m"
-echo "ukyang"|sudo -S cp -R ~/ukyang-vimrelated-Windows/Neovide/lua/* ~/.config/nvim/lua/
+echo "ukyang"|sudo -S cp -R ~/ukyang-vimrelated-Windows/Neovim/lua/* ~/.config/nvim/lua/
 echo ""
-sudo cp -R ~/ukyang-vimrelated-Windows/Neovide/ftplugin/* ~/.config/nvim/ftplugin/
-sudo cp -R ~/ukyang-vimrelated-Windows/Neovide/lint/* ~/.config/nvim/lint/
-sudo cp -R ~/ukyang-vimrelated-Windows/Neovide/sh/* ~/.config/nvim/sh/
-sudo cp -R ~/ukyang-vimrelated-Windows/Neovide/snippet/* ~/.config/nvim/snippet/
-sudo cp -R ~/ukyang-vimrelated-Windows/Neovide/vim_raw/* ~/.config/nvim/vim_raw/
-sudo cp -R ~/ukyang-vimrelated-Windows/Neovide/init.vim ~/.config/nvim/
+sudo cp -R ~/ukyang-vimrelated-Windows/Neovim/ftplugin/* ~/.config/nvim/ftplugin/
+sudo cp -R ~/ukyang-vimrelated-Windows/Neovim/lint/* ~/.config/nvim/lint/
+sudo cp -R ~/ukyang-vimrelated-Windows/Neovim/sh/* ~/.config/nvim/sh/
+sudo cp -R ~/ukyang-vimrelated-Windows/Neovim/snippet/* ~/.config/nvim/snippet/
+sudo cp -R ~/ukyang-vimrelated-Windows/Neovim/vim_raw/* ~/.config/nvim/vim_raw/
+sudo cp -R ~/ukyang-vimrelated-Windows/Neovim/init.vim ~/.config/nvim/
 echo -e "\e[36m同步成功\e[0m"
