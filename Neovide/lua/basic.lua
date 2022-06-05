@@ -133,6 +133,8 @@ require("plugin_config.nvim-autopairs")
 require("plugin_config.nvim-colorizer")
 require("plugin_config.nvim-hlslens")
 require("plugin_config.nvim-lastplace")
+-- WARN: 这里的灯泡显示以及代码动作有bug
+require("plugin_config.nvim-lightbulb")
 require("plugin_config.nvim-notify")
 require("plugin_config.nvim-scrollbar")
 require("plugin_config.nvim-spectre") -- <leader>rf/p 后，内部<leader>相关快捷键

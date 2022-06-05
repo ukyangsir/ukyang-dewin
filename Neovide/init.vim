@@ -104,6 +104,8 @@ Plug 'tami5/lspsaga.nvim'
 Plug 'j-hui/fidget.nvim'
 " lsp_signature
 Plug 'ray-x/lsp_signature.nvim'
+" lightbulb
+Plug 'kosayoda/nvim-lightbulb'
 
 
 " nvim-cmp
