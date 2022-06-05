@@ -102,6 +102,8 @@ Plug 'onsails/lspkind-nvim'
 Plug 'tami5/lspsaga.nvim'
 " fidget
 Plug 'j-hui/fidget.nvim'
+" lsp_signature
+Plug 'ray-x/lsp_signature.nvim'
 
 
 " nvim-cmp
@@ -197,6 +199,11 @@ highlight WhichKeyFloat guibg=none
 highlight DiagnosticInfo guibg=none
 highlight DiagnosticWarn guibg=none
 highlight DiagnosticError guibg=none
+highlight DiagnosticHint guibg=none
+
+" lsp_signature
+highlight NormalFloat guibg=none
+" highlight FloatBorder guifg=none
 
 " marks
 " highlight SignColumn guibg=none ctermbg=none

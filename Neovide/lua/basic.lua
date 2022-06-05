@@ -127,6 +127,7 @@ require("plugin_config.fidget")
 require("plugin_config.gitsigns")
 require("plugin_config.hop") -- leader 退出
 require("plugin_config.indent-blankline")
+require("plugin_config.lsp_signature")
 require("plugin_config.neoformat")
 require("plugin_config.nvim-autopairs")
 require("plugin_config.nvim-colorizer")
