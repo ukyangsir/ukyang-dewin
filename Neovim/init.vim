@@ -4,9 +4,7 @@
 " Date: 2022-06-05
 " Description:
 
-
 " autocmd BufWritePost $MYVIMRC source $MYVIMRC
-
 
 " Windows Need Modify Here
 " cd /mnt/f/git_space
@@ -205,6 +203,7 @@ highlight DiagnosticHint guibg=none
 
 " lsp_signature
 highlight NormalFloat guibg=none
+highlight Normal guibg=none
 " highlight FloatBorder guifg=none
 
 " marks
