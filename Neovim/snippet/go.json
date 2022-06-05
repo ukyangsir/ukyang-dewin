@@ -1,5 +1,5 @@
 {
-  "code": {
+  "main package code": {
     "prefix": "code",
     "body": [
       "package main\n",
