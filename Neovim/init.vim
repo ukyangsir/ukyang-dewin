@@ -110,7 +110,7 @@ Plug 'hrsh7th/nvim-cmp' " 代码补全核心插件，下面都是增强补全体
 Plug 'onsails/lspkind-nvim' " 为补全添加类似vscode的图标
 Plug 'hrsh7th/vim-vsnip' " vsnip补全引擎，用于获得代码片段支持，选择它的原因是，可以直接调用vscode下的代码片段
 Plug 'hrsh7th/cmp-vsnip' " 适用于vsnip的代码片段源
-Plug 'hrsh7th/cmp-nvim-lsp'  " 替换内置omnifunc，获得更多补全
+Plug 'hrsh7th/cmp-nvim-lsp'  " 替换内置omnifunc，获得更多补全，增强补全体验
 Plug 'hrsh7th/cmp-buffer' " 缓冲区补全
 Plug 'hrsh7th/cmp-path' " 路径补全
 Plug 'hrsh7th/cmp-cmdline' " 命令补全

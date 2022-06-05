@@ -6,6 +6,10 @@
 
 local lsp_installer_servers = require("nvim-lsp-installer.servers")
 
+-- 使用 cmp_nvim_lsp 代替内置 omnifunc，获得更强的补全体验
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+
 local servers = {
     -- 语言服务器名称：配置选项
     sumneko_lua = require("lsp.languages.sumneko_lua")
@@ -70,6 +74,8 @@ for server_name, server_options in pairs(servers) do
                 server_options.flags = {
                     debounce_text_changes = 150
                 }
+                -- nvim-lsp-installer 代替内置 omnifunc
+                server_options.capabilities = capabilities
                 -- 启动服务
                 server:setup(server_options)
             end
