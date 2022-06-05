@@ -215,7 +215,7 @@ let g:neovide_fullscreen=v:true
 let g:neovide_transparency=0.8
 
 " ==================== External settings ===================
-source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/autoheader.vim
-source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/terslation.vim
+source ~/.config/nvim/vim_raw/autoheader.vim
+source ~/.config/nvim/vim_raw/terslation.vim
 " source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/floaterm.vim
 " ==================== END External settings ===================
