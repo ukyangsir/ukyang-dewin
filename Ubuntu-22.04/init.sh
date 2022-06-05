@@ -102,7 +102,7 @@ echo ""
 
 echo -e "\e[36m=======================Mission6: Install Neovim=========================\e[0m"
 sudo apt install -y neovim
-sudo mkdir -p ~/.config/nvim
+sudo mkdir -p ~/.config/nvim/plugged
 sudo cp -r ~/ukyang-vimrelated-Windows/Neovide/* ~/.config/nvim/
 sudo chmod -R 777 ~/.config/nvim
 # echo "alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
