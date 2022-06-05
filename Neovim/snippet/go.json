@@ -1,0 +1,19 @@
+// Copyright (C)2022 By ukyang. All Rights Reserved.
+// Author: ukyang
+// E-mail: ukyang_ma@163.com
+// Date: 2022-06-05
+// Description:
+
+{
+  "main package code": {
+    "prefix": "code",
+    "body": [
+      "package main\n",
+      "import \"fmt\"\n",
+      "func main() {",
+      "\tfmt.Printf(\"hi Golang\\n${1}\")",
+      "}"
+    ],
+    "description": "package main code"
+  }
+}
