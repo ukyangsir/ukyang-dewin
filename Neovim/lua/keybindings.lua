@@ -198,6 +198,9 @@ vim.keybinds.gmap(
 )
 vim.keybinds.gmap("n", "<leader>ll", ":Notifications<CR>", vim.keybinds.opts)
 
+-- copilot快捷键
+vim.keybinds.gmap("i", "<C-l>", "copilot#Accept('')", vim.keybinds.opts)
+
 -- which-key快捷键
 -- vim.keybinds.gmap("n", "<leader>", ":WhichKey <leader><CR>", vim.keybinds.opts)
 -- vim.keybinds.gmap("n", "m", ":WhichKey m<CR>", vim.keybinds.opts)

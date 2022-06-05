@@ -115,6 +115,8 @@ vim.g.background_transparency = true
 vim.g.undotree_dir="~/.cache/nvim/undodir"
 -- 指定代码片段存储路径
 vim.g.vsnip_snippet_dir = "~/.config/nvim/snippet"
+-- copilot 启用设置
+vim.g.copilot_no_tab_map = true
 
 require("lsp.lspsaga")
 require("lsp.nvim-cmp")
@@ -125,6 +127,7 @@ require("plugin_config.auto-session")
 require("plugin_config.autosave")
 -- require('plugin-config.bufferline')
 require("plugin_config.comment") -- 代码格式化快捷键
+require("plugin_config.copilot") -- copilot专属快捷键
 require("plugin_config.fidget")
 require("plugin_config.gitsigns")
 require("plugin_config.hop") -- leader 退出
