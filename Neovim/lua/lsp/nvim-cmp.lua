@@ -49,65 +49,66 @@ cmp.setup {
         -- }
     ),
     -- 快捷键
-    -- mapping = cmp.mapping.preset.insert({})
-    mapping = {
-        -- 上一个
-        ["<A-p>"] = cmp.mapping.select_prev_item(),
-        -- 下一个
-        ["<A-;>"] = cmp.mapping.select_next_item(),
-        -- -- 出现补全
-        -- ["<A-CR>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
-        -- 出现补全以及取消补全
-        ["<A-CR>"] = cmp.mapping(
-            {
-                -- i = cmp.mapping.abort(),
-                -- c = cmp.mapping.close()
-                i = function()
+    mapping = cmp.mapping.preset.insert(
+        {
+            -- 上一个
+            ["<A-p>"] = cmp.mapping.select_prev_item(),
+            -- 下一个
+            ["<A-;>"] = cmp.mapping.select_next_item(),
+            -- -- 出现补全
+            -- ["<A-CR>"] = cmp.mapping(cmp.mapping.complete(), {"i", "c"}),
+            -- 出现补全以及取消补全
+            ["<A-CR>"] = cmp.mapping(
+                {
+                    -- i = cmp.mapping.abort(),
+                    -- c = cmp.mapping.close()
+                    i = function()
+                        if cmp.visible() then
+                            cmp.abort()
+                        else
+                            cmp.complete()
+                        end
+                    end,
+                    c = function()
+                        if cmp.visible() then
+                            cmp.close()
+                        else
+                            cmp.complete()
+                        end
+                    end
+                }
+            ),
+            -- 确认
+            -- Accept currently selected item. If none selected, `select` first item.
+            -- Set `select` to `false` to only confirm explicitly selected items.
+            ["<CR>"] = cmp.mapping.confirm(
+                {
+                    select = true,
+                    behavior = cmp.ConfirmBehavior.Replace
+                }
+            ),
+            -- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
+            -- ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+            -- ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+
+            -- 类似于 IDEA 的功能，如果没进入选择框，tab
+            -- 会选择下一个，如果进入了选择框，tab 会确认当前选择
+            ["<Tab>"] = cmp.mapping(
+                function(fallback)
                     if cmp.visible() then
-                        cmp.abort()
+                        local entry = cmp.get_selected_entry()
+                        if not entry then
+                            cmp.select_next_item({behavior = cmp.SelectBehavior.Select})
+                        end
+                        cmp.confirm()
                     else
-                        cmp.complete()
+                        fallback()
                     end
                 end,
-                c = function()
-                    if cmp.visible() then
-                        cmp.close()
-                    else
-                        cmp.complete()
-                    end
-                end
-            }
-        ),
-        -- 确认
-        -- Accept currently selected item. If none selected, `select` first item.
-        -- Set `select` to `false` to only confirm explicitly selected items.
-        ["<CR>"] = cmp.mapping.confirm(
-            {
-                select = true,
-                behavior = cmp.ConfirmBehavior.Replace
-            }
-        ),
-        -- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-        -- ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-        -- ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-
-        -- 类似于 IDEA 的功能，如果没进入选择框，tab
-        -- 会选择下一个，如果进入了选择框，tab 会确认当前选择
-        ["<Tab>"] = cmp.mapping(
-            function(fallback)
-                if cmp.visible() then
-                    local entry = cmp.get_selected_entry()
-                    if not entry then
-                        cmp.select_next_item({behavior = cmp.SelectBehavior.Select})
-                    end
-                    cmp.confirm()
-                else
-                    fallback()
-                end
-            end,
-            {"i", "s", "c"}
-        )
-    },
+                {"i", "s", "c"}
+            )
+        }
+    ),
     -- 使用lspkind-nvim显示类型图标
     formatting = {
         format = lspkind.cmp_format(
@@ -143,6 +144,7 @@ cmp.setup {
 cmp.setup.cmdline(
     "/",
     {
+        mapping = cmp.mapping.preset.cmdline(),
         sources = {
             {name = "buffer"}
         }
@@ -153,6 +155,7 @@ cmp.setup.cmdline(
 cmp.setup.cmdline(
     ":",
     {
+        mapping = cmp.mapping.preset.cmdline(),
         sources = cmp.config.sources(
             {
                 {name = "path"}
