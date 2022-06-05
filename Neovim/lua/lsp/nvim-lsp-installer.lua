@@ -12,16 +12,16 @@ capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
 local servers = {
     -- 语言服务器名称：配置选项
-    sumneko_lua = require("lsp.languages.sumneko_lua")
-    -- pyright = require("lsp.pyright"),
-    -- tsserver = require("lsp.tsserver"),
-    -- html = require("lsp.html"),
-    -- cssls = require("lsp.cssls"),
-    -- gopls = require("lsp.gopls"),
-    -- jsonls = require("lsp.jsonls"),
-    -- zeta_note = require("lsp.zeta_note"),
-    -- sqls = require("lsp.sqls"),
-    -- vuels = require("lsp.vuels")
+    cssls = require("lsp.languages.cssls"),
+    gopls = require("lsp.languages.gopls"),
+    html = require("lsp.languages.html"),
+    jsonls = require("lsp.languages.jsonls"),
+    pyright = require("lsp.languages.pyright"),
+    sqls = require("lsp.languages.sqls"),
+    sumneko_lua = require("lsp.languages.sumneko_lua"),
+    tsserver = require("lsp.languages.tsserver"),
+    vuels = require("lsp.languages.vuels"),
+    zeta_note = require("lsp.languages.zeta_note"),
 }
 
 -- 这里是 LSP 服务启动后的按键加载
