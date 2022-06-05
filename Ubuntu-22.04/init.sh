@@ -116,7 +116,8 @@ source ~/.bashrc
 echo ""
 echo ""
 
-echo -e "\e[36m=========mission7: prepares(lsp,treesitter,cmp,format,undotree)==========\e[0m"
+echo -e "\e[36m=========mission7: prepares(lsp,cmp,format,treesitter,undotree)==========\e[0m"
+# lsp contains —— goto，link，goto（float），cmp，format，refactor，diagnose
 # lsp log file
 sudo mkdir -p ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
