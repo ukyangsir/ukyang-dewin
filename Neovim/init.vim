@@ -94,8 +94,6 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 " lsp
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
-" lspkind
-Plug 'onsails/lspkind-nvim'
 " lspsaga
 Plug 'tami5/lspsaga.nvim'
 " fidget
@@ -107,17 +105,20 @@ Plug 'kosayoda/nvim-lightbulb'
 
 
 " nvim-cmp
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-cmdline'
+" Snippet engini: vsnip
+Plug 'hrsh7th/nvim-cmp' " 代码补全核心插件，下面都是增强补全体验的插件
+Plug 'onsails/lspkind-nvim' " 为补全添加类似vscode的图标
+Plug 'hrsh7th/vim-vsnip' " vsnip补全引擎，用于获得代码片段支持，选择它的原因是，可以直接调用vscode下的代码片段
+Plug 'hrsh7th/cmp-vsnip' " 适用于vsnip的代码片段源
+Plug 'hrsh7th/cmp-nvim-lsp'  " 替换内置omnifunc，获得更多补全
+Plug 'hrsh7th/cmp-buffer' " 缓冲区补全
+Plug 'hrsh7th/cmp-path' " 路径补全
+Plug 'hrsh7th/cmp-cmdline' " 命令补全
+Plug 'f3fora/cmp-spell' " 拼写建议
+Plug 'rafamadriz/friendly-snippets' " 提供多种语言的代码片段
+Plug 'lukas-reineke/cmp-under-comparator' " 让补全结果的排序更加智能
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' } " tabnine源，提供基于AI的智能补全
 
-
-" Snippet engine: vsnip
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'rafamadriz/friendly-snippets'
 
 " treesitter
 " Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
