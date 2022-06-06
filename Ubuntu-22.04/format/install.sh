@@ -10,3 +10,8 @@
 sudo apt install -y python3-autopep8
 # vue（html、css、js、ts、json）、lua
 npm install -g prettier lua-fmt
+# shell
+go install mvdan.cc/sh/v3/cmd/shfmt@latest
+# go
+go install mvdan.cc/gofumpt@latest
+# nodejs
