@@ -6,7 +6,6 @@
 # Description:
 # NOTE: 必备脚本1： Ubuntu22.04 初始化 + 代码格式化插件安装脚本
 
-
 echo -e "\033[33m ___  ___  ___  __        ___    ___ ________  ________   ________      \033[0m"
 echo -e "\033[33m|\  \|\  \|\  \|\  \     |\  \  /  /|\   __  \|\   ___  \|\   ____\     \033[0m"
 echo -e "\033[33m\ \  \\\  \ \  \/  /|_   \ \  \/  / | \  \|\  \ \  \\ \  \ \  \___|     \033[0m"
@@ -15,7 +14,6 @@ echo -e "\033[33m  \ \  \\\  \ \  \\ \  \   \/  /  /   \ \  \ \  \ \  \\ \  \ \ 
 echo -e "\033[33m   \ \_______\ \__\\ \__\__/  / /      \ \__\ \__\ \__\\ \__\ \_______\ \033[0m"
 echo -e "\033[33m    \|_______|\|__| \|__|\___/ /        \|__|\|__|\|__| \|__|\|_______| \033[0m"
 echo -e "\033[33m                        \|___|/                                         \033[0m"
-
 
 echo -e "\e[36mWelcome to ukyang's Ubuntu-22.04!!!\e[0m"
 cd ~
@@ -42,19 +40,19 @@ echo ""
 echo ""
 
 echo -e "\e[36m================Mission1: Change sources.list(tsinghua)=================\e[0m"
-echo "ukyang"|sudo -S chmod 777 -R ~/ukyang-vimrelated-Windows
+echo "ukyang" | sudo -S chmod 777 -R ~/ukyang-vimrelated-Windows
 echo ""
 sudo rm -rf /etc/apt/sources.list
 sudo cp ~/ukyang-vimrelated-Windows/Ubuntu-22.04/sources.list /etc/apt/
-sudo chmod 777 /etc/apt/sources.list 
+sudo chmod 777 /etc/apt/sources.list
 
 echo ""
 echo ""
 
 echo -e "\e[36m===========Mission2: Add google nameserver to resolv.config=============\e[0m"
 sudo chmod 777 /etc/resolv.conf
-sudo echo "nameserver 8.8.8.8" >> /etc/resolv.conf
-sudo echo "nameserver 8.8.4.4" >> /etc/resolv.conf
+sudo echo "nameserver 8.8.8.8" >>/etc/resolv.conf
+sudo echo "nameserver 8.8.4.4" >>/etc/resolv.conf
 
 echo ""
 echo ""
@@ -75,10 +73,10 @@ echo -e "\e[36m=================Mission4: Install something necessary===========
 # plug(telescope,spectre,clipboard) related(completed)
 # enable systemctl related(completed)
 sudo apt install -y curl wget git openssh-server net-tools \
-     tar zip unzip \
-     build-essential gcc g++ zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev sqlite3 libsqlite3-dev tk-dev uuid-dev libgdbm-compat-dev \
-     fd-find ripgrep sed xsel \
-     fontconfig daemonize \
+  tar zip unzip \
+  build-essential gcc g++ zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libbz2-dev liblzma-dev sqlite3 libsqlite3-dev tk-dev uuid-dev libgdbm-compat-dev \
+  fd-find ripgrep sed xsel \
+  fontconfig daemonize
 # sudo daemonize /usr/bin/unshare --fork --pid --mount-proc /lib/systemd/systemd --system-unit=basic.target
 # exec sudo nsenter -t $(pidof systemd) -m -p su - $LOGNAME
 # sudo systemctl restart snapd.service
@@ -95,7 +93,7 @@ sudo mkdir /usr/local/z
 sudo chmod -R 777 /usr/local/z
 git clone git@github.com:rupa/z.git /usr/local/z
 sudo chmod -R 777 /usr/local/z
-echo '. /usr/local/z/z.sh' >> ~/.bashrc
+echo '. /usr/local/z/z.sh' >>~/.bashrc
 
 echo ""
 echo ""
@@ -108,19 +106,27 @@ sudo chmod -R 777 ~/.config/nvim
 # echo "alias vim='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
 # echo "alias vi='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
 # echo "alias v='nvim -u ~/ukyang-vimrelated-Windows/Neovide/init.vim'">> ~/.bashrc
-echo "alias vim='nvim'">> ~/.bashrc
-echo "alias vi='nvim'">> ~/.bashrc
-echo "alias v='nvim'">> ~/.bashrc
+echo "alias vim='nvim'" >>~/.bashrc
+echo "alias vi='nvim'" >>~/.bashrc
+echo "alias v='nvim'" >>~/.bashrc
 source ~/.bashrc
 
 echo ""
 echo ""
 
-echo -e "\e[36m=========mission7: prepares(lsp,cmp,format,treesitter,undotree)==========\e[0m"
-# lsp contains —— goto，link，goto（float），cmp，format，refactor，diagnose
+echo -e "\e[36m==============mission7: prepares(lsp,treesitter,undotree)===============\e[0m"
+# lsp contains —— goto，link，goto（float），cmp，format，diagnose，refactor
+# cmp，diagnose（lint），format都不用内置
+# cmp 是固定配置
+# lint 是按语言配置
+# format 也是按语言配置
+
 # lsp log file
 sudo mkdir -p ~/.cache/nvim
 sudo touch ~/.cache/nvim/lsp-installer.log
+
+# treesitter contains —— 语法高亮，增量选择代码块，缩进（关闭），折叠（关闭）
+# 可配合其他插件使用，比如彩虹括号
 
 # undotree
 sudo mkdir ~/.cache/nvim/undodir
