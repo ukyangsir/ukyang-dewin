@@ -8,8 +8,7 @@ require("nvim-treesitter.configs").setup(
     {
         -- 安装的高亮支持来源
         -- FIX: 安装某些语言的高亮支持来源时被墙
-        ensure_installed = {"bash", "lua", "vim", "python"},
-        -- {"go", "html", "json", "typescript", "javascript", "vue"},
+        ensure_installed = {"bash", "lua", "vim", "python", "vue", "typescript", "javascript", "json", "go"},
         -- ensure_installed = "maintained",
         -- 同步下载高亮支持
         sync_install = false,
@@ -45,6 +44,10 @@ require("nvim-treesitter.configs").setup(
             extended_mode = true
             -- colors = {}, -- table of hex strings
             -- termcolors = {} -- table of colour name strings
+        },
+        -- 根据当前上下文定义文件类型，由 nvim-ts-context-commentstring 插件提供
+        context_commentstring = {
+            enable = true
         }
     }
 )
