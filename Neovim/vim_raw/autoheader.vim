@@ -38,6 +38,13 @@ func SetTitle()
     call setline(3,"// E-mail: ukyang_ma@163.com")
     call setline(4,"// Date: ".strftime("%Y-%m-%d")."")
     call setline(5,"// Description:")
+  elseif expand("%:e") == 'md'
+    call setline(1,"---")
+    call setline(2,"title: ")
+    call setline(3,"author: ukyang")
+    call setline(4,"date: ".strftime("%Y-%m-%d")."")
+    call setline(5,"keywords: []")
+    call setline(6,"---")
   else
     call setline(1,"# Copyright (C)".strftime("%Y"). " By ukyang. All Rights Reserved.")
     call setline(2,"# Author: ukyang")
