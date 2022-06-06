@@ -8,5 +8,5 @@
 
 # python
 sudo apt install -y python3-autopep8
-# vue/lua
+# vue（html、css、js、ts、json）、lua
 npm install -g prettier lua-fmt

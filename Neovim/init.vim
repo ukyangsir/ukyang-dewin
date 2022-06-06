@@ -124,7 +124,7 @@ Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' } " tabnine源，提供基于
 Plug 'mfussenegger/nvim-lint'
 
 
-" code format
+" format
 Plug 'sbdchd/neoformat'
 
 
