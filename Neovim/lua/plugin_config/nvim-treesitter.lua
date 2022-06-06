@@ -1,7 +1,14 @@
+-- Copyright (C)2022 By ukyang. All Rights Reserved.
+-- Author: ukyang
+-- E-mail: ukyang_ma@163.com
+-- Date: 2022-06-06
+-- Description:
+
 require("nvim-treesitter.configs").setup(
     {
         -- 安装的高亮支持来源
-        ensure_installed = {"bash","lua","vim","python"},
+        ensure_installed = {"bash", "lua", "vim", "python", "go","scss","html","json","typescript","javascript","vue"},
+        -- ensure_installed = "maintained",
         -- 同步下载高亮支持
         sync_install = false,
         -- 高亮相关
@@ -9,8 +16,8 @@ require("nvim-treesitter.configs").setup(
             -- 启用高亮支持
             enable = true,
             -- 使用 treesitter 高亮而不是 neovim 内置的高亮
-            additional_vim_regex_highlighting = false,
-            disable = {"lua","vim"},
+            additional_vim_regex_highlighting = false
+            -- disable = {"lua", "vim"}
         },
         -- 范围选择
         incremental_selection = {
@@ -36,6 +43,6 @@ require("nvim-treesitter.configs").setup(
             extended_mode = true
             -- colors = {}, -- table of hex strings
             -- termcolors = {} -- table of colour name strings
-        },
+        }
     }
 )

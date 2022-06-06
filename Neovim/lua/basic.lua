@@ -140,11 +140,12 @@ require("plugin_config.nvim-hlslens")
 require("plugin_config.nvim-lastplace")
 -- WARN: 这里的灯泡显示以及代码动作有bug
 require("plugin_config.nvim-lightbulb")
+require("plugin_config.nvim-lint")
 require("plugin_config.nvim-notify")
 require("plugin_config.nvim-scrollbar")
 require("plugin_config.nvim-spectre") -- <leader>rf/p 后，内部<leader>相关快捷键
 require("plugin_config.nvim-tree") -- nvim-tree 有一些快捷键
--- require("plugin_config.nvim-treesitter")
+require("plugin_config.nvim-treesitter")
 require("plugin_config.spellsitter")
 require("plugin_config.surround") -- ys/ds/cs
 require("plugin_config.switch")
