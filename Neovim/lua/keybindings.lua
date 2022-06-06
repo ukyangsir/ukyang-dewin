@@ -86,7 +86,7 @@ vim.keybinds.gmap("n", "<A-m>", ":NvimTreeFindFile<CR>", vim.keybinds.opts)
 -- vim.keybinds.gmap("t", "sd", "<C-\\><C-n> :FloatermToggle<CR>", vim.keybinds.opts)
 
 -- 生成 title
-vim.keybinds.gmap("n", "ma", ":call SetTitle()<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>ma", ":call SetTitle()<CR>", vim.keybinds.opts)
 
 -- map('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
 -- map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
@@ -202,7 +202,12 @@ vim.keybinds.gmap("n", "<leader>ll", ":Notifications<CR>", vim.keybinds.opts)
 vim.keybinds.gmap("i", "<C-l>", "copilot#Accept('')", vim.keybinds.opts)
 
 -- vista快捷键，打开大纲预览
-vim.keybinds.gmap("n", "<A-<F12>>", "<cmd>Vista!!<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>tt", "<cmd>Vista!!<CR>", vim.keybinds.opts)
+
+-- markdown preview快捷键
+vim.keybinds.gmap("n", "m", ":InstantMarkdownPreview<CR>", vim.keybinds.opts)
+vim.keybinds.gmap("n", "<leader>ms", ":InstantMarkdownStop<CR>", vim.keybinds.opts)
+
 
 -- which-key快捷键
 -- vim.keybinds.gmap("n", "<leader>", ":WhichKey <leader><CR>", vim.keybinds.opts)

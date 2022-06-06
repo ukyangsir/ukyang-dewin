@@ -112,11 +112,20 @@ vim.o.incsearch = true
 -- 是否透明背景
 vim.g.background_transparency = true
 -- 指定undotree缓存存放路径
-vim.g.undotree_dir="~/.cache/nvim/undodir"
+vim.g.undotree_dir = "~/.cache/nvim/undodir"
 -- 指定代码片段存储路径
 vim.g.vsnip_snippet_dir = "~/.config/nvim/snippet"
 -- copilot 启用设置
 vim.g.copilot_no_tab_map = true
+-- markdown preview设置
+-- vim.g.nvim_markdown_preview_theme = "solarized-light"
+-- vim.g.nvim_markdown_preview_format = "markdown"
+vim.g.instant_markdown_browser = "/mnt/c/Users/mayang/AppData/Local/Google/Chrome/Application/chrome.exe"
+-- vim.g.instant_markdown_slow = 1
+vim.g.instant_markdown_logfile = "/tmp/instant_markdown.log"
+vim.g.instant_markdown_mathjax = 1
+vim.g.instant_markdown_mermaid = 1
+vim.g.instant_markdown_autostart = 0
 
 require("lsp.lspsaga")
 require("lsp.nvim-cmp")

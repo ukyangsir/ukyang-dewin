@@ -12,7 +12,6 @@
 " set guifont=FiraCode\ NF:h12
 " cd F:\git_space
 
-
 " ==================== Plugin packages ====================
 " Begin Plug, Depends On https://github.com/junegunn/vim-plug
 call plug#begin('~/.config/nvim/plugged')
@@ -40,7 +39,7 @@ Plug 'windwp/windline.nvim'
 " gitsigns
 Plug 'lewis6991/gitsigns.nvim'
 " nvim-tree
-Plug 'kyazdani42/nvim-tree.lua'
+Plug 'kyazdani42/nvim-tree.lua',{'on': ['NvimTreeToggle','NvimTreeFindFile']}
 " hlslens
 Plug 'kevinhwang91/nvim-hlslens'
 " indent-blankline
@@ -48,8 +47,9 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " autopairs
 Plug 'windwp/nvim-autopairs'
 " switch
-Plug 'AndrewRadev/switch.vim'
+Plug 'AndrewRadev/switch.vim',{'on': 'Switch'}
 " hop
+" Plug 'phaazon/hop.nvim',{'on': ['HopWord','HopLine','HopChar1','HopChar1CurrentLine']}
 Plug 'phaazon/hop.nvim'
 " surround
 Plug 'ur4ltz/surround.nvim'
@@ -135,6 +135,11 @@ Plug 'p00f/nvim-ts-rainbow' " 彩虹括号
 " undotree
 Plug 'mbbill/undotree'
 
+
+" markdown
+" Plug 'davidgranstrom/nvim-markdown-preview'
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+
 " bufferline
 " Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 " floaterm
@@ -164,7 +169,6 @@ call plug#end()
 "   endif
 "endif
 " =================== END Pre settings ===================
-
 
 
 
@@ -230,3 +234,9 @@ source ~/.config/nvim/vim_raw/autoheader.vim
 source ~/.config/nvim/vim_raw/terslation.vim
 " source ~/ukyang-vimrelated-Windows/Neovide/vim_raw/floaterm.vim
 " ==================== END External settings ===================
+:autocmd TextChanged *.md :write
+:autocmd InsertLeave *.md :write
+
+:autocmd CursorMovedI *.md :InstantMarkdownPreview
+:autocmd TextChanged *.md :InstantMarkdownPreview
+:autocmd InsertLeave *.md :InstantMarkdownPreview
