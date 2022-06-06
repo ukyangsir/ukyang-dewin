@@ -155,6 +155,7 @@ require("plugin_config.toggleterm")
 require("plugin_config.undotree")
 require("plugin_config.vim-illuminate")
 require("plugin_config.vim-multiple-cursors") -- gm，alt 系列（alt + b 取消），sd
+require("plugin_config.vista")
 require("plugin_config.which-key")
 require("plugin_config.windline")
 

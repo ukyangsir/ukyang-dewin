@@ -87,9 +87,8 @@ Plug 'SpringHan/Terslation.vim'
 " comment
 Plug 'numToStr/Comment.nvim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
-" copilot
-" Plug 'github/copilot.vim'
-
+" vista
+Plug 'liuchengxu/vista.vim'
 
 " lsp
 Plug 'neovim/nvim-lspconfig'
@@ -140,6 +139,9 @@ Plug 'mbbill/undotree'
 " Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
 " floaterm
 " Plug 'voldikss/vim-floaterm'
+" copilot
+" Plug 'github/copilot.vim'
+
 
 call plug#end()
 " ==================== END Plugin packages ====================

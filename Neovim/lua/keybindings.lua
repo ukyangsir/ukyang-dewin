@@ -201,6 +201,9 @@ vim.keybinds.gmap("n", "<leader>ll", ":Notifications<CR>", vim.keybinds.opts)
 -- copilot快捷键
 vim.keybinds.gmap("i", "<C-l>", "copilot#Accept('')", vim.keybinds.opts)
 
+-- vista快捷键，打开大纲预览
+vim.keybinds.gmap("n", "<A-<F12>>", "<cmd>Vista!!<CR>", vim.keybinds.opts)
+
 -- which-key快捷键
 -- vim.keybinds.gmap("n", "<leader>", ":WhichKey <leader><CR>", vim.keybinds.opts)
 -- vim.keybinds.gmap("n", "m", ":WhichKey m<CR>", vim.keybinds.opts)
