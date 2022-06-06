@@ -7,7 +7,9 @@
 require("nvim-treesitter.configs").setup(
     {
         -- 安装的高亮支持来源
-        ensure_installed = {"bash", "lua", "vim", "python", "go","scss","html","json","typescript","javascript","vue"},
+        -- FIX: 安装某些语言的高亮支持来源时被墙
+        ensure_installed = {"bash", "lua", "vim", "python"},
+        -- {"go", "html", "json", "typescript", "javascript", "vue"},
         -- ensure_installed = "maintained",
         -- 同步下载高亮支持
         sync_install = false,
