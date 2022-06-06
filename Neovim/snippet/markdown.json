@@ -1,8 +1,118 @@
 {
+  "YAML Front Matter": {
+    "prefix": "front",
+    "body": ["---\n$1\n---"],
+    "description": "YAML Front Matter"
+  },
+  "title 1": {
+    "prefix": "t1",
+    "body": ["# $1"],
+    "description": "create title 1"
+  },
+  "title 2": {
+    "prefix": "t2",
+    "body": ["## $1"],
+    "description": "create title 2"
+  },
+  "title 3": {
+    "prefix": "t3",
+    "body": ["### $1"],
+    "description": "create title 3"
+  },
+  "TOC": {
+    "prefix": "toc",
+    "body": ["[TOC]\n"],
+    "description": "TOC"
+  },
   "code block": {
     "prefix": "code",
     "body": ["```$1\n```"],
     "description": "create code block"
+  },
+  "bold text": {
+    "prefix": "bold",
+    "body": ["**$1**"],
+    "description": "create bold text"
+  },
+  "wai text": {
+    "prefix": "wai",
+    "body": ["*$1*"],
+    "description": "create wai text"
+  },
+  "highlight text": {
+    "prefix": "hi",
+    "body": ["`$1`"],
+    "description": "create highlight text"
+  },
+  "link": {
+    "prefix": "link",
+    "body": ["[$1]($2)"],
+    "description": "create link"
+  },
+  "image": {
+    "prefix": "img",
+    "body": ["![$1]($2)"],
+    "description": "image"
+  },
+  "checkbox": {
+    "prefix": "box",
+    "body": ["- [ ] $1\n- [ ] $2\n- [ ] $3\n- [ ] $4"],
+    "description": "create checkbox"
+  },
+  "ref": {
+    "prefix": "ref",
+    "body": ["> $1"],
+    "description": "create ref"
+  },
+  "list": {
+    "prefix": "list",
+    "body": ["- $1\n- $2\n- $3\n- $4"],
+    "description": "create list"
+  },
+  "order list": {
+    "prefix": "olist",
+    "body": ["1. $1\n2. $2\n3. $3\n4. $4"],
+    "description": "create order list"
+  },
+  "line": {
+    "prefix": "line",
+    "body": ["------\n"],
+    "description": "line"
+  },
+  "2x4table": {
+    "prefix": "2x4table",
+    "body": ["|  $1  |  $2  |  $3  |  $4  |\n| ---- | ---- | ---- | ---- |\n|||||"],
+    "description": "2x4table"
+  },
+  "1x1row": {
+    "prefix": "1x1row",
+    "body": ["|  $1  |"],
+    "description": "1x1row"
+  },
+  "1x2row": {
+    "prefix": "1x2row",
+    "body": ["|  $1  |  $2  |"],
+    "description": "1x2row"
+  },
+  "1x3row": {
+    "prefix": "1x3row",
+    "body": ["|  $1  |  $2  |  $3  |"],
+    "description": "1x3row"
+  },
+  "1x4row": {
+    "prefix": "1x4row",
+    "body": ["|  $1  |  $2  |  $3  |  $4  |"],
+    "description": "1x4row"
+  },
+  "1x5row": {
+    "prefix": "1x5row",
+    "body": ["|  $1  |  $2  |  $3  |  $4  |  $5  |"],
+    "description": "1x5row"
+  },
+  "place holder": {
+    "prefix": "holder",
+    "body": ["<++>"],
+    "description": "create placeholder"
   },
   "< symbol": {
     "prefix": "<",
@@ -27,15 +137,5 @@
       "|      |      |      |      |"
     ],
     "description": "create vim table"
-  },
-  "table row": {
-    "prefix": "row",
-    "body": ["|  $1  |  $2  |  $3  |  $4  |"],
-    "description": "create table row"
-  },
-  "place holder": {
-    "prefix": "holder",
-    "body": ["<++>"],
-    "description": "create placeholder"
   }
 }
