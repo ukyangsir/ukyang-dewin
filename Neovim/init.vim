@@ -73,8 +73,6 @@ Plug 'petertriho/nvim-scrollbar'
 Plug 'norcalli/nvim-colorizer.lua'
 " toggleterm
 Plug 'akinsho/toggleterm.nvim'
-" undotree
-Plug 'mbbill/undotree'
 " which-key
 Plug 'folke/which-key.nvim'
 " telescope
@@ -89,6 +87,8 @@ Plug 'SpringHan/Terslation.vim'
 " comment
 Plug 'numToStr/Comment.nvim'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+" copilot
+" Plug 'github/copilot.vim'
 
 
 " lsp
@@ -118,20 +118,23 @@ Plug 'f3fora/cmp-spell' " 拼写建议
 Plug 'rafamadriz/friendly-snippets' " 提供多种语言的代码片段
 Plug 'lukas-reineke/cmp-under-comparator' " 让补全结果的排序更加智能
 Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' } " tabnine源，提供基于AI的智能补全
-" copilot
-" Plug 'github/copilot.vim'
 
 
 " lint
 Plug 'mfussenegger/nvim-lint'
 
 
+" code format
+Plug 'sbdchd/neoformat'
+
+
 " treesitter
 Plug 'nvim-treesitter/nvim-treesitter',{'do': ':TSUpdate'}
 Plug 'p00f/nvim-ts-rainbow' " 彩虹括号
 
-" code format
-Plug 'sbdchd/neoformat'
+
+" undotree
+Plug 'mbbill/undotree'
 
 " bufferline
 " Plug 'akinsho/bufferline.nvim',{ 'tag': 'v2.*' }
