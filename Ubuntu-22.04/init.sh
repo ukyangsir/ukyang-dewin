@@ -2,7 +2,7 @@
 # Copyright (C)2022 By ukyang. All Rights Reserved.
 # Author: ukyang
 # E-mail: ukyang_ma@163.com
-# Date: 2022-05-29
+# Date: 2022-06-19
 # Description:
 # NOTE: 必备脚本1： Ubuntu22.04 初始化 + 代码格式化插件安装脚本
 
