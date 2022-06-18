@@ -79,6 +79,11 @@
     "body": ["------\n"],
     "description": "line"
   },
+  "red": {
+    "prefix": "red",
+    "body": ["<font color='red'>$1</font>"],
+    "description": "red"
+  },
   "2x4table": {
     "prefix": "2x4table",
     "body": ["|  $1  |  $2  |  $3  |  $4  |\n| ---- | ---- | ---- | ---- |\n|||||"],
