@@ -25,14 +25,14 @@ echo -e "\e[36m=============================Start To Init=======================
 echo "Init Ubuntu-22.04......"
 echo ""
 echo "Mission0: Add /etc/wsl.conf, Reboot, Add ssh-keys, Clone the repo to your home path"
-echo "Mission1: Change sources.list(tsinghua) && Add google to resolv.config"
+echo "Mission1: Change sources.list(tsinghua)"
 echo "Mission2: Add google nameserver to resolv.config"
 echo "Mission3: Add ppa(Neovim)"
 echo "Mission4: Install something necessary"
 echo "Mission5: Install z.sh"
 echo "Mission6: Install Neovim"
-echo "Mission7: Prepares(lsp,treesitter,cmp,format)"
-echo "Mission8: Install shells_to_bin(push,backup)"
+echo "Mission7: Prepares(lsp,treesitter,undotree)"
+echo "Mission8: Install shells_to_bin(backup)"
 begindate=$(date "+%Y-%m-%d %H:%M:%S")
 echo "BeginDate: ${begindate}"
 
