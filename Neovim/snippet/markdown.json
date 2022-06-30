@@ -21,7 +21,7 @@
   },
   "TOC": {
     "prefix": "toc",
-    "body": ["[TOC]\n"],
+    "body": ["[[TOC]]\n"],
     "description": "TOC"
   },
   "code block": {
@@ -81,7 +81,7 @@
   },
   "red": {
     "prefix": "red",
-    "body": ["<font color='red'>$1</font>"],
+    "body": ["<div style=\"color:red\">$1</div>"],
     "description": "red"
   },
   "2x4table": {
