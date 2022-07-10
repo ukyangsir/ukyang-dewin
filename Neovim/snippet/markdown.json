@@ -81,7 +81,7 @@
   },
   "red": {
     "prefix": "red",
-    "body": ["<div style=\"color:red\">$1</div>"],
+    "body": ["<div style='display:inline-block;color:red;font-weight:bold'>$1</div>"],
     "description": "red"
   },
   "2x4table": {
